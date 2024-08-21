@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'BIUST',
-  tagline: 'Driving inspiration and change',
+  title: 'B   I   P',
+  tagline: 'biust insight project',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -36,9 +36,17 @@ const config = {
 
   presets: [
     [
+
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+          gtag: {
+          trackingID: 'G-999X9XX9XX',
+          anonymizeIP: false,
+        },
+         googleTagManager: {
+          containerId: 'GTM-12345',
+        },
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
@@ -65,12 +73,15 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+
     ],
+
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
