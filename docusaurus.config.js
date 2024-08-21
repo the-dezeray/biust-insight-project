@@ -23,7 +23,7 @@ const config = {
   organizationName: 'another-desiree', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -91,7 +91,7 @@ const config = {
           {label:"Study",position:'left',type:"dropdown",items:[
             {label:"why study at biust",href:"https://github.com/facebook/docusaurus"}
           ]},
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/why-biust', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -107,7 +107,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/why-biust',
               },
             ],
           },
@@ -133,7 +133,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: '/docs/why-biust',
               },
               {
                 label: 'GitHub',
