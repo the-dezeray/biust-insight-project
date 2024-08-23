@@ -2,10 +2,18 @@
   display: flex;
   align-items: center;
   padding: 2rem 0;
+
+ background-color: #1E201E;
   width: 100%;
 }
 
 .featureSvg {
   height: 100px;
   width: 100px;
+}
+
+/* styles.module.css */
+.customContainer {
+  background-color: #1E201E;
+  /* Other styles as needed */
 }

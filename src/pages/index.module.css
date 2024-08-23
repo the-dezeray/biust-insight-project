@@ -4,8 +4,8 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 2rem 0;
+  text-align: left;
   position: relative;
   overflow: hidden;
 }
@@ -18,6 +18,30 @@
 
 .buttons {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
+}
+.purple-text {
+  color: rebeccapurple;
+}
+/* styles.module.css */
+.customContainer {
+  background-color:#1E201E;
+  /* Other styles as needed */
+}
+
+/* styles.module.css */
+.heroTitleLarge {
+  font-size: 20rem; /* Adjust the size as needed */
+  font-weight: bold;
+   /* Optional: Adjust font weight */
+  /* Add any other styles as needed */
+}
+
+/* styles.module.css */
+.heroSubtitleStyled {
+  font-size: 3rem; /* Increase the size */
+  padding: 20px 0;
+   /* Add padding (adjust as needed) */
+  /* Add any other styles as needed */
 }

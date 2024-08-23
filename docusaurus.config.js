@@ -8,19 +8,19 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'B   I   P',
-  tagline: 'biust insight project',
+  title: 'B    I    P',
+  tagline: 'biust   insight   project',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://another-desiree.github.io',
+  url: 'https://halo-saber.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/biust-insight-project/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'another-desiree', // Usually your GitHub org/user name.
+  organizationName: 'halo-saber', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -41,18 +41,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
           gtag: {
-          trackingID: 'G-999X9XX9XX',
+          trackingID: 'GTM-PHDC9B7C',
           anonymizeIP: false,
         },
          googleTagManager: {
-          containerId: 'GTM-12345',
+          containerId: 'GTM-PHDC9B7C',
         },
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -81,14 +81,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-
+  
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+  
+  },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         hideOnScroll: true,
-        title: 'My Site',
+        title: 'BIP',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'site logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -96,16 +102,20 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            position: 'right',
+            label: 'Drives',
           },
-          {label:"Study",position:'left',type:"dropdown",items:[
+          {label:"Clubs",position:'right',type:"dropdown",items:[
             {label:"why study at biust",href:"https://github.com/facebook/docusaurus"}
           ]},
-          {to: '/docs/why-biust', label: 'Blog', position: 'left'},
+          {to: '/docs/why-biust', label: 'News', position: 'right'},
+          
+          {to: '/docs/why-biust', label: 'Photo Gallery', position: 'right'},
+          {to: '/docs/why-biust', label: 'Challenges', position: 'right'},
+
           {
             href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            label: 'AboutMe',
             position: 'right',
           },
         ],
@@ -114,46 +124,86 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Info',
             items: [
               {
-                label: 'Tutorial',
+                label: 'FAQs',
                 to: '/docs/why-biust',
               },
+   {
+                label: 'Resources',
+                to: '/docs/why-biust',
+              },
+   {
+                label: 'About Biust',
+                to: '/docs/why-biust',
+              },
+               {
+                label: 'About Project',
+                to: '/docs/why-biust',
+              },
+
             ],
           },
           {
-            title: 'Community',
+            title: 'Join Us',
             items: [
               {
-                label: 'Stack Overflow',
+                label: 'Members of the team',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'Discord',
+                label: 'Developer Credits',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
               {
-                label: 'Twitter',
+                label: 'How to contibute',
                 href: 'https://twitter.com/docusaurus',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Project',
             items: [
               {
-                label: 'Blog',
+                label: 'Github',
                 to: '/docs/why-biust',
               },
               {
-                label: 'GitHub',
+                label: 'Maintainers',
                 href: 'https://github.com/facebook/docusaurus',
               },
+{
+                label: 'Documentaion',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+
             ],
           },
+ {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy',
+                to: '/docs/why-biust',
+              },
+              {
+                label: 'Terms',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+{
+                label: 'Cookie Policy',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+
+            ],
+          },
+       
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    
+        copyright: `  <img src={LogoSvg} ><p style="color:#D6BD98"> </br>This project is currently in the alpha stage. I built it as a way to enhance my skills as a Computer Science major and to address the technological infrastructure gaps I noticed at BIUST. I hope to find others who share my interests to form a community. Feel free to join me! </br> </br>
+Copyright © ${new Date().getFullYear()} Biust Insight Project. Built by Desiree and others </p>.
+`,
       },
       prism: {
         theme: prismThemes.github,
