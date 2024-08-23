@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'B    I    P',
   tagline: 'biust   insight   project',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/logo.svg',
 
   // Set the production url of your site here
   url: 'https://halo-saber.github.io',
@@ -106,12 +106,15 @@ const config = {
             label: 'Drives',
           },
           {label:"Clubs",position:'right',type:"dropdown",items:[
-            {label:"why study at biust",href:"https://github.com/facebook/docusaurus"}
+            {label:"Join",to:""},
+     {label:"Explore",to:""},
+
+        
           ]},
           {to: '/docs/why-biust', label: 'News', position: 'right'},
           
-          {to: '/docs/why-biust', label: 'Photo Gallery', position: 'right'},
-          {to: '/docs/why-biust', label: 'Challenges', position: 'right'},
+          {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
+          {to: '/docs/challanges/main', label: 'Challenges', position: 'right'},
 
           {
             href: 'https://github.com/facebook/docusaurus',
