@@ -106,21 +106,41 @@ const config = {
             label: 'Drives',
           },
           {label:"Clubs",position:'right',type:"dropdown",items:[
-            {label:"Join",to:""},
-     {label:"Explore",to:""},
+            {label:"Join",to:"/docs/clubs/join"},
+     {label:"Explore",to:"/docs/clubs/list-of-clubs"},
+     {label:"Create club",to:"/docs/clubs/list-of-clubs"},
+
 
         
           ]},
+          {label:"Portals",position:'left',type:"dropdown",items:[
+            {label:"Blackboard",href:"https://biust.blackboard.com/"},
+     {label:"Basis",href:"https://portal.biust.ac.bw/"},
+   
+
+
+        
+          ]},
+
+ 
+ 
           {to: '/docs/why-biust', label: 'News', position: 'right'},
           
           {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
           {to: '/docs/challanges/main', label: 'Challenges', position: 'right'},
 
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'AboutMe',
-            position: 'right',
-          },
+          {label:"Biust",position:'right',type:"dropdown",items:[
+            {label:"programs offered",to:"/docs/clubs/join"},
+     {label:"apply",to:"/docs/clubs/list-of-clubs"},
+{label:"contact directory",to:"/docs/clubs/list-of-clubs"},
+{label:"biust map",to:"/docs/clubs/list-of-clubs"},
+{label:"Src",to:"/docs/clubs/list-of-clubs"},
+
+
+
+
+        
+          ]},
         ],
       },
       footer: {
@@ -145,7 +165,10 @@ const config = {
                 label: 'About Project',
                 to: '/docs/why-biust',
               },
-
+ {
+                label: 'About Me',
+                to: '/docs/why-biust',
+              },
             ],
           },
           {
