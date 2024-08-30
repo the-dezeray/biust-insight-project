@@ -34,7 +34,7 @@ Find us at the about us section in the footer down below 👇👇
 <details>
 <summary>Turtorials </summary>
 
-- [21 August 2023 ](https://drive.google.com/file/d/1SpGkyXxXb3rXZfwKmF-O8kDl2FvTvyve/view?usp=drive_link)
+- [21 August 2023 tutorial](https://drive.google.com/file/d/1SpGkyXxXb3rXZfwKmF-O8kDl2FvTvyve/view?usp=drive_link)
 
 </details>
 

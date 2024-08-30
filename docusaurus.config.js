@@ -5,7 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-
+import ads from '@site/static/img/logo.png';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'B    I    P',
@@ -227,7 +227,7 @@ const config = {
        
         ],
     
-        copyright: `  <img src={LogoSvg} ><p style="color:#D6BD98"> </br>This project is currently in the alpha stage. I built it as a way to enhance my skills as a Computer Science major and to address the technological infrastructure gaps I noticed at BIUST. I hope to find others who share my interests to form a community. Feel free to join me! </br> </br>
+        copyright: `  <img src={ads}/><p style="color:#D6BD98"> </br>This project is currently in the alpha stage. I built it as a way to enhance my skills as a Computer Science major and to address the technological infrastructure gaps I noticed at BIUST. I hope to find others who share my interests to form a community. Feel free to join me! </br> </br>
 Copyright © ${new Date().getFullYear()} Biust Insight Project. Built by Desiree and others </p>.
 `,
       },

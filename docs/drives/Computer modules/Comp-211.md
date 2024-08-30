@@ -9,8 +9,8 @@ A Collection of exams past tests and tutorials
 <details>
 <summary> Exam papers </summary>
 
-- [2021](https://drive.google.com/file/d/10CE7rNh5XPI5EqKyV-s0J5WyMsI1WbhO/view?usp=drive_link)  
-- [2022](https://drive.google.com/file/d/17u2oAOAcG6UkFK-q6ndPgxOVSzlJ4OsR/view?usp=drive_linkhttps://google.com)  
+- [2021 exam](https://drive.google.com/file/d/10CE7rNh5XPI5EqKyV-s0J5WyMsI1WbhO/view?usp=drive_link)  
+- [2022 exam](https://drive.google.com/file/d/17u2oAOAcG6UkFK-q6ndPgxOVSzlJ4OsR/view?usp=drive_linkhttps://google.com)  
 </details>
 
 <details>
@@ -138,7 +138,7 @@ C labs from week 2 to week 11
 <details>
 <summary>Week 3-4  </summary>
 
-### 1
+### Write a C program to find whether given no is even or odd
 
     ``` c
         #include <stdio.h>
@@ -160,7 +160,7 @@ C labs from week 2 to week 11
 
     ```
 
-### 2
+### Write a C program to find greatest in 3 numbers
     ```c
 
     #include <stdio.h>
@@ -190,7 +190,7 @@ C labs from week 2 to week 11
 
     ``` 
 
-### 3
+### Write a C program to find that entered year is leap year or not
     ```c
 
     #include <stdio.h>
@@ -221,7 +221,7 @@ C labs from week 2 to week 11
 
     ```
 
-### 4
+### Write a C program to accept marks scored in a subject and print the result as below If the marks scored is less than 35 print result as fail, if the marks scored is 35 and above and less than 50 print the result as III class, if the marks is 50 and above and less than 60 print result as II class, if the marks is 60 and above and less than 85 print result as I class and if the marks is 85 and above and less than 100 print the result as distinction. [Use if-else statement]
     ```c
     #include <stdio.h>
 
@@ -250,7 +250,13 @@ C labs from week 2 to week 11
 
     ```
 
-### 5
+### Write a C program to do basic arithmetic operations on given two integers by accepting the operator from the user. Use switch case statement to do this program.
+
+:::note HINT
+the given operator is +, then program should give sum of given two integers,
+if the operator is –, then calculate difference, if operator is * then calculate
+product and if the given operator is /, then calculate quotient.
+:::
 
     ``` c
     #include <stdio.h>
@@ -300,7 +306,7 @@ C labs from week 2 to week 11
 <details>
 <summary> week 6</summary>
 
-### 1
+### Write a C program to generate multiplication table for a given number
     ```c
     #include <stdio.h>
 
@@ -321,7 +327,7 @@ C labs from week 2 to week 11
 
     ```
 
-### 2
+### Write a C program to find factorial of a number
     ```c
     #include <stdio.h>
 
@@ -347,7 +353,7 @@ C labs from week 2 to week 11
 
     ```
 
-### 3
+### Write a C program to find the sum of individual digits of a positive integer. [Hint: Given positive integer is 4557 [Sum of individual digits of a positive integer = 4+5+5+7=21].
     ```c
     #include <stdio.h>
 
@@ -373,7 +379,7 @@ C labs from week 2 to week 11
 
     ```
 
-### 4
+### Write a C program to generate first n natural numbers using for loop.
 
     ```c
     #include <stdio.h>
@@ -401,7 +407,7 @@ C labs from week 2 to week 11
 <details>
 <summary> week 9</summary>
 
-### 1
+### Write a C program to find the factorial of a number using recursion.
 ```c
 #include <stdio.h>
 
@@ -430,7 +436,7 @@ int main() {
 
 
 ```
-### 2
+### Write a C program to show table of a number using functions
 ```c
 #include <stdio.h>
 
@@ -456,7 +462,7 @@ int main() {
 
 
 ```
-### 3
+### Write a C program to swap two numbers using functions.
 
 ```c
 #include <stdio.h>
@@ -492,7 +498,7 @@ int main() {
 
 ```
 
-### 4
+### Write a C program to show table of a number using functions.
 ```c
 #include <stdio.h>
 
@@ -519,7 +525,7 @@ int main() {
 
 ```
 
-### 5
+### Write a C program to find square of a number using functions.
 ```c
 #include <stdio.h>
 
@@ -547,7 +553,7 @@ int main() {
 <details>
 <summary> week 10</summary>
 
-### 1
+### Write a C program to accept and print 1_D array.
 ```c
 #include <stdio.h>
 
@@ -573,7 +579,7 @@ int main() {
 }
 ```
 
-### 2
+### Write a C program to accept and print 2_D array
 ``` c
 #include <stdio.h>
 
@@ -606,7 +612,7 @@ int main() {
 
 ```
 
-### 3
+### Write a C program to find sum of two matrices.
 ```c
 #include <stdio.h>
 
@@ -651,7 +657,7 @@ int main() {
 
 ```
 
-### 4
+### Write a C program to find subtraction of two matrices.
 ```c
 #include <stdio.h>
 
@@ -686,7 +692,7 @@ int main() {
 
 ```
 
-### 5
+### Write a C program to find multiplication of two matrices
 ```c
 #include <stdio.h>
 
@@ -746,7 +752,7 @@ int main() {
 <details>
 <summary>week 11</summary>
 
-### 1
+### Write a c program to copy string using library function strcpy
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -766,7 +772,7 @@ int main() {
 ```
 
 
-### 2   
+### Write a C program to concatenate strings.  
 
 ``` c
 #include <stdio.h>
@@ -791,7 +797,7 @@ int main() {
 
 ```
 
-### 3
+### Write a C palindrome program to find whether the given string is palindrome or not
 ``` c
 
 #include <stdio.h>
@@ -822,11 +828,11 @@ int main() {
 
 
 ```
-### 4
+### C Program to store Information (name, roll and marks) of a Student Using sructure.
 ``` TO BE UPLOADED !!!
 ```
 
-### 5
+### Write a C program to store Information of 10 students using structure.
 ```c
 #include <stdio.h>
 
@@ -865,7 +871,7 @@ int main() {
 
 
 ```
-### 6
+### Write a C program to add two distances (in inch-feet) System Using Structure.
 ``` c
 #include <stdio.h>
 

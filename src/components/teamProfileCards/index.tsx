@@ -92,7 +92,7 @@ export function ActiveTeamRow(): JSX.Element {
             devto: <Link to="https://dev.to/sebastienlorber">Dev.to</Link>,
           }}>
           {
-            'React lover since 2014. Freelance, helping Facebook ship Docusaurus v2. He writes regularly, on his {website} and {devto}.'
+            'As long as it has code i like i want to see it.'
           }
         </Translate>
       </TeamProfileCardCol>
@@ -105,7 +105,7 @@ export function HonoraryAlumniTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Joel Marcey"
+        name="Simion Uden"
         githubUrl="https://github.com/JoelMarcey"
         twitterUrl="https://twitter.com/joelmarcey">
         <Translate id="team.profile.Joel Marcey.body">
@@ -114,7 +114,7 @@ export function HonoraryAlumniTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Alexey Pyltsyn"
+        name="Lethabo "
         githubUrl="https://github.com/lex111">
         <Translate id="team.profile.Alexey Pyltsyn.body">
           Obsessed open-source enthusiast 👋 Eternal amateur at everything 🤷‍♂️
@@ -122,7 +122,7 @@ export function HonoraryAlumniTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Yangshun Tay"
+        name="Phenyo "
         githubUrl="https://github.com/yangshun"
         twitterUrl="https://twitter.com/yangshunz">
         <Translate id="team.profile.Yangshun Tay.body">
@@ -141,7 +141,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Anshul Goyal"
+        name="Sydney"
         githubUrl="https://github.com/anshulrgoyal"
         twitterUrl="https://twitter.com/ar_goyal">
         <Translate
@@ -161,7 +161,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Drew Alexander"
+        name="Sharkie Shezzaine"
         githubUrl="https://github.com/drewbi">
         <Translate id="team.profile.Drew Alexander.body">
           Developer and Creative, trying to gain the skills to build whatever he
@@ -169,7 +169,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Fanny Vieira"
+        name="Mutsa "
         githubUrl="https://github.com/fanny"
         twitterUrl="https://twitter.com/fannyvieiira">
         <Translate
@@ -196,7 +196,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Sam Zhou"
+        name="mutleskhanda"
         githubUrl="https://github.com/SamChou19815"
         twitterUrl="https://twitter.com/SamChou19815">
         <Translate
@@ -230,7 +230,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Tan Teik Jun"
+        name="Tlotlo mutleskhanda"
         githubUrl="https://github.com/teikjun"
         twitterUrl="https://twitter.com/teik_jun">
         <Translate id="team.profile.Tan Teik Jun.body">
@@ -240,7 +240,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Nisarag Bhatt"
+        name="Bunno"
         githubUrl="https://github.com/FocalChord"
         twitterUrl="https://twitter.com/focalchord_">
         <Translate id="team.profile.Nisarag Bhatt.body">
