@@ -23,7 +23,7 @@ const config = {
   organizationName: 'halo-saber', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -227,9 +227,7 @@ const config = {
        
         ],
     
-        copyright: `  <img src="logo.svg"/><p style="color:#D6BD98"> </br>This project is currently in the alpha stage. I built it as a way to enhance my skills as a Computer Science major and to address the technological infrastructure gaps I noticed at BIUST. I hope to find others who share my interests to form a community. Feel free to join me! </br> </br>
-Copyright © ${new Date().getFullYear()} Biust Insight Project. Built by Desiree and others </p>.
-`,
+        copyright: "hey",
       },
       prism: {
         theme: prismThemes.github,
