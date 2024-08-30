@@ -1,7 +1,6 @@
 ---
 title: Comp 211
 description: A collection of material and resource related to Procdural Programming (211)
-hide_table_of_contents: true
 
 ---
 :::warning @Motions 

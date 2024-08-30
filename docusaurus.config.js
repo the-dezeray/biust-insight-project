@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'B    I    P',
   tagline: 'biust   insight   project',
-  favicon: '/img/logo.svg',
+  favicon: '/img/logo.png',
 
   // Set the production url of your site here
   url: 'https://halo-saber.github.io',
