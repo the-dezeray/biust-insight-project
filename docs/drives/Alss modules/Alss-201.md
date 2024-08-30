@@ -22,12 +22,6 @@
 - [2022 Exam ](https://google.com)
 </details>
 
-<details>
-<summary>Test papers </summary>
-- [Bio 101 2021/22 exam](https://google.com)  
-- [Bio 101 2022/23 exam](https://google.com)  
-- [Bio 101 2023/24 exam ](https://google.com)
-</details>
 
 <details>
 <summary>Lectures </summary>
@@ -53,12 +47,4 @@ if you have material or want to contribute or write and journal feel free to ema
 :::
 </details>
 
-
-
-
-
-
-
-
-### Lectures
 
