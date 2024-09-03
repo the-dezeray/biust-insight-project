@@ -57,10 +57,18 @@
 - [Tutorial 2 heterogeneous and ionic equilibria 1 (`solutions below 👇`)](https://drive.google.com/file/d/14yLKIYSyK3iC6FKL053cEkHjELPML_rs/view?usp=drive_link)
 - [Tutorial 3 from 2019-2020](https://drive.google.com/file/d/1hLA22py4CiFu5GcHjLlHp81JL4tlR61Q/view?usp=sharing)
 - [tutorial 4 colligative properties of solutions](https://drive.google.com/file/d/1doqAySZMZ4ixG3-cN0rkmzdcPEnqzi32/view?usp=drive_link)
-###  Solutions ✔✔
 
-- [tutorial 1 solutions ✔](https://drive.google.com/file/d/1t0lkmsF_oWZJshDgOvsukPfVQMRE3APn/view?usp=sharing)
-- [tutorial 2 solutions ✔](https://drive.google.com/file/d/1FcOL1e_hyMYSAexj08VccltGf7OAjCU4/view?usp=sharing)
+
+### Recent Tutorial Solutions
+- [CHEM 101 Tutorial L1](https://drive.google.com/file/d/1Ui0R5xjtBLu5PLUvUnR8kCZtbwii-063/view?usp=drive_link)
+- [CHEM 101 Tutorial L2](https://drive.google.com/file/d/1V5-DOGDhWs-_5ya9dVcZJIazRb_uteWl/view?usp=drive_link)
+- [CHEM 101 Tutorial L3](https://drive.google.com/file/d/1pvk6cLyQVkVOK8PunkTYAGGIKOdC1w3-/view?usp=drive_link)
+
+- [CHEM 101 Tutorial L6](https://drive.google.com/file/d/1e-eXgxhIMxqvyrb6Cu3KIHBRlcea4FVa/view?usp=drive_link)
+- [CHEM 101 Tutorial L7](https://drive.google.com/file/d/1KLm8UIwYjfW9Cv7IY_d-UUHNH-MsO_4-/view?usp=drive_link)
+- [CHEM 101 Tutorial L8, L9](https://drive.google.com/file/d/1bWKs_Km_Kzr58ghktxhmd__7GF8bTLR8/view?usp=drive_link)
+###  Past Solutions ✔✔
+
 - [Tutorial 2 heterogeneous and ionic equilibria 1 solutions ✔](https://drive.google.com/file/d/1qn7eZe2_th0lezDLqcxkmjSlOzgc61IC/view?usp=drive_link)
 - [tutorial 4 colligative properties of solutions  (solutions ✔)](https://drive.google.com/file/d/127gfMCtxipHILATvSX0xnoZkhAJxLW1r/view?usp=drive_link)
 

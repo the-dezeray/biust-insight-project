@@ -1,7 +1,8 @@
-:::tip Alss 101
+---
+title: Alss 101
+sidebar_position: 2
 
-:::
-
+---
 
 <details>
 <summary>Exam papers </summary>
