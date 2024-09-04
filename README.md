@@ -8,9 +8,9 @@ The Biust Insight Project is primarily an early stage interactive library and da
 
 ## Getting Started
 #### Requiremnts
-| node
-- you must have node installed
-- alternatively you can use yarn  
+- | node
+- | git 
+
 
 #### Downloading the repository:
 
@@ -36,7 +36,7 @@ npm run build
 ```
 
 ## The Plan
-The plan is to architecture a modern modern and better to the exisitin Libaryy system
+The plan is to architecture a modern modern and better to the exisitin Library system
 1. **Comprehensive Coverage**: Develop a complete and well-organized repository of materials relevant to our field. This includes research papers, case studies, historical documents, and other valuable resources.
 2. **User Experience**: Ensure a seamless and intuitive experience for users, including easy navigation, efficient search capabilities, and responsive design.
 3. **Quality and Accuracy**: Maintain high standards for content accuracy and relevance, ensuring that all materials are thoroughly vetted and up-to-date.
@@ -44,9 +44,14 @@ The plan is to architecture a modern modern and better to the exisitin Libaryy s
 
 ### Main features to come:
 - ***search functionality***:Locate any object in the archieve
-- ***animations***:Fast smooth interacive animation
+- ***api intergration***:Fast smooth interacive animation
 - ***Authentication***:User authentication
+- ***Blog Support*** : Blogging
+- ***Photo Galley***: A Photo gallery of pictures taken in biust
+- ***News Section***: A section for all current events happening in campus
+- ***Project***: A list of all projects in progress and completed
 
 ## Short term goals :
 - ***stable*** :have a stable foundation and build
-
+- ***animations*** : introduction of dynamic elements to add  life to the static feel of the webpage
+- ***documantation***: a beginner friendly documentation to the community  on how to contribute/ videos for writes and jounals
