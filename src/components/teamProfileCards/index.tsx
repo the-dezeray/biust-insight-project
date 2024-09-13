@@ -57,7 +57,7 @@ function TeamProfileCard({
           <div className="button-group button-group--block">
             {githubUrl && (
               <Link className="button button--secondary" href={githubUrl}>
-                GitHub
+                GitHuab
               </Link>
             )}
             {twitterUrl && (
