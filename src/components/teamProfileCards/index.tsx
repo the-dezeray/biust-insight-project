@@ -57,7 +57,7 @@ function TeamProfileCard({
           <div className="button-group button-group--block">
             {githubUrl && (
               <Link className="button button--secondary" href={githubUrl}>
-                GitHub
+                GitHuab
               </Link>
             )}
             {twitterUrl && (
@@ -92,7 +92,7 @@ export function ActiveTeamRow(): JSX.Element {
             devto: <Link to="https://dev.to/sebastienlorber">Dev.to</Link>,
           }}>
           {
-            'React lover since 2014. Freelance, helping Facebook ship Docusaurus v2. He writes regularly, on his {website} and {devto}.'
+            'React lover since 2014. Freelance, helping Facebook ship Docusaurus v2. He writes regularly, on his {website} and {devto}r'
           }
         </Translate>
       </TeamProfileCardCol>

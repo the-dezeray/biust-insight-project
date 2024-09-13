@@ -10,20 +10,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'B    I    P',
   tagline: 'biust   insight   project',
-  favicon: '/img/logo.svg',
+  favicon: '/img/social-card.png',
 
   // Set the production url of your site here
-  url: 'https://halo-saber.github.io',
+  url: 'https://the-dezeray.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/biust-insight-project/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'halo-saber', // Usually your GitHub org/user name.
+  organizationName: 'the-dezeray', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -89,7 +89,7 @@ const config = {
   
   },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.svg',
       navbar: {
         hideOnScroll: true,
         title: 'BIP',
@@ -103,12 +103,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'right',
-            label: 'Drives',
+            label: 'The Archive',
           },
-          {label:"Clubs",position:'right',type:"dropdown",items:[
-            {label:"Join",to:"/docs/clubs/join"},
-     {label:"Explore",to:"/docs/clubs/list-of-clubs"},
-     {label:"Create club",to:"/docs/clubs/list-of-clubs"},
+          {label:"About",position:'right',type:"dropdown",items:[
+            {label:"Me",to:"/docs/about-me"},
+     {label:"The Project",to:"/docs/why-project"},
 
 
         
@@ -124,23 +123,12 @@ const config = {
 
  
  
-          {to: '/docs/why-biust', label: 'News', position: 'right'},
+
           
           {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
-          {to: '/docs/challanges/main', label: 'Challenges', position: 'right'},
-
-          {label:"Biust",position:'right',type:"dropdown",items:[
-            {label:"programs offered",to:"/docs/clubs/join"},
-     {label:"apply",to:"/docs/clubs/list-of-clubs"},
-{label:"contact directory",to:"/docs/clubs/list-of-clubs"},
-{label:"biust map",to:"/docs/clubs/list-of-clubs"},
-{label:"Src",to:"/docs/clubs/list-of-clubs"},
+          {to: '/docs/challanges/main', label: 'Contritbue ', position: 'right'},
 
 
-
-
-        
-          ]},
         ],
       },
       footer: {
@@ -149,59 +137,37 @@ const config = {
           {
             title: 'Info',
             items: [
-              {
-                label: 'FAQs',
-                to: '/docs/why-biust',
-              },
+
    {
-                label: 'Resources',
-                to: '/docs/why-biust',
+                label: 'Project stats',
+                to: '/docs/project-stats',
               },
-   {
-                label: 'About Biust',
-                to: '/docs/why-biust',
-              },
+
                {
-                label: 'About Project',
-                to: '/docs/why-biust',
+                label: 'About the  Project',
+                to: '/docs/why-project',
               },
  {
-                label: 'About Me',
-                to: '/docs/why-biust',
+                label: 'developer ',
+                to: '/docs/about-me',
               },
             ],
           },
+
           {
-            title: 'Join Us',
-            items: [
-              {
-                label: 'Members of the team',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Developer Credits',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'How to contibute',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'Project',
+            title: 'Contribute / Join',
             items: [
               {
                 label: 'Github',
-                to: '/docs/why-biust',
+                to: 'https://github.com/the-dezeray/biust-insight-project',
               },
               {
-                label: 'Maintainers',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Contributers',
+                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
               },
 {
                 label: 'Documentaion',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
               },
 
             ],
@@ -209,17 +175,14 @@ const config = {
  {
             title: 'Legal',
             items: [
-              {
-                label: 'Privacy',
-                to: '/docs/why-biust',
-              },
+    
               {
                 label: 'Terms',
-                href: 'https://github.com/facebook/docusaurus',
+                href: '/docs/terms',
               },
 {
                 label: 'Cookie Policy',
-                href: 'https://github.com/facebook/docusaurus',
+                href: '/docs/cookie-policy',
               },
 
             ],
@@ -227,9 +190,7 @@ const config = {
        
         ],
     
-        copyright: `  <img src={LogoSvg} ><p style="color:#D6BD98"> </br>This project is currently in the alpha stage. I built it as a way to enhance my skills as a Computer Science major and to address the technological infrastructure gaps I noticed at BIUST. I hope to find others who share my interests to form a community. Feel free to join me! </br> </br>
-Copyright © ${new Date().getFullYear()} Biust Insight Project. Built by Desiree and others </p>.
-`,
+        copyright: " <br/> <br> <br>The content provided in this archive is for educational use only. While I encourage collaboration and resource sharing, I will   not  beresponsible for any instances of plagiarism, loss of marks, or other academic consequences that may arise from the use of this material. Users are advised to adhere to their institution’s academic integrity policies when utilizing these resources. Thank you for your understanding.<br/> Desiree",  
       },
       prism: {
         theme: prismThemes.github,

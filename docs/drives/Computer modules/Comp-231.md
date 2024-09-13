@@ -6,43 +6,13 @@ title : COMP 231-Intro to databases
 
 
 
-
-
-
-<details>
-<summary>Exam papers </summary>
-- [Bio 101 2021/22 exam](https://google.com)  
-- [Bio 101 2022/23 exam](https://google.com)  
-- [Bio 101 2023/24 exam ](https://google.com)
-</details>
-
-<details>
-<summary>Test papers </summary>
-- [Bio 101 2021/22 exam](https://google.com)  
-- [Bio 101 2022/23 exam](https://google.com)  
-- [Bio 101 2023/24 exam ](https://google.com)
-</details>
-
-<details>
-<summary>Lectures </summary>
-- [Bio 101 2021/22 exam](https://google.com)  
-- [Bio 101 2022/23 exam](https://google.com)  
-- [Bio 101 2023/24 exam ](https://google.com)
-</details>
-
 <details>
 <summary>Turtorials </summary>
-- [Bio 101 2021/22 exam](https://google.com)  
-- [Bio 101 2022/23 exam](https://google.com)  
-- [Bio 101 2023/24 exam ](https://google.com)
+
+- [tutorial 4](https://drive.google.com/file/d/1izoM8ZqBHopESUyRcnttNwrPnEb7HgDW/view?usp=drive_link)
+- [tutorial 2](https://drive.google.com/file/d/1LgzQd0hToUTlqTWPESLnOQKKJRXZem20/view?usp=drive_link)
 </details>
 
 
-
-
-
-
-
-
-### Lectures
-
+## Labs
+- [Lab 1](https://drive.google.com/file/d/1j0VPxEDcafV5K26H0qD7ESetggAePMQw/view?usp=drive_link)
