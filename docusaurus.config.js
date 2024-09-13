@@ -13,14 +13,22 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
+<<<<<<< HEAD
   url: 'https://another-desiree.github.io',
+=======
+  url: 'https://the-dezeray.github.io',
+>>>>>>> fa8d8fc (feat : welcome page redesign)
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/biust-insight-project/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
+<<<<<<< HEAD
   organizationName: 'another-desiree', // Usually your GitHub org/user name.
+=======
+  organizationName: 'the-dezeray', // Usually your GitHub org/user name.
+>>>>>>> fa8d8fc (feat : welcome page redesign)
   projectName: 'biust-insight-project', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -85,6 +93,7 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
+<<<<<<< HEAD
             position: 'left',
             label: 'Tutorial',
           },
@@ -97,6 +106,35 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+=======
+            position: 'right',
+            label: 'The Archive',
+          },
+          {label:"About",position:'right',type:"dropdown",items:[
+            {label:"Me",to:"/docs/about-me"},
+     {label:"The Project",to:"/docs/why-project"},
+
+
+        
+          ]},
+          {label:"Portals",position:'left',type:"dropdown",items:[
+            {label:"Blackboard",href:"https://biust.blackboard.com/"},
+     {label:"Basis",href:"https://portal.biust.ac.bw/"},
+   
+
+
+        
+          ]},
+
+ 
+ 
+
+          
+          {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
+          {to: '/docs/challanges/main', label: 'Contritbue ', position: 'right'},
+
+
+>>>>>>> fa8d8fc (feat : welcome page redesign)
         ],
       },
       footer: {
@@ -105,13 +143,31 @@ const config = {
           {
             title: 'Docs',
             items: [
+<<<<<<< HEAD
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
+=======
+
+   {
+                label: 'Project stats',
+                to: '/docs/project-stats',
+              },
+
+               {
+                label: 'About the  Project',
+                to: '/docs/why-project',
+              },
+ {
+                label: 'developer ',
+                to: '/docs/about-me',
+>>>>>>> fa8d8fc (feat : welcome page redesign)
               },
             ],
           },
+
           {
+<<<<<<< HEAD
             title: 'Community',
             items: [
               {
@@ -143,6 +199,44 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+=======
+            title: 'Contribute / Join',
+            items: [
+              {
+                label: 'Github',
+                to: 'https://github.com/the-dezeray/biust-insight-project',
+              },
+              {
+                label: 'Contributers',
+                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
+              },
+{
+                label: 'Documentaion',
+                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
+              },
+
+            ],
+          },
+ {
+            title: 'Legal',
+            items: [
+    
+              {
+                label: 'Terms',
+                href: '/docs/terms',
+              },
+{
+                label: 'Cookie Policy',
+                href: '/docs/cookie-policy',
+              },
+
+            ],
+          },
+       
+        ],
+    
+        copyright: " <br/> <br> <br>The content provided in this archive is for educational use only. While I encourage collaboration and resource sharing, I will   not  beresponsible for any instances of plagiarism, loss of marks, or other academic consequences that may arise from the use of this material. Users are advised to adhere to their institution’s academic integrity policies when utilizing these resources. Thank you for your understanding.<br/> Desiree",  
+>>>>>>> fa8d8fc (feat : welcome page redesign)
       },
       prism: {
         theme: prismThemes.github,

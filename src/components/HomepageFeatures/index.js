@@ -1,45 +1,55 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
+<<<<<<< HEAD
     title: 'Easy to Use',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+=======
+    title: "User Friendly Interface",
+    Svg: require("@site/static/img/design-sprint.svg").default,
+>>>>>>> fa8d8fc (feat : welcome page redesign)
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+    Built to allow users to easily navigate a vast array of documents, and material irrespective of their computer literacy.
       </>
     ),
   },
   {
+<<<<<<< HEAD
     title: 'Focus on What Matters',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+=======
+    title: "Maintained by fellows",
+    Svg: require("@site/static/img/pair-programming.svg").default,
+>>>>>>> fa8d8fc (feat : welcome page redesign)
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Your contributions aid and assits your fellow collegues and others who are to come in a distant future.
       </>
     ),
   },
   {
+<<<<<<< HEAD
     title: 'Powered by React',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+=======
+    title: "Multilingual Support",
+    Svg: require("@site/static/img/multilingual.svg").default,
+>>>>>>> fa8d8fc (feat : welcome page redesign)
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The archive is constantly growing in size and as contribtuions are  made a blank section today a maze another day.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
