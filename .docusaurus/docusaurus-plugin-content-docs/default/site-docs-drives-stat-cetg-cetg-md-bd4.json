@@ -1,0 +1,20 @@
+{
+  "id": "drives/stat/cetg/Cetg",
+  "title": "Cetg",
+  "description": "Exam papers",
+  "source": "@site/docs/drives/stat/cetg/Cetg.md",
+  "sourceDirName": "drives/stat/cetg",
+  "slug": "/drives/stat/cetg/",
+  "permalink": "/biust-insight-project/docs/drives/stat/cetg/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/stat/cetg/Cetg.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Stat-101",
+    "permalink": "/biust-insight-project/docs/drives/stat/Stat-101"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "drives/math/Bio/Bio-101",
+  "title": "Bio 101",
+  "description": "all related material to the module Bio 101 offered by biust",
+  "source": "@site/docs/drives/math/Bio/Bio-101.md",
+  "sourceDirName": "drives/math/Bio",
+  "slug": "/drives/math/Bio/Bio-101",
+  "permalink": "/biust-insight-project/docs/drives/math/Bio/Bio-101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/math/Bio/Bio-101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bio 101",
+    "description": "all related material to the module Bio 101 offered by biust",
+    "keywords": [
+      "bio101",
+      "biust",
+      "exam",
+      "paper",
+      "desire chingwaru"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Comp-232",
+    "permalink": "/biust-insight-project/docs/drives/comp/Comp-232"
+  },
+  "next": {
+    "title": "Bio-102",
+    "permalink": "/biust-insight-project/docs/drives/math/Bio/Bio-102"
+  }
+}

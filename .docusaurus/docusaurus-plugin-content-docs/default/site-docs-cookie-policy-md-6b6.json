@@ -1,0 +1,24 @@
+{
+  "id": "cookie-policy",
+  "title": "cookie-policy",
+  "description": "Cookie Policy",
+  "source": "@site/docs/cookie-policy.md",
+  "sourceDirName": ".",
+  "slug": "/cookie-policy",
+  "permalink": "/biust-insight-project/docs/cookie-policy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cookie-policy.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "About Me",
+    "permalink": "/biust-insight-project/docs/about-me"
+  },
+  "next": {
+    "title": "Biol 101",
+    "permalink": "/biust-insight-project/docs/getting-started/bio101-2023"
+  }
+}

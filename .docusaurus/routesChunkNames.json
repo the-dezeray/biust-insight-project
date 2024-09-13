@@ -1,0 +1,376 @@
+{
+  "/biust-insight-project/__docusaurus/debug-1ad": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/__docusaurus/debug/config-d81": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/__docusaurus/debug/content-578": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    },
+    "__props": "__props---biust-insight-project-docusaurus-debug-contentfb-9-95e"
+  },
+  "/biust-insight-project/__docusaurus/debug/globalData-0e8": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/__docusaurus/debug/metadata-37f": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/__docusaurus/debug/registry-f79": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/__docusaurus/debug/routes-1a4": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docusaurus-debugb-38-3d9"
+    }
+  },
+  "/biust-insight-project/blog-fff": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      },
+      {
+        "content": "content---biust-insight-project-blogf-4-f-bf0"
+      },
+      {
+        "content": "content---biust-insight-project-blog-871-096"
+      },
+      {
+        "content": "content---biust-insight-project-blog-925-e93"
+      }
+    ],
+    "__props": "__props---biust-insight-project-blog-02-b-a05"
+  },
+  "/biust-insight-project/blog/archive-1e2": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "__props": "__props---biust-insight-project-blog-archivee-3-d-3ca"
+  },
+  "/biust-insight-project/blog/authors-988": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-list-page-621-70c",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "__props": "__props---biust-insight-project-blog-authors-9-d-5-b4b"
+  },
+  "/biust-insight-project/blog/authors/all-sebastien-lorber-articles-334": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      },
+      {
+        "content": "content---biust-insight-project-blogf-4-f-bf0"
+      },
+      {
+        "content": "content---biust-insight-project-blog-925-e93"
+      }
+    ],
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "__props": "__props---biust-insight-project-blog-authors-all-sebastien-lorber-articles-53-a-386"
+  },
+  "/biust-insight-project/blog/authors/yangshun-dd4": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      },
+      {
+        "content": "content---biust-insight-project-blog-871-096"
+      },
+      {
+        "content": "content---biust-insight-project-blog-925-e93"
+      }
+    ],
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "__props": "__props---biust-insight-project-blog-authors-yangshun-3-cd-b55"
+  },
+  "/biust-insight-project/blog/first-blog-post-c30": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "content": "content---biust-insight-project-blog-first-blog-poste-27-6db"
+  },
+  "/biust-insight-project/blog/long-blog-post-973": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "content": "content---biust-insight-project-blog-long-blog-post-736-033"
+  },
+  "/biust-insight-project/blog/mdx-blog-post-6b7": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "content": "content---biust-insight-project-blog-mdx-blog-post-593-602"
+  },
+  "/biust-insight-project/blog/tags-d2e": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "__props": "__props---biust-insight-project-blog-tagsa-4-a-4a4"
+  },
+  "/biust-insight-project/blog/tags/docusaurus-1b0": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      },
+      {
+        "content": "content---biust-insight-project-blogf-4-f-bf0"
+      },
+      {
+        "content": "content---biust-insight-project-blog-871-096"
+      },
+      {
+        "content": "content---biust-insight-project-blog-925-e93"
+      }
+    ],
+    "__props": "__props---biust-insight-project-blog-tags-docusauruscce-98c"
+  },
+  "/biust-insight-project/blog/tags/facebook-f24": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      }
+    ],
+    "__props": "__props---biust-insight-project-blog-tags-facebook-79-a-af1"
+  },
+  "/biust-insight-project/blog/tags/hello-40b": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-766-58e"
+      },
+      {
+        "content": "content---biust-insight-project-blog-871-096"
+      }
+    ],
+    "__props": "__props---biust-insight-project-blog-tags-hello-66-c-f61"
+  },
+  "/biust-insight-project/blog/tags/hola-c62": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "items": [
+      {
+        "content": "content---biust-insight-project-blog-925-e93"
+      }
+    ],
+    "__props": "__props---biust-insight-project-blog-tags-hola-8-f-8-f16"
+  },
+  "/biust-insight-project/blog/welcome-c26": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---biust-insight-project-blog-authorsace-910"
+      },
+      "plugin": "plugin---biust-insight-project-blog-369-d1a"
+    },
+    "sidebar": "sidebar---biust-insight-project-blog-814-2ad",
+    "content": "content---biust-insight-project-blog-welcomed-9-f-9fd"
+  },
+  "/biust-insight-project/markdown-page-3d3": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-markdown-pagea-74-80e"
+    },
+    "content": "content---biust-insight-project-markdown-page-393-c76"
+  },
+  "/biust-insight-project/docs-848": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-docsaba-96a"
+    }
+  },
+  "/biust-insight-project/docs-dc8": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---biust-insight-project-docs-784-fcb"
+  },
+  "/biust-insight-project/docs-c95": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/biust-insight-project/docs/about-me-230": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-about-me-3-ba-925"
+  },
+  "/biust-insight-project/docs/cookie-policy-37e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-cookie-policy-6-b-6-3b1"
+  },
+  "/biust-insight-project/docs/getting-started/bio101-2023-91b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-bio-101-20238-be-8cf"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Alss-101-c83": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-alss-1016-cb-dea"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Bio-101-77d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-bio-101975-d2e"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Bio-102-7bf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-bio-102688-5e8"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Cetg-b5f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-cetg-861-e69"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Chem-101-bfd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-chem-101-eea-d20"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Chem-102-29c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-chem-10211-c-328"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Comp-101-012": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-comp-101619-883"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Comp-201-18c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-comp-2016-f-2-72c"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Comp-211-988": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-comp-2112-db-aeb"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Comp-221-292": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-comp-221-eaf-bc2"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Comp-232-4f2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-comp-232-f-93-219"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Math-101-0ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-math-101766-8a6"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Math-102-9c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-math-1027-c-7-c83"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Phys-101-7f2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-phys-1018-ee-38a"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Phys-102-b95": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-phys-10223-f-5cc"
+  },
+  "/biust-insight-project/docs/getting-started/courses/Stat-101-f39": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-courses-stat-101-ffd-7e3"
+  },
+  "/biust-insight-project/docs/getting-started/page-1-108": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-page-1-a-71-71d"
+  },
+  "/biust-insight-project/docs/getting-started/phys101-2023-faa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-getting-started-phys-101-2023507-88c"
+  },
+  "/biust-insight-project/docs/privacy-aa0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-privacy-9-b-4-14e"
+  },
+  "/biust-insight-project/docs/single-page-299": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-single-paged-76-03c"
+  },
+  "/biust-insight-project/docs/terms-c2c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-terms-500-657"
+  },
+  "/biust-insight-project/docs/why-biust-6fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-why-biusta-92-a85"
+  },
+  "/biust-insight-project/docs/why-project-8d5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---biust-insight-project-docs-why-project-560-895"
+  },
+  "/biust-insight-project/-424": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---biust-insight-project-markdown-pagea-74-80e"
+    },
+    "config": "config---biust-insight-project-5-e-9-23d"
+  }
+}

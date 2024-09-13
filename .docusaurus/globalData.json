@@ -1,0 +1,158 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/biust-insight-project/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/biust-insight-project/docs",
+          "mainDocId": "single-page",
+          "docs": [
+            {
+              "id": "about-me",
+              "path": "/biust-insight-project/docs/about-me",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cookie-policy",
+              "path": "/biust-insight-project/docs/cookie-policy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/bio101-2023",
+              "path": "/biust-insight-project/docs/getting-started/bio101-2023",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Alss-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Alss-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Bio-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Bio-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Bio-102",
+              "path": "/biust-insight-project/docs/getting-started/courses/Bio-102",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Cetg",
+              "path": "/biust-insight-project/docs/getting-started/courses/Cetg",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Chem-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Chem-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Chem-102",
+              "path": "/biust-insight-project/docs/getting-started/courses/Chem-102",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Comp-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Comp-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Comp-201",
+              "path": "/biust-insight-project/docs/getting-started/courses/Comp-201",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Comp-211",
+              "path": "/biust-insight-project/docs/getting-started/courses/Comp-211",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Comp-221",
+              "path": "/biust-insight-project/docs/getting-started/courses/Comp-221",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Comp-232",
+              "path": "/biust-insight-project/docs/getting-started/courses/Comp-232",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Math-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Math-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Math-102",
+              "path": "/biust-insight-project/docs/getting-started/courses/Math-102",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Phys-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Phys-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Phys-102",
+              "path": "/biust-insight-project/docs/getting-started/courses/Phys-102",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/courses/Stat-101",
+              "path": "/biust-insight-project/docs/getting-started/courses/Stat-101",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/page-1",
+              "path": "/biust-insight-project/docs/getting-started/page-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/phys101-2023",
+              "path": "/biust-insight-project/docs/getting-started/phys101-2023",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "privacy",
+              "path": "/biust-insight-project/docs/privacy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "single-page",
+              "path": "/biust-insight-project/docs/single-page",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "terms",
+              "path": "/biust-insight-project/docs/terms",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "why-biust",
+              "path": "/biust-insight-project/docs/why-biust",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "why-project",
+              "path": "/biust-insight-project/docs/why-project",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/biust-insight-project/docs/single-page",
+                "label": "single-page"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

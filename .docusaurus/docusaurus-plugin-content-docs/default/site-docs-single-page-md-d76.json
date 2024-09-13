@@ -1,0 +1,24 @@
+{
+  "id": "single-page",
+  "title": "Our First Page",
+  "description": "this is the main page",
+  "source": "@site/docs/single-page.md",
+  "sourceDirName": ".",
+  "slug": "/single-page",
+  "permalink": "/biust-insight-project/docs/single-page",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/single-page.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Our First Page",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "About Me",
+    "permalink": "/biust-insight-project/docs/about-me"
+  }
+}

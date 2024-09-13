@@ -1,0 +1,30 @@
+{
+  "id": "drives/Bio-101",
+  "title": "Bio 101",
+  "description": "all related material to the module Bio 101 offered by biust",
+  "source": "@site/docs/drives/Bio-101.md",
+  "sourceDirName": "drives",
+  "slug": "/drives/Bio-101",
+  "permalink": "/biust-insight-project/docs/drives/Bio-101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/Bio-101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bio 101",
+    "description": "all related material to the module Bio 101 offered by biust",
+    "keywords": [
+      "bio101",
+      "biust",
+      "exam",
+      "paper",
+      "desire chingwaru"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Bio-102",
+    "permalink": "/biust-insight-project/docs/drives/Bio-102"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "getting-started/bio101-2023",
+  "title": "Biol 101",
+  "description": "module guide : -download-",
+  "source": "@site/docs/getting-started/bio101-2023.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/bio101-2023",
+  "permalink": "/biust-insight-project/docs/getting-started/bio101-2023",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/bio101-2023.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "cookie-policy",
+    "permalink": "/biust-insight-project/docs/cookie-policy"
+  },
+  "next": {
+    "title": "Alss-101",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Alss-101"
+  }
+}

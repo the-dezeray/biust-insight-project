@@ -1,0 +1,26 @@
+{
+  "id": "drives/Computer modules/Comp-231",
+  "title": "COMP 231-Intro to databases",
+  "description": "Turtorials",
+  "source": "@site/docs/drives/Computer modules/Comp-231.md",
+  "sourceDirName": "drives/Computer modules",
+  "slug": "/drives/Computer modules/Comp-231",
+  "permalink": "/biust-insight-project/docs/drives/Computer modules/Comp-231",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/Computer modules/Comp-231.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "COMP 231-Intro to databases"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Comp-221",
+    "permalink": "/biust-insight-project/docs/drives/Computer modules/Comp-221"
+  },
+  "next": {
+    "title": "Comp-232",
+    "permalink": "/biust-insight-project/docs/drives/Computer modules/Comp-232"
+  }
+}

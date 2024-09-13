@@ -1,0 +1,24 @@
+{
+  "id": "drives/alss/Alss-101",
+  "title": "Alss-101",
+  "description": "Exam papers",
+  "source": "@site/docs/drives/alss/Alss-101.md",
+  "sourceDirName": "drives/alss",
+  "slug": "/drives/alss/Alss-101",
+  "permalink": "/biust-insight-project/docs/drives/alss/Alss-101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/alss/Alss-101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Bio-102",
+    "permalink": "/biust-insight-project/docs/drives/Biology modules/Bio-102"
+  },
+  "next": {
+    "title": "Cetg 101",
+    "permalink": "/biust-insight-project/docs/drives/cetg/Cetg 101"
+  }
+}

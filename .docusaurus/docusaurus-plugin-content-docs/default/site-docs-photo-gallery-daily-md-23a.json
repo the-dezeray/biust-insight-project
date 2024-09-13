@@ -1,0 +1,15 @@
+{
+  "id": "photo-gallery/daily",
+  "title": "Section in development",
+  "description": "",
+  "source": "@site/docs/photo-gallery/daily.md",
+  "sourceDirName": "photo-gallery",
+  "slug": "/photo-gallery/daily",
+  "permalink": "/biust-insight-project/docs/photo-gallery/daily",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/photo-gallery/daily.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

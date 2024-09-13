@@ -1,0 +1,24 @@
+{
+  "id": "getting-started/courses/Alss101",
+  "title": "Alss101",
+  "description": "",
+  "source": "@site/docs/getting-started/courses/Alss101.md",
+  "sourceDirName": "getting-started/courses",
+  "slug": "/getting-started/courses/Alss101",
+  "permalink": "/biust-insight-project/docs/getting-started/courses/Alss101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/courses/Alss101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Biol 101",
+    "permalink": "/biust-insight-project/docs/getting-started/bio101-2023"
+  },
+  "next": {
+    "title": "Bio101",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Bio101"
+  }
+}

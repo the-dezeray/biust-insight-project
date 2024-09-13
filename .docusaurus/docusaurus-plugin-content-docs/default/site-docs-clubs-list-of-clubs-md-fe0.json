@@ -1,0 +1,15 @@
+{
+  "id": "clubs/list-of-clubs",
+  "title": "list-of-clubs",
+  "description": "",
+  "source": "@site/docs/clubs/list-of-clubs.md",
+  "sourceDirName": "clubs",
+  "slug": "/clubs/list-of-clubs",
+  "permalink": "/biust-insight-project/docs/clubs/list-of-clubs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/clubs/list-of-clubs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

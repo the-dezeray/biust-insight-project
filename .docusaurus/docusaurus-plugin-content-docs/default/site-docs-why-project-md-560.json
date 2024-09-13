@@ -1,0 +1,20 @@
+{
+  "id": "why-project",
+  "title": "why-project",
+  "description": "About the Biust Insight Project",
+  "source": "@site/docs/why-project.md",
+  "sourceDirName": ".",
+  "slug": "/why-project",
+  "permalink": "/biust-insight-project/docs/why-project",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/why-project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "why-biust",
+    "permalink": "/biust-insight-project/docs/why-biust"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "privacy",
+  "title": "privacy",
+  "description": "Privacy Policy",
+  "source": "@site/docs/privacy.md",
+  "sourceDirName": ".",
+  "slug": "/privacy",
+  "permalink": "/biust-insight-project/docs/privacy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/privacy.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "phys101-2023",
+    "permalink": "/biust-insight-project/docs/getting-started/phys101-2023"
+  },
+  "next": {
+    "title": "terms",
+    "permalink": "/biust-insight-project/docs/terms"
+  }
+}

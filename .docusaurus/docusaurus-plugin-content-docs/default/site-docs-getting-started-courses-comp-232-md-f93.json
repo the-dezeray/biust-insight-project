@@ -1,0 +1,24 @@
+{
+  "id": "getting-started/courses/Comp-232",
+  "title": "Comp-232",
+  "description": "",
+  "source": "@site/docs/getting-started/courses/Comp-232.md",
+  "sourceDirName": "getting-started/courses",
+  "slug": "/getting-started/courses/Comp-232",
+  "permalink": "/biust-insight-project/docs/getting-started/courses/Comp-232",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/courses/Comp-232.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Comp-221",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Comp-221"
+  },
+  "next": {
+    "title": "Math-101",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Math-101"
+  }
+}

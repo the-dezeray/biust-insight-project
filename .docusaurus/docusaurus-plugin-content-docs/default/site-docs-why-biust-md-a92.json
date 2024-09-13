@@ -1,0 +1,24 @@
+{
+  "id": "why-biust",
+  "title": "why-biust",
+  "description": "BIUST offers qualifications which are designed to help you launch your career, where upon graduating, you will have the requisite skills to be globally competitive and contribute to Botswana’s economy through employment or entrepreneurship.",
+  "source": "@site/docs/why-biust.md",
+  "sourceDirName": ".",
+  "slug": "/why-biust",
+  "permalink": "/biust-insight-project/docs/why-biust",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/why-biust.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "terms",
+    "permalink": "/biust-insight-project/docs/terms"
+  },
+  "next": {
+    "title": "why-project",
+    "permalink": "/biust-insight-project/docs/why-project"
+  }
+}

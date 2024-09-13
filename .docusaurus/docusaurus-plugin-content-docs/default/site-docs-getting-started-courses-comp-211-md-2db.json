@@ -1,0 +1,24 @@
+{
+  "id": "getting-started/courses/Comp-211",
+  "title": "Comp-211",
+  "description": "",
+  "source": "@site/docs/getting-started/courses/Comp-211.md",
+  "sourceDirName": "getting-started/courses",
+  "slug": "/getting-started/courses/Comp-211",
+  "permalink": "/biust-insight-project/docs/getting-started/courses/Comp-211",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/courses/Comp-211.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Comp-201",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Comp-201"
+  },
+  "next": {
+    "title": "Comp-221",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Comp-221"
+  }
+}

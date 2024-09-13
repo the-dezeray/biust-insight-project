@@ -1,0 +1,24 @@
+{
+  "id": "getting-started/courses/Phys101",
+  "title": "Phys101",
+  "description": "",
+  "source": "@site/docs/getting-started/courses/Phys101.md",
+  "sourceDirName": "getting-started/courses",
+  "slug": "/getting-started/courses/Phys101",
+  "permalink": "/biust-insight-project/docs/getting-started/courses/Phys101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/courses/Phys101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Math-102",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Math-102"
+  },
+  "next": {
+    "title": "Phys102",
+    "permalink": "/biust-insight-project/docs/getting-started/courses/Phys102"
+  }
+}

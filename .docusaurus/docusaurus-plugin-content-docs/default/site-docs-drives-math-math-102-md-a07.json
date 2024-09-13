@@ -1,0 +1,20 @@
+{
+  "id": "drives/math/Math-102",
+  "title": "Math-102",
+  "description": "Exam papers",
+  "source": "@site/docs/drives/math/Math-102.md",
+  "sourceDirName": "drives/math",
+  "slug": "/drives/math/Math-102",
+  "permalink": "/biust-insight-project/docs/drives/math/Math-102",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/math/Math-102.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Math-101",
+    "permalink": "/biust-insight-project/docs/drives/math/Math-101"
+  }
+}

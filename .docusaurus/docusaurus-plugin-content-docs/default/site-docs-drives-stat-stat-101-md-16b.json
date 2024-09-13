@@ -1,0 +1,20 @@
+{
+  "id": "drives/stat/Stat-101",
+  "title": "Stat-101",
+  "description": "Exam papers",
+  "source": "@site/docs/drives/stat/Stat-101.md",
+  "sourceDirName": "drives/stat",
+  "slug": "/drives/stat/Stat-101",
+  "permalink": "/biust-insight-project/docs/drives/stat/Stat-101",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/stat/Stat-101.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Math-102",
+    "permalink": "/biust-insight-project/docs/drives/math/Math-102"
+  }
+}

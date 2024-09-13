@@ -1,0 +1,24 @@
+{
+  "id": "drives/comp/Comp-201",
+  "title": "Comp-201",
+  "description": "Exam papers",
+  "source": "@site/docs/drives/comp/Comp-201.md",
+  "sourceDirName": "drives/comp",
+  "slug": "/drives/comp/Comp-201",
+  "permalink": "/biust-insight-project/docs/drives/comp/Comp-201",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/drives/comp/Comp-201.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Comp-101",
+    "permalink": "/biust-insight-project/docs/drives/comp/Comp-101"
+  },
+  "next": {
+    "title": "Comp-211",
+    "permalink": "/biust-insight-project/docs/drives/comp/Comp-211"
+  }
+}
