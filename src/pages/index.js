@@ -1,3 +1,4 @@
+
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -51,7 +52,7 @@ function HomepageHeader() {
       
   <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/drives/Computer modules/comp-211"
             style={{ alignSelf: "right" }}
           >
             Explore
