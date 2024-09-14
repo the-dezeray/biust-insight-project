@@ -47,12 +47,14 @@ const config = {
          googleTagManager: {
           containerId: 'GTM-PHDC9B7C',
         },
+   
         docs: {
           sidebarPath: './sidebars.js',
+    
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/do                                                                                                                                   cusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/the-dezeray/biust-insight-project/blob/',
         },
         blog: {
           showReadingTime: true,
@@ -63,7 +65,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/the-dezeray/biust-insight-project/blob/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -83,7 +85,7 @@ const config = {
     ({
   
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: false,
   
