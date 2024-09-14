@@ -41,11 +41,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
           gtag: {
-          trackingID: 'GTM-PHDC9B7C',
+          trackingID: 'GTM-5VCFWTM5',
           anonymizeIP: false,
         },
          googleTagManager: {
-          containerId: 'GTM-PHDC9B7C',
+          containerId: 'GTM-5VCFWTM5',
         },
    
         docs: {
