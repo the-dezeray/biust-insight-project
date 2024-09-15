@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'B    I    P',
-  tagline: 'biust   insight   project',
+  title: 'Biust Insight Project',
+  tagline: 'Biust Insight Project',
   favicon: '/img/social-card.png',
 
   // Set the production url of your site here
@@ -85,7 +85,7 @@ const config = {
     ({
   
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: 'Light',
       disableSwitch: false,
       respectPrefersColorScheme: false,
   
@@ -126,15 +126,13 @@ const config = {
  
  
 
-          
-          {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
           {to: '/docs/challanges/main', label: 'Contritbue ', position: 'right'},
 
 
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'Light',
         links: [
           {
             title: 'Info',
