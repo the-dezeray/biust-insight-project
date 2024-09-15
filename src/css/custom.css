@@ -26,7 +26,7 @@
   --ifm-color-primary-light: #595edb;
   --ifm-color-primary-lighter: #6569dd;
   --ifm-color-primary-lightest: #878be5;
-  /* --ifm-footer-background-color: #21af90; */
+  --ifm-footer-background-color: #132521; 
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -49,6 +49,7 @@
   --ifm-color-primary-light: #a8acec;
   --ifm-color-primary-lighter: #b7bbf0;
   --ifm-color-primary-lightest: #e5e6f9;
+
 }
 
 .header--github-link {
@@ -82,10 +83,11 @@ html[data-theme='dark'] .header--github-link:before {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .hero__pretext {
-  color: black;
+  color: white;
   background-color: #e2dede;
   padding: .3rem;
   width: 20rem;
@@ -99,11 +101,14 @@ html[data-theme='dark'] .header--github-link:before {
   text-align: left;
   font-size: 2.5rem;
   margin-top: 1rem;
+  color:white;
 }
 
 .hero__subtitle {
   max-width: 700px;
   font-size: 1.2rem;
+
+color:white;
 }
 
 
