@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'B    I    P',
-  tagline: 'biust   insight   project',
+  title: 'Biust Insight Project',
+  tagline: 'biust insight project',
   favicon: '/img/social-card.png',
 
   // Set the production url of your site here
@@ -83,13 +83,24 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+ metadata: [
+      { name: 'keywords', content: 'BIUST, test papers, labs, exams, archive, students, university,insight,project' },
+      { name: 'description', content: 'The BIUST Insight Project is an archive of past test papers, labs, and exams for students at BIUST, providing resources to aid study and academic performance.' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'BIUST Insight Project - An Archive of Past Test , Lab & Exam Documents' },
+      { name: 'twitter:description', content: 'Access past test papers, labs, and exams to help you prepare for assessments at BIUST.' },
+      { name: 'twitter:image', content: 'img/logo.png' },
+      {name: 'author',content:'Desiree Chingwaru'}
+    ],
   
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: false,
-  
-  },
+     // Declare some <meta> tags
+ },
+
+   
       // Replace with your project's social card
       image: 'img/logo.svg',
       navbar: {
@@ -199,6 +210,30 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-};
+ headTags: [
+    // Declare a <link> preconnect tag
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://the-dezeray.github.io/biust-insight-project',
+      },
+    },
+    // Declare some json-ld structured data
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org/',
+        '@type': 'CreativeWork',
+        name: 'Biust Insight Project',
+        url: 'https://the-dezeray.github.io./biust-insight-project/',
+        logo: 'img/logo.png',
+      }),
+    },
+  ],
+  };
 
 export default config;
