@@ -70,8 +70,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Organize your documentation"
+      title={`Biust Insight Prject`}
+      description="An Archive of matterial"
     >
       <HomepageHeader />
       <main>
