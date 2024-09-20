@@ -1,3 +1,4 @@
+
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -34,20 +35,24 @@ function HomepageHeader() {
         </p>
    <Heading as="h3" className=" hero__subtitle"> About Me</Heading>
         <p className="hero__subtitle">
-<ul>
-  <li>The Name Is Desiree </li>
-  <li>Computer Science Undergraduate </li>
-  <li>I Eat Code And Breathe Software</li>
 
-</ul>
-
+<div class="hero__subtitle">
+  <img
+    class="avatar__photo"
+    
+    src="https://avatars.githubusercontent.com/u/146452474?s=400&u=a414e97d0508d3dde7173bf221f3e2c414b2e575&v=4" />
+  <div class="avatar__intro">
+    <div class="hero_subtitle">Desiree CH</div>
+    <small class="avatar__subtitle">Always Thinking About Code</small>
+  </div>
+</div>
         </p>
 
         <div className={styles.buttons}>
       
   <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/drives/Computer modules/comp-211"
             style={{ alignSelf: "right" }}
           >
             Explore
@@ -65,8 +70,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Organize your documentation"
+      title={`Biust Insight Prject`}
+      description="An Archive of matterial"
     >
       <HomepageHeader />
       <main>

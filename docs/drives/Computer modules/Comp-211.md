@@ -1,7 +1,11 @@
 ---
-title: Comp 211
-description: A collection of material and resource related to Procdural Programming (211)
 
+description: A collection of material and resource related to Procdural Programming (211)
+hide_table_of_contents: true
+
+last_update:
+  date: 4/10/2024
+  author: Desiree CH
 ---
 :::warning @Motions 
 a shout out to the boy  motions thanks a lot for the code and contributions 👍👍
