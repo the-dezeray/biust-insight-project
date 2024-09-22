@@ -19,6 +19,6 @@ Currently, I am in my second year of studying Computer Science and Software Engi
 
 ### Personal Interests:
 
-Outside of my academic and project work, I enjoy solving puzzle sodoku rubix chess  anything puzzle i like it . I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
+Outside of my academic and project work, I enjoy solving puzzles, sodoku grids,  rubix , chess  anything which looks like a puzzle i like it . I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
 
 I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](mailto:chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
