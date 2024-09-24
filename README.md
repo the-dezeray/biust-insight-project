@@ -54,6 +54,7 @@ The plan is to architecture a modern modern and better to the exisitin Library s
 - ***📦Project***: A list of all projects in progress and completed
 
 ## Short term goals 🚩:
+- ***content collection*** : add more material to the existing  strcuture
 - ***stable*** :have a stable foundation and build
 - ***🌥animations*** : introduction of dynamic elements to add  life to the static feel of the webpage
 - ***📗documantation***: a beginner friendly documentation to the community  on how to contribute/ videos for writes and jounals
