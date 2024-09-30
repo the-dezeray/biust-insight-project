@@ -1,5 +1,5 @@
 # About Me
----
+
 
 :::warning who am i
 ### The name is Desiree Chingwaru
@@ -21,8 +21,4 @@ Currently, I am in my second year of studying Computer Science and Software Engi
 
 Outside of my academic and project work, I enjoy solving puzzles, sodoku grids,  rubix , chess  anything which looks like a puzzle i like it . I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
 
-<<<<<<< HEAD:docs/about-me.md
-I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](mailto:chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
-=======
 I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at  or connect with me on 
->>>>>>> ac8d2fff317f5d32afa56ba0905167b963573efd:blog/about-me.md
