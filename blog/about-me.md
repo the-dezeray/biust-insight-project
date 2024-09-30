@@ -6,7 +6,7 @@
  a second-year student specializing in Computer Science and Software Engineering. I am the creator, maintainer, and founder of the Biust Insight Project, an initiative designed to revolutionize document management within our school.
 :::
 ### My Journey:
-
+{/* truncate */}
 As a passionate technology enthusiast, I embarked on the Biust Insight Project to address the challenges of managing and accessing a vast array of documents at our institution. The project began with a vision to create a centralized digital archive that would streamline the organization and retrieval of important documents, making information more accessible and reducing inefficiencies.
 
 ### Current Role:
