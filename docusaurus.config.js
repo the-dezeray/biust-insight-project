@@ -39,7 +39,7 @@ plugins:
     [
       'docusaurus-plugin-dotenv',
       {
-          path: "./.env.local", 
+          path: "./.env", 
           systemvars: true, 
       }
     ],
