@@ -7,7 +7,7 @@ Effective Date: [13/07/2024]
 Welcome to [Your Website Name] ("we", "our", "us"). This Cookie Policy explains how we use cookies and similar tracking technologies on our website [insert website URL] (the "Site"). By using our Site, you consent to the use of cookies in accordance with this policy.
 
 2. What Are Cookies?
-
+{/* truncate */}
 Cookies are small text files that are placed on your device (computer, smartphone, tablet) when you visit a website. They help websites remember your actions and preferences (such as login details, language, and other display preferences) over a period of time, so you don’t have to re-enter them whenever you come back to the site or browse from one page to another.
 
 3. Types of Cookies We Use

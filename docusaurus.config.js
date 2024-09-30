@@ -33,13 +33,40 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+plugins: 
+[
+    // Other plugins
+    [
+      'docusaurus-plugin-dotenv',
+      {
+          path: "./.env.local", 
+          systemvars: true, 
+      }
+    ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
 
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      }),
+    ],
+    // ... Your other themes.
+
+  
+],
   presets: [
     [
 
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        pages :{showLastUpdateAuthor:true,showLastUpdateTime:true},
           gtag: {
           trackingID: 'GTM-5VCFWTM5',
           anonymizeIP: false,
@@ -49,7 +76,7 @@ const config = {
         },
    
         docs: {
-          sidebarPath: './sidebars.js',
+        sidebarPath: './sidebars.js',
     
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -83,6 +110,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+       docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
  metadata: [
       { name: 'keywords', content: 'BIUST, test papers, labs, exams, archive, students, university,insight,project' },
       { name: 'description', content: 'The BIUST Insight Project is an archive of past test papers, labs, and exams for students at BIUST, providing resources to aid study and academic performance.' },
@@ -105,106 +137,92 @@ const config = {
       image: 'img/logo.svg',
       navbar: {
         hideOnScroll: true,
-        title: 'BIP',
+        
         logo: {
           alt: 'site logo',
           src: 'img/logo.svg',
         },
         items: [
-
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'right',
-            label: 'The Archive',
-          },
-          {label:"About",position:'right',type:"dropdown",items:[
-            {label:"Me",to:"/docs/about-me"},
-     {label:"The Project",to:"/docs/why-project"},
-
-
         
-          ]},
-          {label:"Portals",position:'left',type:"dropdown",items:[
-            {label:"Blackboard",href:"https://biust.blackboard.com/"},
-     {label:"Basis",href:"https://portal.biust.ac.bw/"},
-   
+             {
+          to: '/docs/category/modules',
+          // Only one of "to" or "href" should be used
+          // href: 'https://www.facebook.com',
+          label: 'Files',
+          // Only one of "label" or "html" should be used
+          // html: '<b>Introduction</b>'
+          position: 'left',
+          activeBaseRegex: 'docs/(next|v8)',
+           // Open link in a new tab
+          rel: 'noopener noreferrer', // Recommended for security when using target="_blank"
+          className: 'custom-navbar-item', // Custom class for styling
+        },
 
-
-        
-          ]},
-
- 
- 
-
-          
-          {to: '/docs/photo-gallery/daily', label: 'Photo Gallery', position: 'right'},
-          {to: '/docs/challanges/main', label: 'Contritbue ', position: 'right'},
-
-
-        ],
+],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Info',
-            items: [
+footer: {
+  style: 'dark',
+  links: [
+    {
+      title: 'Info',
+      items: [
+        {
+          label: 'Project Stats',
+          to: '/blog/project-stats',
+        },
+        {
+          label: 'About the Project',
+          to: '/blog/why-project',
+        },
+        {
+          label: 'Developer',
+          to: '/blog/about-me',
+        },
+      ],
+    },
+    {
+      title: 'Contribute / Join',
+      items: [
+        {
+          label: 'GitHub',
+          to: 'https://github.com/the-dezeray/biust-insight-project',
+        },
+        {
+          label: 'Contributors',
+          href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
+        },
+        {
+          label: 'Documentation',
+          href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
+        },
+      ],
+    },
+    {
+      title: 'Legal',
+      items: [
+        {
+          label: 'Terms',
+          href: '/blog/terms',
+        },
+        {
+          label: 'Cookie Policy',
+          href: '/blog/cookie-policy',
+        },
+      ],
+    },
+  ],
+  copyright: `
+    <div style="text-align: center; margin-top: 20px;">
+      <p>The content provided in this archive is for educational use only. 
+      While I encourage collaboration and resource sharing, I will not be responsible for 
+      any instances of plagiarism, loss of marks, or other academic consequences that may arise 
+      from the use of this material. Users are advised to adhere to their institution’s academic 
+      integrity policies when utilizing these resources. Thank you for your understanding.</p>
+      <p>Copyright © ${new Date().getFullYear()} Desiree</p>
+    </div>
+  `,
+},
 
-   {
-                label: 'Project stats',
-                to: '/docs/project-stats',
-              },
-
-               {
-                label: 'About the  Project',
-                to: '/docs/why-project',
-              },
- {
-                label: 'developer ',
-                to: '/docs/about-me',
-              },
-            ],
-          },
-
-          {
-            title: 'Contribute / Join',
-            items: [
-              {
-                label: 'Github',
-                to: 'https://github.com/the-dezeray/biust-insight-project',
-              },
-              {
-                label: 'Contributers',
-                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
-              },
-{
-                label: 'Documentaion',
-                href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
-              },
-
-            ],
-          },
- {
-            title: 'Legal',
-            items: [
-    
-              {
-                label: 'Terms',
-                href: '/docs/terms',
-              },
-{
-                label: 'Cookie Policy',
-                href: '/docs/cookie-policy',
-              },
-
-            ],
-          },
-       
-        ],
-    
-        copyright: " <br/> <br> <br>The content provided in this archive is for educational use only. While I encourage collaboration and resource sharing, I will   not  beresponsible for any instances of plagiarism, loss of marks, or other academic consequences that may arise from the use of this material. Users are advised to adhere to their institution’s academic integrity policies when utilizing these resources. Thank you for your understanding.<br/> Desiree",  
-      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -234,6 +252,12 @@ const config = {
       }),
     },
   ],
-  };
+  stylesheets: [
+    {
+      href: '/css/custom.css',
+      type: 'text/css',
+    },
+  ],
+};
 
 export default config;

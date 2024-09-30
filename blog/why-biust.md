@@ -6,7 +6,7 @@ BIUST offers qualifications which are designed to help you launch your career, w
 BIUST prides itself as the first specialised tert:iary institution and a research-intensive University in Botswana, aimed at being a catalyst for innovation and our country’s economic transformation drive. Its graduates are equipped with world-class education enriched with research-based solutions which will impact communities locally, regionally and in the international arena.
 ### Career Guidance
 The University has adopted a strong academic support model where students are paired with their Academic Advisors right from the registration period to guide them through their studies in readiness for graduation. Students are also supported by a tutor who provides them with practical guidance and extra lessons on a range of academic issues to help them excel in their studies. As a BIUST Student, you will also have a peer mentor – a trained student volunteer from your course, to help you with assignments and other course materials and percolate to boost excellence in your respective modules. 
-
+{/* truncate */}
 
 ### Enriched Learning and Experience
 The University has carefully selected qualified local and international experts who are tasked with delivering quality education to our students and in the process sharing their global experiences.
