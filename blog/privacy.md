@@ -5,7 +5,7 @@ Effective Date: [Insert Date]
 1. Introduction
 
 Welcome to [Your Company Name] (“we”, “our”, “us”). We are committed to protecting your privacy and ensuring a safe online experience. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [insert website URL] (the “Site”), use our services, or interact with us in other ways.
-
+{/* truncate */}
 2. Information We Collect
 
 We may collect the following types of information:
