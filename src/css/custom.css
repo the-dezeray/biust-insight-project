@@ -254,13 +254,14 @@ footer .footer__bottom p {
 } */
 
 [data-theme='dark'] {
-  --ifm-color-primary: #8a8fe6;
-  --ifm-color-primary-dark: #6c72e0;
-  --ifm-color-primary-darker: #5d63dc;
-  --ifm-color-primary-darkest: #2f38d3;
-  --ifm-color-primary-light: #a8acec;
-  --ifm-color-primary-lighter: #b7bbf0;
-  --ifm-color-primary-lightest: #e5e6f9;
+  --ifm-color-primary: #4248d6;
+  --ifm-color-primary-dark: #2d33cf;
+  --ifm-color-primary-darker: #2a31c4;
+  --ifm-color-primary-darkest: #2328a1;
+  --ifm-color-primary-light: #595edb;
+  --ifm-color-primary-lighter: #6569dd;
+  --ifm-color-primary-lightest: #878be5;
+  --ifm-footer-background-color: #d1d2e4;
 
 }
 

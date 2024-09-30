@@ -21,4 +21,4 @@ Currently, I am in my second year of studying Computer Science and Software Engi
 
 Outside of my academic and project work, I enjoy [mention hobbies or interests, such as “exploring new technologies,” “participating in coding challenges,” or “engaging in tech meetups”]. I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
 
-I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
+I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at  or connect with me on 
