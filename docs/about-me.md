@@ -3,7 +3,7 @@
 
 :::warning who am i
 ### The name is Desiree Chingwaru
- a second-year student specializing in Computer Science and Software Engineering. I am the creator, maintainer, and founder of the Biust Insight Project, an initiative designed to revolutionize document management within our school.
+ a second-year student majoring in Computer Science and Software Engineering. I am the creator, maintainer, and founder of the Biust Insight Project, an initiative designed to revolutionize document management within our school.
 :::
 ### My Journey:
 
@@ -15,10 +15,10 @@ In my role as the creator and maintainer of the Biust Insight Project, I have be
 
 ### Academic Pursuits:
 
-Currently, I am in my second year of studying Computer Science and Software Engineering. My coursework and projects have equipped me with a solid foundation in programming, data management, and software development. I am particularly interested in areas such as [mention any specific areas of interest, such as artificial intelligence, cybersecurity, or software development], and I am eager to continue exploring and contributing to the field of technology.
+Currently, I am in my second year of studying Computer Science and Software Engineering. My coursework and projects have equipped me with a solid foundation in programming, data management, and software development. I am particularly interested in areas around backend server components Api  the web and its complexity, and I am eager to continue exploring and contributing to the field of technology.
 
 ### Personal Interests:
 
-Outside of my academic and project work, I enjoy [mention hobbies or interests, such as “exploring new technologies,” “participating in coding challenges,” or “engaging in tech meetups”]. I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
+Outside of my academic and project work, I enjoy solving puzzles, sodoku grids,  rubix , chess  anything which looks like a puzzle i like it . I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
 
-I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
+I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](mailto:chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
