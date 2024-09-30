@@ -6,7 +6,7 @@
  a second-year student specializing in Computer Science and Software Engineering. I am the creator, maintainer, and founder of the Biust Insight Project, an initiative designed to revolutionize document management within our school.
 :::
 ### My Journey:
-
+{/* truncate */}
 As a passionate technology enthusiast, I embarked on the Biust Insight Project to address the challenges of managing and accessing a vast array of documents at our institution. The project began with a vision to create a centralized digital archive that would streamline the organization and retrieval of important documents, making information more accessible and reducing inefficiencies.
 
 ### Current Role:
@@ -21,4 +21,4 @@ Currently, I am in my second year of studying Computer Science and Software Engi
 
 Outside of my academic and project work, I enjoy [mention hobbies or interests, such as “exploring new technologies,” “participating in coding challenges,” or “engaging in tech meetups”]. I am committed to continuous learning and am always on the lookout for new opportunities to expand my skills and knowledge.
 
-I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at [email](chingwaru.desiree@gmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/desiree-chingwaru-294747248/).
+I’m excited to connect with fellow tech enthusiasts and professionals, and I look forward to future collaborations and innovations. Feel free to reach out to me at  or connect with me on 

@@ -1,3 +1,141 @@
+/* custom.css */
+.customButtons:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+  transform: scale(1.01); /* Slight zoom on hover */
+}
+
+/* Base button style */
+.customButton {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+  padding: 12px 24px; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  position: relative; /* Relative positioning for dropdown */
+}
+
+/* Hover effect for button */
+.customButton:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Active/Pressed state */
+.customButton:active {
+  background-color: #d0d0d0; /* Darker gray on press */
+  box-shadow: 0 5px #aaa; /* Shadow on press */
+  transform: translateY(4px); /* Button moves slightly down */
+}
+
+/* Dropdown content (hidden by default) */
+.customButton .dropdown-content {
+  display: none; /* Hidden initially */
+  position: absolute; /* Positioned relative to button */
+  background-color: #ffffff; /* White background for dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+  padding: 12px 16px; /* Padding inside dropdown */
+  z-index: 1; /* Ensure dropdown is on top */
+  top: 100%; /* Position below the button */
+  left: 0;
+  width: 100%; /* Full width of the button */
+}
+
+/* Show dropdown content when button is selected */
+.customButton.selected .dropdown-content {
+  display: block; /* Make visible */
+  animation: fadeIn 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Dropdown item styling */
+.customButton .dropdown-content a {
+  color: #666; /* Darker gray for dropdown item text */
+  padding: 8px 12px; /* Padding for dropdown items */
+  text-decoration: none; /* No underline */
+  display: block; /* Block-level item */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Hover effect for dropdown items */
+.customButton .dropdown-content a:hover {
+  background-color: #f5f5f5; /* Light gray on hover */
+  color: #333; /* Keep text color consistent */
+}
+
+/* Style for selected child (dropdown item) */
+.customButton .dropdown-content a.selected {
+  background-color: var(--ifm-color-primary-light); /* Highlight the selected item */
+  color: #ffffff; /* White text for the selected item */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/**/
+/* Apply the Poppins font and make the text bigger for footer links */
+footer {
+  font-family: 'Poppins', sans-serif; /* Custom font */
+
+ 
+  padding: 50px 0;
+}
+
+footer h4 {
+  text-align: center;
+  font-size: 1.5rem; /* Bigger title text */
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+footer a {
+ 
+  font-size: 1.2rem; /* Bigger link text */
+  text-decoration: none;
+  font-weight: 500; /* Medium weight for links */
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+footer a:hover {
+  
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: left;
+}
+
+.footer__links div {
+  text-align: center;
+}
+
+footer .footer__bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Add unique styling for the footer copyright notice */
+footer .footer__bottom p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-top: 20px;
+}
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -7,6 +145,51 @@
 /* You can override the default Infima variables here. */
 
 
+/* src/css/custom.css */
+
+/* Center the navbar items */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centering items */
+  padding: 0 50px; /* Add padding to the sides */
+}
+
+/* Style for navbar items */
+.navbar__item {
+  padding: 0 15px; /* Optional: Add padding to individual items */
+}
+
+/* Add shadow to the navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Customize shadow */
+}
+
+/* Optional: Adjust navbar height */
+.navbar__inner {
+  min-height: 60px; /* Adjust height as needed */
+}
+.custom-navbar-item {
+    color: #4248d6; /* Primary color for text */
+    background-color: transparent; /* Transparent background */
+    padding: 8px 18px; /* Slightly reduced padding to account for border */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #4248d6; /* Border matching text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+/* Change background color on hover */
+.custom-navbar-item:hover {
+    background-color: rgba(66, 72, 214, 0.1); /* Slight background color on hover */
+    color: #2d33cf; /* Slightly darker text color on hover */
+}
+
+/* Customize active item styles */
+.custom-navbar-item-active {
+    font-weight: bold; /* Make active item bold */
+    border-bottom: 2px solid #f00c0c; /* Red underline for active item */
+    background-color: rgba(66, 72, 214, 0.2); /* Slightly more noticeable background for active item */
+    color: #2a31c4; /* Slightly darker text color for the active item */
+}
 /* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -19,6 +202,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 } */
 :root {
+  /* Existing color palette */
   --ifm-color-primary: #4248d6;
   --ifm-color-primary-dark: #2d33cf;
   --ifm-color-primary-darker: #2a31c4;
@@ -26,8 +210,36 @@
   --ifm-color-primary-light: #595edb;
   --ifm-color-primary-lighter: #6569dd;
   --ifm-color-primary-lightest: #878be5;
-  --ifm-footer-background-color: #132521; 
+  --ifm-footer-background-color: #d1d2e4;
+
+  /* Search modal customizations */
+  --search-local-modal-background: #f5f6f7; /* Keeping the light background */
+  --search-local-modal-background-dark: var(--ifm-color-primary-dark); /* Dark background based on primary color */
+  --search-local-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.5),
+    0 3px 8px 0 #555a64; /* Shadow using a neutral tone */
+  --search-local-modal-shadow-dark: inset 1px 1px 0 0 #2a31c4,
+    0 3px 8px 0 #2328a1; /* Dark shadow based on primary darker and darkest colors */
+  --search-local-modal-width: 560px;
+  --search-local-modal-width-sm: 340px;
+  --search-local-spacing: 12px;
+  --search-local-hit-background: #fff; /* Keeping the hit background light */
+  --search-local-hit-background-dark: var(--ifm-color-primary-lightest); /* Dark mode hit background using primary lightest */
+  --search-local-hit-shadow: 0 1px 3px 0 #d4d9e1; /* Light shadow */
+  --search-local-hit-shadow-dark: none; /* No shadow for dark mode */
+  --search-local-hit-color: #444950; /* Keeping the default dark color */
+  --search-local-hit-color-dark: var(--ifm-color-primary-light); /* Using primary light color for dark mode hit text */
+  --search-local-hit-height: 56px;
+  --search-local-highlight-color: var(--ifm-color-primary); /* Matching the highlight color to the primary color */
+  --search-local-muted-color: #969faf; /* Keeping the muted color */
+  --search-local-muted-color-dark: var(--ifm-color-primary-darker); /* Darker muted color */
+  --search-local-icon-stroke-width: 1.4;
+  --search-local-hit-active-color: var(--ifm-color-white); /* Keeping active hit color white for contrast */
+  
+  /* Example of overriding */
+  --search-local-modal-width: 480px;
+  --search-local-highlight-color: #5468ff; /* Custom override for highlight color */
 }
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 /* [data-theme='dark'] {
@@ -42,13 +254,14 @@
 } */
 
 [data-theme='dark'] {
-  --ifm-color-primary: #8a8fe6;
-  --ifm-color-primary-dark: #6c72e0;
-  --ifm-color-primary-darker: #5d63dc;
-  --ifm-color-primary-darkest: #2f38d3;
-  --ifm-color-primary-light: #a8acec;
-  --ifm-color-primary-lighter: #b7bbf0;
-  --ifm-color-primary-lightest: #e5e6f9;
+  --ifm-color-primary: #4248d6;
+  --ifm-color-primary-dark: #2d33cf;
+  --ifm-color-primary-darker: #2a31c4;
+  --ifm-color-primary-darkest: #2328a1;
+  --ifm-color-primary-light: #595edb;
+  --ifm-color-primary-lighter: #6569dd;
+  --ifm-color-primary-lightest: #878be5;
+  --ifm-footer-background-color: #d1d2e4;
 
 }
 

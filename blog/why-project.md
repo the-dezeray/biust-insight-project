@@ -1,7 +1,7 @@
 About the Biust Insight Project
 
 As a dedicated Computer Science graduate, I embarked on the Biust Insight Project to address a significant need within our educational institution: the organization and accessibility of critical documents. Our school, like many academic institutions, faced challenges in managing a growing volume of documents, including research papers, administrative records, course materials, and more.
-
+{/* truncate */}
 The Challenge:
 
 Before the Biust Insight Project, document management at our school was largely manual and fragmented. Documents were scattered across various physical and digital locations, making it difficult for students, faculty, and staff to find and access the information they needed efficiently. This lack of centralized access led to inefficiencies, wasted time, and frustration among users.
