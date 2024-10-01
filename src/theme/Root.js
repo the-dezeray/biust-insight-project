@@ -91,8 +91,8 @@ export default function Root({ children }) {
               <h3>Pricing (Coming Soon) 💰</h3>
               <p>After your trial:</p>
               <ul>
-                <li>$4 USD per month 💵</li>
-                <li>or $10 for the whole semester 🏫</li>
+                <li>80 Pula per month 💵</li>
+                <li>or 150 for the whole semester 🏫</li>
               </ul>
               <small>Note: Pricing not yet in effect ⏳</small>
             </div>
