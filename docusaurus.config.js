@@ -68,11 +68,11 @@ plugins:
       ({
         pages :{showLastUpdateAuthor:true,showLastUpdateTime:true},
           gtag: {
-          trackingID: 'GTM-5VCFWTM5',
+          trackingID: 'G-DJKE85H5XJ',
           anonymizeIP: false,
         },
          googleTagManager: {
-          containerId: 'GTM-5VCFWTM5',
+          containerId: 'GTM-WZ8LD4SX',
         },
    
         docs: {
