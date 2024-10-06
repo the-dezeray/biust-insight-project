@@ -1,0 +1,5 @@
+# Ignore Markdown Files From Being Formatted
+*.md
+
+# Ignore License File
+.LICENSE
