@@ -1,156 +1,97 @@
 /* Overall styles for the hero section */
 .heroBanner {
   padding: 4rem 0;
+  background-color: #f8f9fa; /* Light background for the entire hero section */
   text-align: center;
+  color: #ffffff; /* White text */
   position: relative;
   overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px for a wider layout */
   margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  padding: 0 2rem;
+}
+
+.heroBox {
+  background-color: #6a0dad; /* Purple background for the box */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 4rem; /* Increased padding for a more spacious look */
 }
 
 .heroContent {
-  max-width: 600px;
+  max-width: 1000px; /* Increased from 800px */
   margin: 0 auto;
   text-align: center;
 }
 
 .heroTitle {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3rem; /* Increased font size */
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* White text */
 }
 
-.heroSubtitle {
-  font-size: 1.2rem;
+.heroDesc {
+  font-size: 1.2rem; /* Slightly increased font size */
   margin-bottom: 2rem;
+  color: #ffffff; /* White text */
 }
 
 .heroButtons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 0;
-  list-style-type: none;
 }
 
 .mainBtn {
-  /* Styles for the main button */
-}
-
-.linkBtn {
-  /* Styles for the link button */
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.mainContent {
-  padding: 4rem 0;
-}
-
-.sectionTitle {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.sectionTitle span {
-  color: var(--ifm-color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.sectionTitle h2 {
-  font-size: 2.5rem;
-  margin: 1rem 0;
-  color: var(--ifm-heading-color);
+.exploreBtn {
+  background-color: #ffffff;
+  color: #6a0dad;
 }
 
-.sectionTitle p {
-  color: var(--ifm-font-color-base);
-  max-width: 600px;
-  margin: 0 auto;
+.exploreBtn:hover {
+  background-color: #f0f0f0;
 }
 
-.featureGrid,
-.pricingGrid,
-.faqGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+.learnMoreBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
-.featureItem,
-.pricingItem,
-.faqItem {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  background: var(--ifm-card-background-color);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.learnMoreBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.featureItem:hover,
-.pricingItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.heroBrandsWrapper {
+  margin-top: 3rem;
 }
 
-.pricingItem.featured {
-  border: 2px solid var(--ifm-color-primary);
+/* Remove or comment out these styles
+.heroImage {
+  margin-top: 4rem;
   position: relative;
-  z-index: 1;
-  transform: scale(1.05);
 }
 
-.pricingItem.featured:hover {
-  transform: scale(1.05) translateY(-5px);
+.heroImage img {
+  max-width: 100%;
+  height: auto;
 }
+*/
 
-.featuredBadge {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  background: var(--ifm-color-primary);
-  color: white;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 1rem 0;
-  color: var(--ifm-color-primary);
-}
-
-.price span {
-  font-size: 1rem;
-  font-weight: normal;
-  color: var(--ifm-font-color-base);
+/* Main content area */
+.mainContent {
+  padding: 5rem 2rem;
+  background-color: #f8f9fa;
 }
 
 .pricingBtn {
@@ -191,77 +132,23 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-  .featureGrid,
-  .pricingGrid,
-  .faqGrid {
-    grid-template-columns: 1fr;
+  .heroBox {
+    padding: 3rem 2rem;
   }
 
   .container {
     padding: 0 1rem;
   }
-}
 
-.faq {
-  background-color: #f8f9fa;
-  padding: 4rem 0;
-}
+  .heroDesc {
+    font-size: 1.1rem;
+  }
 
-.faqItem {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+  .heroButtons {
+    flex-direction: column;
+  }
 
-.faqItem:hover {
-  transform: translateY(-5px);
-}
-
-.faqItem h3 {
-  color: var(--biust-insight-primary);
-  margin-bottom: 1rem;
-}
-
-.features {
-  background-color: #f8f9fa;
-  padding: 4rem 0;
-}
-
-.featureItem {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.featureItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.featureIcon {
-  font-size: 2.5rem;
-  color: var(--biust-insight-primary);
-  margin-bottom: 1rem;
-}
-
-.featureImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.featureItem i {
-  font-size: 2.5rem;
-  color: var(--biust-insight-primary);
-  margin-bottom: 1rem;
+  .mainBtn {
+    width: 100%;
+  }
 }
