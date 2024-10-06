@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { signInWithGoogle, auth } from './firebase';
 import styles from '../css/login.module.css';
 import Loading from './Loading';
-// Import icons from a library like react-icons
-import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock } from 'react-icons/fa';
+// Import icons from react-icons
+import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook } from 'react-icons/fa';
 
 export default function Root({ children }) {
     const [userAuth, setUserAuth] = useState(null);
@@ -79,10 +79,10 @@ export default function Root({ children }) {
             <div className={styles.loginFeatures}>
               <h2>Contains:</h2>
               <ul>
-                <li>📝 Past exam papers</li>
-                <li>🧪 Laboratory reports</li>
-                <li>📘 Assignment samples</li>
-                <li>📚 Study resources</li>
+                <li><FaFileAlt /> Past exam papers</li>
+                <li><FaFlask /> Laboratory reports</li>
+                <li><FaClipboardList /> Assignment samples</li>
+                <li><FaBook /> Study resources</li>
               </ul>
             </div>
             <div className={styles.loginTrial}>

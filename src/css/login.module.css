@@ -111,38 +111,45 @@
 
 .loginPricing h3 {
   color: #8040ff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.loginPricing small {
-  display: block;
-  margin-top: 0.5rem;
-  color: #444;
-}
-
-/* Pricing styles */
 .pricingOptions {
   display: flex;
   justify-content: space-around;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
 .pricingOption {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 10px rgba(58, 22, 43, 0.788);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 45%;
+}
+
+.pricingOption:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .price {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #8040ff;
+  margin-bottom: 0.5rem;
 }
 
 .period {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
+  text-align: center;
 }
 
 .pricingNote {
