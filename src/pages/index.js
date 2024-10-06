@@ -37,6 +37,90 @@ function HomepageHeader() {
     </header>
   );
 }
+
+function PricingSection() {
+  return (
+    <section id="pricing" className={styles.pricingSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionTitle}>
+          <h2>Our Pricing Plans</h2>
+          <p>Choose the plan that best fits your needs and budget.</p>
+        </div>
+
+        <div className={styles.pricingGrid}>
+          <PricingItem
+            title="Basic"
+            price="$19.99/mo"
+            features={[
+              "5 Users",
+              "All UI components",
+              "Lifetime access",
+              "Free updates",
+              "Use on 1 project",
+              "4 Months support",
+            ]}
+            buttonText="Get Started"
+          />
+          <PricingItem
+            title="Pro"
+            price="$30.99/mo"
+            features={[
+              "10 Users",
+              "All UI components",
+              "Lifetime access",
+              "Free updates",
+              "Use on 3 projects",
+              "6 Months support",
+            ]}
+            buttonText="Get Pro"
+            isPopular={true}
+          />
+          <PricingItem
+            title="Enterprise"
+            price="$70.99/mo"
+            features={[
+              "Unlimited Users",
+              "All UI components",
+              "Lifetime access",
+              "Free updates",
+              "Unlimited projects",
+              "12 Months support",
+            ]}
+            buttonText="Contact Us"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PricingItem({ title, price, features, buttonText, isPopular }) {
+  return (
+    <div className={clsx(styles.pricingItem, isPopular && styles.popularItem)}>
+      {isPopular && <span className={styles.popularTag}>POPULAR</span>}
+      <div className={styles.pricingHeader}>
+        <h3>{title}</h3>
+        <h4>{price}</h4>
+      </div>
+      <div className={styles.pricingBody}>
+        <ul>
+          {features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.pricingFooter}>
+        <Link
+          to="/contact"
+          className={clsx(styles.pricingBtn, isPopular && styles.popularBtn)}
+        >
+          {buttonText}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -46,8 +130,7 @@ export default function Home() {
     >
       <HomepageHeader />
       <main className={styles.mainContent}>
-   
-
+        <PricingSection />
       </main>
     </Layout>
   );
