@@ -340,3 +340,26 @@ color:white;
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar__items--right {
+    flex-direction: row-reverse;
+  }
+
+  .navbar__items--right > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .navbar__items--right button {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+
+  .navbar__items--right svg {
+    width: 18px;
+    height: 18px;
+  }
+}

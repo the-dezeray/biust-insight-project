@@ -338,3 +338,32 @@
   background-color: rgba(106, 13, 173, 0.1);
   border-radius: 50%;
 }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinkingText {
+  animation: blink 1s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.movingItem {
+  animation: move 2s infinite;
+}
