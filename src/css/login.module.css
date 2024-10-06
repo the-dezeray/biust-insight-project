@@ -71,6 +71,10 @@
 .loginFeatures {
   margin-bottom: 2rem;
   text-align: center; /* Center-aligned features */
+  background-color: #f9f5ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .loginFeatures h2 {
@@ -95,7 +99,7 @@
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .loginTrial h3 {
@@ -107,6 +111,10 @@
 /* Pricing */
 .loginPricing {
   margin-bottom: 2rem;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .loginPricing h3 {
@@ -129,14 +137,14 @@
   background-color: white;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 10px 10px rgba(58, 22, 43, 0.788);
+  box-shadow: 0 10px 15px rgba(58, 22, 43, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 45%;
 }
 
 .pricingOption:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 20px rgba(58, 22, 43, 0.15);
 }
 
 .price {
@@ -174,13 +182,13 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.4s ease;
+  transition: background-color 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
   margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(128, 64, 255, 0.3);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -188,7 +196,8 @@
 
 .loginBtn:hover {
   background-color: #9560ff;
-  transform: scale(1.08);
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(128, 64, 255, 0.4);
 }
 
 .loginGoogle i {
@@ -204,12 +213,13 @@
   color: #8040ff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .loginLink:hover {
   color: #9560ff;
   text-decoration: underline;
+  text-shadow: 0 0 1px rgba(128, 64, 255, 0.3);
 }
 
 /* Info Text */
