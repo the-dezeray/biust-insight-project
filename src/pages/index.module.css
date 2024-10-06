@@ -261,3 +261,80 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Feature Section */
+.featureSection {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureItem {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: #6a0dad;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.featureLink {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.featureLink:hover {
+  color: #4a0080;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add these styles at the end of the file */
+.floatingBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floatingElement {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(106, 13, 173, 0.1);
+  border-radius: 50%;
+}

@@ -4,6 +4,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
+import React, { useEffect } from 'react';
+import { useAnimate, useInView } from 'framer-motion';
+import { FaGift, FaBook, FaUsers, FaRocket } from 'react-icons/fa';
 
 function HomepageHeader() {
   return (
@@ -121,6 +124,109 @@ function PricingItem({ title, price, features, buttonText, isPopular }) {
   );
 }
 
+function FeatureItem({ Icon, title, description, delay }) {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(scope.current, { opacity: 1, y: 0 }, { duration: 0.5, delay });
+    }
+  }, [isInView, animate, delay]);
+
+  return (
+    <div ref={scope} className={styles.featureItem} style={{ opacity: 0, y: 50 }}>
+      <div className={styles.featureIcon}>
+        <Icon size={48} />
+      </div>
+      <h3 className={styles.featureTitle}>{title}</h3>
+      <p className={styles.featureDesc}>{description}</p>
+      <div>
+        <Link to="/docs/intro" className={styles.featureLink}>
+          Learn More
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function FeatureSection() {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(scope.current, { opacity: 1 }, { duration: 0.5 });
+    }
+  }, [isInView, animate]);
+
+  return (
+    <section className={styles.featureSection}>
+      <div className={styles.container}>
+        <div ref={scope} className={styles.featureGrid} style={{ opacity: 0 }}>
+          <FeatureItem
+            Icon={FaGift}
+            title="Free and Open-Source"
+            description="Access a wealth of academic resources without any cost, promoting collaborative learning."
+            delay={0.1}
+          />
+          <FeatureItem
+            Icon={FaBook}
+            title="Comprehensive Archive"
+            description="Find a vast collection of notes, tests, lab reports, and exams from various courses."
+            delay={0.2}
+          />
+          <FeatureItem
+            Icon={FaUsers}
+            title="Community-Driven"
+            description="Benefit from contributions made by students and faculty, fostering a collaborative environment."
+            delay={0.3}
+          />
+          <FeatureItem
+            Icon={FaRocket}
+            title="Continuous Growth"
+            description="Experience an ever-expanding repository of academic materials and resources."
+            delay={0.4}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FloatingBackground() {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    const animateBackground = async () => {
+      for (let i = 0; i < 20; i++) {
+        animate(`#float-${i}`, {
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          rotate: Math.random() * 360,
+        }, { duration: 20 + Math.random() * 10, repeat: Infinity, repeatType: "reverse" });
+      }
+    };
+    animateBackground();
+  }, [animate]);
+
+  return (
+    <div ref={scope} className={styles.floatingBackground}>
+      {[...Array(20)].map((_, index) => (
+        <div
+          key={index}
+          id={`float-${index}`}
+          className={styles.floatingElement}
+          style={{
+            left: Math.random() * window.innerWidth,
+            top: Math.random() * window.innerHeight,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -128,8 +234,10 @@ export default function Home() {
       title={`Biust Insight Project`}
       description="An Archive of academic materials for collaborative learning"
     >
+      <FloatingBackground />
       <HomepageHeader />
       <main className={styles.mainContent}>
+        <FeatureSection />
         <PricingSection />
       </main>
     </Layout>
