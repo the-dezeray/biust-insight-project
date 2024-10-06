@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { signInWithGoogle, auth } from './firebase';
 import styles from '../css/login.module.css';
 import Loading from './Loading';
+// Import icons from a library like react-icons
+import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock } from 'react-icons/fa';
 
 export default function Root({ children }) {
-  const [userAuth, setUserAuth] = useState(null);
+    const [userAuth, setUserAuth] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [animate, setAnimate] = useState(false);
 
@@ -75,7 +77,7 @@ export default function Root({ children }) {
               An Archive Of Material
             </p>
             <div className={styles.loginFeatures}>
-              <h2>Contains:  </h2>
+              <h2>Contains:</h2>
               <ul>
                 <li>📝 Past exam papers</li>
                 <li>🧪 Laboratory reports</li>
@@ -88,16 +90,24 @@ export default function Root({ children }) {
               <p>Still in development mode therefore free access 🆓</p>
             </div>
             <div className={styles.loginPricing}>
-              <h3>Pricing (Coming Soon) 💰</h3>
+              <h3>Pricing (Coming Soon) <FaMoneyBillWave /></h3>
               <p>After your trial:</p>
-              <ul>
-                <li>80 Pula per month 💵</li>
-                <li>or 150 for the whole semester 🏫</li>
-              </ul>
-              <small>Note: Pricing not yet in effect ⏳</small>
+              <div className={styles.pricingOptions}>
+                <div className={styles.pricingOption}>
+                  <span className={styles.price}>80 Pula</span>
+                  <span className={styles.period}>per month</span>
+                </div>
+                <div className={styles.pricingOption}>
+                  <span className={styles.price}>150 Pula</span>
+                  <span className={styles.period}>per semester <FaSchool /></span>
+                </div>
+              </div>
+              <small className={styles.pricingNote}>
+                <FaClock /> Note: Pricing not yet in effect
+              </small>
             </div>
             <button className={`${styles.loginBtn} ${styles.loginGoogle}`} onClick={signInWithGoogle}>
-              <i className="fab fa-google"></i> Login with Google
+              <FaGoogle /> Login with Google
             </button>
             <p className={styles.loginInfo}>
               By logging in, you agree to our{' '}
