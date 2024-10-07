@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+.errorMessage {
+  color: red; /* Change to your desired warning color */
+  margin: 1rem 0;
+  font-weight: bold;
+  text-align: center; /* Center the message */
+}
 /* Global Styles */
 .login {
   font-family: 'Poppins', sans-serif;
