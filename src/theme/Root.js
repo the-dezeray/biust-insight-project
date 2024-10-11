@@ -4,17 +4,22 @@ import styles from '../css/login.module.css';
 import Loading from './Loading';
 // Import icons from react-icons
 import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook } from 'react-icons/fa';
+import { useHistory } from '@docusaurus/router';
 
 export default function Root({ children }) {
   const [userAuth, setUserAuth] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [animate, setAnimate] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
+  const history = useHistory();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async function (user) {
-      if (user !== null) {
+      if (user !== null && isValidUser(user.email)) { // Check if the user is valid
         setUserAuth(user);
+        history.push('/biust-insight-project/'); // Updated redirection path
+      } else {
+        setUserAuth(null); // Reset userAuth if not valid
       }
       setAuthLoading(false);
     });
@@ -48,7 +53,7 @@ export default function Root({ children }) {
         rain.remove();
       }
     };
-  }, [userAuth]);
+  }, [history]);
 
   const isAllow = () => userAuth?.email;
 
@@ -75,7 +80,11 @@ export default function Root({ children }) {
           <div className={styles.loginContainer}>
             <h1 className={styles.loginHeading}>Biust Insight Project</h1>
             <p className={styles.loginSubheading}>An Archive Of Material</p>
-            {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>} {/* Warning element */}
+            {errorMessage && (
+              <div className={styles.errorMessage}>
+                {errorMessage}
+              </div>
+            )}
             <div className={styles.loginFeatures}>
               <h2>Contains:</h2>
               <ul>
@@ -133,3 +142,9 @@ export default function Root({ children }) {
     </React.Fragment>
   );
 }
+
+// Function to check if the user's email is valid
+const isValidUser = (email) => {
+  const allowedDomains = ['studentmail.biust.ac.bw']; // Add allowed domains
+  return allowedDomains.some(domain => email.endsWith(`@${domain}`));
+};
