@@ -1,0 +1,116 @@
+.pricingSection {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pricingItem {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricingItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popularItem {
+  border: 2px solid #6a0dad;
+}
+
+.popularTag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+
+.pricingHeader h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.pricingHeader h4 {
+  font-size: 2rem;
+  color: #6a0dad;
+  margin-bottom: 1rem;
+}
+
+.pricingBody ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.pricingBody li {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.pricingBtn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6a0dad;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.pricingBtn:hover {
+  background-color: #5a0b8d;
+}
+
+.popularBtn {
+  background-color: #4a0080;
+}
+
+.popularBtn:hover {
+  background-color: #3a0060;
+}
+
+@media screen and (max-width: 768px) {
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

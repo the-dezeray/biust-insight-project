@@ -59,10 +59,21 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-heading-color);
 }
 
-/* Navbar styles */
 .navbar {
   box-shadow: var(--ifm-navbar-shadow);
+  background-color: #e2dbe7;
 }
+
+.navbar__link,
+.navbar__brand {
+  color: #ffffff;
+}
+
+.navbar__link:hover,
+.navbar__brand:hover {
+  color: #d9b3ff;
+}
+/* Navbar styles */
 
 .custom-navbar-item {
   color: var(--ifm-color-primary);

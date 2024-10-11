@@ -1,0 +1,97 @@
+.featureSection {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.featureLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.featureItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.featureItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.percentageContainer {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.percentageRing {
+  transform: rotate(-90deg);
+}
+
+.percentageCircle {
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.percentageProgress {
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+/* Module-specific colors */
+.featureItem[data-subject="PHYS"] { background-color: #e3f2fd; }
+.featureItem[data-subject="BIO"] { background-color: #e8f5e9; }
+.featureItem[data-subject="MATH"] { background-color: #fff3e0; }
+.featureItem[data-subject="CHEM"] { background-color: #fce4ec; }
+.featureItem[data-subject="STATS"] { background-color: #e8eaf6; }
+.featureItem[data-subject="CETG"] { background-color: #f3e5f5; }
+.featureItem[data-subject="COMP"] { background-color: #e0f2f1; }
+
+/* Percentage-specific colors */
+.featureItem[data-subject="PHYS"] .percentageProgress { stroke: #2196f3; }
+.featureItem[data-subject="BIO"] .percentageProgress { stroke: #4caf50; }
+.featureItem[data-subject="MATH"] .percentageProgress { stroke: #ff9800; }
+.featureItem[data-subject="CHEM"] .percentageProgress { stroke: #e91e63; }
+.featureItem[data-subject="STATS"] .percentageProgress { stroke: #3f51b5; }
+.featureItem[data-subject="CETG"] .percentageProgress { stroke: #9c27b0; }
+.featureItem[data-subject="COMP"] .percentageProgress { stroke: #009688; }
+
+@media screen and (max-width: 768px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
