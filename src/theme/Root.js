@@ -6,9 +6,10 @@ import Loading from './Loading';
 import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook } from 'react-icons/fa';
 
 export default function Root({ children }) {
-    const [userAuth, setUserAuth] = useState(null);
+  const [userAuth, setUserAuth] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [animate, setAnimate] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null); // State for error message
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async function (user) {
@@ -73,9 +74,8 @@ export default function Root({ children }) {
         <div className={containerClass}>
           <div className={styles.loginContainer}>
             <h1 className={styles.loginHeading}>Biust Insight Project</h1>
-            <p className={styles.loginSubheading}>
-              An Archive Of Material
-            </p>
+            <p className={styles.loginSubheading}>An Archive Of Material</p>
+            {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>} {/* Warning element */}
             <div className={styles.loginFeatures}>
               <h2>Contains:</h2>
               <ul>
@@ -106,7 +106,10 @@ export default function Root({ children }) {
                 <FaClock /> Note: Pricing not yet in effect
               </small>
             </div>
-            <button className={`${styles.loginBtn} ${styles.loginGoogle}`} onClick={signInWithGoogle}>
+            <button 
+              className={`${styles.loginBtn} ${styles.loginGoogle}`} 
+              onClick={() => signInWithGoogle(setErrorMessage)} // Pass the setErrorMessage
+            >
               <FaGoogle /> Login with Google
             </button>
             <p className={styles.loginInfo}>
