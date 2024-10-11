@@ -14,48 +14,32 @@ export default function Root({ children }) {
   const history = useHistory();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async function (user) {
-      if (user !== null && isValidUser(user.email)) { // Check if the user is valid
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user && isValidUser(user.email)) {
         setUserAuth(user);
-        history.push('/biust-insight-project/'); // Updated redirection path
+        history.push('/biust-insight-project/');
       } else {
-        setUserAuth(null); // Reset userAuth if not valid
+        setUserAuth(null);
       }
       setAuthLoading(false);
     });
 
     const animationTimer = setTimeout(() => setAnimate(true), 100);
 
-    // Only create raindrops if not authenticated
-    const createRaindrops = () => {
-      if (!userAuth) {
-        const rain = document.createElement('div');
-        rain.className = styles.rain;
-        for (let i = 0; i < 100; i++) {
-          const raindrop = document.createElement('div');
-          raindrop.className = styles.raindrop;
-          raindrop.style.left = `${Math.random() * 100}%`;
-          raindrop.style.animationDuration = `${Math.random() * 2 + 1}s`;
-          raindrop.style.animationDelay = `${Math.random() * 2}s`;
-          rain.appendChild(raindrop);
-        }
-        document.body.appendChild(rain);
-      }
-    };
-
-    createRaindrops();
+    // Create raindrops only if not authenticated
+    if (!userAuth) {
+      createRaindrops();
+    }
 
     return () => {
       unsubscribe();
       clearTimeout(animationTimer);
-      const rain = document.querySelector(`.${styles.rain}`);
-      if (rain) {
-        rain.remove();
-      }
+      removeRaindrops();
     };
-  }, [history]);
+  }, [history, userAuth]);
 
-  const isAllow = () => userAuth?.email;
+  const isAuthenticated = Boolean(userAuth?.email);
+  const containerClass = isAuthenticated ? '' : `${styles.login} ${animate ? styles.animate : ''}`;
 
   if (authLoading) {
     return (
@@ -66,12 +50,9 @@ export default function Root({ children }) {
     );
   }
 
-  // Remove login-specific classes when authenticated
-  const containerClass = isAllow() ? '' : `${styles.login} ${animate ? styles.animate : ''}`;
-
   return (
     <React.Fragment>
-      {isAllow() ? (
+      {isAuthenticated ? (
         <div className={styles.authenticatedView} style={{ width: '100%', height: '100%' }}>
           {children}
         </div>
@@ -130,21 +111,38 @@ export default function Root({ children }) {
               Don't have an account? <a href="/signup" className={styles.loginLink}>Sign up</a>
             </small>
           </div>
-          {!isAllow() && (
-            <div className={styles.backgroundAnimation}>
-              {[...Array(10)].map((_, index) => (
-                <div key={index} className={styles.floatingItem}></div>
-              ))}
-            </div>
-          )}
+          <div className={styles.backgroundAnimation}>
+            {[...Array(10)].map((_, index) => (
+              <div key={index} className={styles.floatingItem}></div>
+            ))}
+          </div>
         </div>
       )}
     </React.Fragment>
   );
 }
 
-// Function to check if the user's email is valid
 const isValidUser = (email) => {
-  const allowedDomains = ['studentmail.biust.ac.bw']; // Add allowed domains
-  return allowedDomains.some(domain => email.endsWith(`@${domain}`));
+  return email.endsWith('@studentmail.biust.ac.bw');
+};
+
+const createRaindrops = () => {
+  const rain = document.createElement('div');
+  rain.className = styles.rain;
+  for (let i = 0; i < 100; i++) {
+    const raindrop = document.createElement('div');
+    raindrop.className = styles.raindrop;
+    raindrop.style.left = `${Math.random() * 100}%`;
+    raindrop.style.animationDuration = `${Math.random() * 2 + 1}s`;
+    raindrop.style.animationDelay = `${Math.random() * 2}s`;
+    rain.appendChild(raindrop);
+  }
+  document.body.appendChild(rain);
+};
+
+const removeRaindrops = () => {
+  const rain = document.querySelector(`.${styles.rain}`);
+  if (rain) {
+    rain.remove();
+  }
 };
