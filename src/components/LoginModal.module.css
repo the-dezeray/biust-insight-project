@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -6,68 +8,313 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 1000;
+  font-family: 'Poppins', sans-serif;
 }
 
 .modalContent {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 90%;
+  width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.modalContent.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 600px;
+  }
 }
 
 .loginHeading {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8040ff;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .loginSubheading {
   font-size: 1.2rem;
+  font-weight: 300;
+  color: #444;
   margin-bottom: 1.5rem;
+}
+
+.errorMessageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .errorMessage {
   background-color: #ffebee;
-  color: #c62828;
-  padding: 0.5rem;
+  color: #d32f2f;
+  padding: 12px 20px;
   border-radius: 4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  border: 2px solid #d32f2f;
+  max-width: 80%;
+  text-align: center;
+}
+
+.errorIcon {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.loginFeatures {
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: #f9f5ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loginFeatures h2 {
+  color: #8040ff;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .loginFeatures ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
 }
 
 .loginFeatures li {
+  margin-bottom: 0.75rem;
+  color: #222;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.loginFeatures li:nth-child(1) { animation-delay: 0.2s; }
+.loginFeatures li:nth-child(2) { animation-delay: 0.4s; }
+.loginFeatures li:nth-child(3) { animation-delay: 0.6s; }
+.loginFeatures li:nth-child(4) { animation-delay: 0.8s; }
+
+.loginTrial {
+  background-color: #f0e6ff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginTrial h3 {
+  color: #8040ff;
   margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.loginPricing {
+  margin-bottom: 2rem;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loginPricing h3 {
+  color: #8040ff;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pricingOptions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pricingOption {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricingOption:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bestValue {
+  background-color: #ffffff;
+  border: 2px solid #3a1038;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(139, 76, 175, 0.2);
+}
+
+.bestValue:hover {
+  box-shadow: 0 6px 14px rgba(139, 76, 175, 0.3);
+}
+
+.bestValueLabel {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background-color: #8b4caf;
+  color: white;
+  padding: 5px 30px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4248d6;
+  display: block;
+  margin-top: 10px;
+}
+
+.period {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+.savings {
+  display: block;
+  margin-top: 10px;
+  color: #742b5e;
+  font-weight: bold;
 }
 
 .loginBtn {
-  width: 100%;
-  padding: 0.75rem;
   font-size: 1rem;
+  background-color: #8040ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(128, 64, 255, 0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
 }
 
-.loginGoogle {
-  background-color: #4285F4;
-  color: white;
+.loginBtn:hover {
+  background-color: #9560ff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(128, 64, 255, 0.4);
+}
+
+.loginLink {
+  color: #8040ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.loginLink:hover {
+  color: #9560ff;
+  text-decoration: underline;
+  text-shadow: 0 0 1px rgba(128, 64, 255, 0.3);
 }
 
 .loginInfo {
-  font-size: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.loginSmallText {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.backgroundAnimation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floatingItem {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(128, 64, 255, 0.2);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.floatingItem:nth-child(2n) {
+  width: 30px;
+  height: 30px;
+  animation-duration: 12s;
+}
+
+.floatingItem:nth-child(3n) {
+  width: 50px;
+  height: 50px;
+  animation-duration: 14s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  20% { opacity: 1; }
+  50% { transform: translate(100px, -50px) rotate(360deg); }
+  100% { transform: translate(100vw, -100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(128, 64, 255, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(128, 64, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(128, 64, 255, 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .closeBtn {
@@ -77,7 +324,47 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Add more styles as needed */
+.closeBtn:hover {
+  background-color: #e0e0e0;
+}
 
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  .loginHeading {
+    font-size: 2rem;
+  }
+  .loginSubheading {
+    font-size: 1rem;
+  }
+  .loginBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  .loginInfo,
+  .loginSmallText {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginHeading {
+    font-size: 1.8rem;
+  }
+  .loginSubheading {
+    font-size: 0.95rem;
+  }
+  .loginBtn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  .loginInfo,
+  .loginSmallText {
+    font-size: 0.75rem;
+  }
+}
