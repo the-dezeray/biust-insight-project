@@ -26,6 +26,21 @@
   /* Other customizations */
   --ifm-navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --ifm-global-radius: 5px;
+  
+  --cyber-purple: #8a2be2;
+  --cyber-purple-light: #9f3eff;
+  --cyber-purple-dark: #6a0dad;
+  --cyber-accent: #00ffff;
+  
+  --footer-bg: #1a1a1a;
+  --footer-text: #ffffff;
+  --footer-link-bg: #333333;
+  --footer-link-text: #b39ddb;
+  --footer-link-hover-bg: #4a4a4a;
+  --footer-link-hover-text: #d1c4e9;
+  --footer-border: #333333;
+  --footer-highlight-bg: #6200ea;
+  --footer-highlight-text: #ffffff;
 }
 
 /* Dark mode colors */
@@ -58,34 +73,33 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--ifm-font-family-headings);
   color: var(--ifm-heading-color);
 }
-
-.navbar {
-  box-shadow: var(--ifm-navbar-shadow);
-  background-color: #e2dbe7;
-}
-
-.navbar__link,
-.navbar__brand {
-  color: #ffffff;
-}
-
-.navbar__link:hover,
-.navbar__brand:hover {
-  color: #d9b3ff;
-}
-/* Navbar styles */
-
 .custom-navbar-item {
   color: var(--ifm-color-primary);
   background-color: transparent;
   border: 2px solid var(--ifm-color-primary);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .custom-navbar-item:hover {
-  background-color: var(--ifm-color-primary-lightest);
-  color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
 }
 
+/* Style for dark mode */
+[data-theme='dark'] .custom-navbar-item {
+  color: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] .custom-navbar-item:hover {
+  color: var(--ifm-color-primary-light);
+}
 .custom-navbar-item-active {
   border-bottom: 2px solid var(--ifm-color-primary);
   background-color: var(--ifm-color-primary-lightest);
@@ -93,9 +107,92 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Footer styles */
-footer {
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 0;
+  border-top: 1px solid var(--footer-border);
+}
 
-  color: var(--ifm-font-color-base);
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer__col {
+  margin-bottom: 2rem;
+  min-width: 200px;
+}
+
+.footer__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--footer-text);
+}
+
+.footer__item {
+  margin-bottom: 0.75rem;
+}
+
+.footer__link-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--footer-link-bg);
+  color: var(--footer-link-text);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.footer__link-item:hover {
+  background-color: var(--footer-link-hover-bg);
+  color: var(--footer-link-hover-text);
+}
+
+.footer__link-item svg {
+  margin-right: 0.5rem;
+}
+
+.footer__link-item--highlight {
+  background-color: var(--footer-highlight-bg);
+  color: var(--footer-highlight-text);
+}
+
+.footer__link-item--highlight:hover {
+  background-color: var(--footer-highlight-bg);
+  color: var(--footer-highlight-text);
+  opacity: 0.9;
+}
+
+.footer__copyright {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  color: var(--footer-text);
+  opacity: 0.8;
+}
+
+.footer__copyright p {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__col {
+    text-align: center;
+  }
 }
 
 footer a {
@@ -160,3 +257,98 @@ footer a:hover {
 }
 
 /* ... (rest of your existing styles) ... */
+/* Sidebar menu styling */
+.menu__list-item-collapsible {
+  transition: background-color 0.2s ease;
+}
+
+.menu__link--sublist {
+  font-weight: 600;
+  color: var(--ifm-menu-color);
+  transition: color 0.2s ease;
+}
+
+.menu__link--sublist:hover,
+.menu__link--active {
+  color: var(--ifm-color-primary);
+  background-color: transparent;
+}
+
+.menu__list-item-collapsible--active {
+  background-color: transparent;
+}
+
+.menu__caret {
+  color: var(--ifm-menu-color);
+  transition: color 0.2s ease;
+}
+
+.menu__caret:hover {
+  background-color: transparent;
+  color: var(--ifm-color-primary);
+}
+
+/* Submenu items */
+.menu__list-item-collapsible + ul .menu__link {
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.menu__list-item-collapsible + ul .menu__link:hover {
+  background-color: transparent;
+  color: var(--ifm-color-primary);
+}
+
+.menu__list-item-collapsible + ul .menu__link--active {
+  border-left: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .menu__link--sublist:hover,
+[data-theme='dark'] .menu__link--active,
+[data-theme='dark'] .menu__caret:hover,
+[data-theme='dark'] .menu__list-item-collapsible + ul .menu__link:hover,
+[data-theme='dark'] .menu__list-item-collapsible + ul .menu__link--active {
+  color: var(--ifm-color-primary-lighter);
+}
+
+/* Override default Docusaurus menu hover styles */
+.menu__link:hover,
+.menu__list-item-collapsible:hover {
+  background-color: transparent;
+}
+
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Ensure active items don't have a background color */
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: transparent;
+}
+
+/* If you want a subtle background for active items, use this instead:
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-menu-color-background-active);
+}
+*/
+
+/* Adjust styles for dark mode if needed */
+[data-theme='dark'] .menu__link:hover {
+  color: var(--ifm-color-primary-lighter);
+}
+
+/* Sidebar menu styling */
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+.menu__list-item:not(.menu__list-item-collapsible):hover {
+  background-color: var(--ifm-menu-color-background-hover);
+}
+
+.menu__link:hover {
+  background-color: transparent;
+}

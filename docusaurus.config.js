@@ -197,6 +197,14 @@ footer: {
           href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
         },
       ],
+    },{
+      title: 'Social',
+      items: [
+        {
+          label: 'Facebook',
+          href: 'https://www.facebook.com',
+        },
+      ],
     },
     {
       title: 'Legal',
