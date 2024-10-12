@@ -5,21 +5,21 @@ import styles from './Contributors.module.css';
 const mainContributors = [
 
       
-  { name: 'Desiree Chingwaru', role: 'UI Designer', icon: FaUserCircle },
+  { name: 'Desiree Chingwaru', role: 'Lead Developer', icon: FaUserCircle },
 
   
-  { name: 'Simion Uden', role: 'UI Designer', icon: FaUserCircle },
-  { name: 'John Doe', role: 'Database Admin', icon: FaUserCog },
+  { name: 'Simion Uden', role: 'Developer', icon: FaUserCircle },
+
   
   { name: 'Lethabo', role: 'UI Designer', icon: FaUserCircle },
   { name: 'Lorato Gaie', role: 'Database Admin', icon: FaUserCog },
   
-  { name: 'Nebiat', role: 'UI Designer', icon: FaUserCircle },
-  { name: 'John Doe', role: 'Database Admin', icon: FaUserCog },
+  { name: 'Nebiat', role: 'Marketing and Socials', icon: FaUserCircle },
+  { name: 'Motheo', role: 'Tester', icon: FaUserCog },
   
-  { name: 'Clarify', role: 'UI Designer', icon: FaUserCircle },
-  { name: 'Ishe', role: 'Database Admin', icon: FaUserCog },
-  { name: 'EJ', role: 'Developer', icon: FaUserGraduate },
+  { name: 'Clarify', role: 'Tester', icon: FaUserCircle },
+  { name: 'Ishe', role: 'Tester', icon: FaUserCog },
+  { name: 'EJ', role: 'Marketing', icon: FaUserGraduate },
 ];
 
 const resourceProviders = [

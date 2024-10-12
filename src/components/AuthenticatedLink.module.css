@@ -10,25 +10,26 @@
 }
 
 .featureItem {
-  background-color: #ffffff;
+  background-color: var(--ifm-background-surface-color);
   border-radius: 8px;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--ifm-color-emphasis-200);
   min-width: 200px;
 }
 
 .featureItem:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .featureIcon {
   font-size: 1.5rem;
   margin-right: 1rem;
+  transition: color 0.3s ease;
 }
 
 .featureContent {
@@ -39,20 +40,42 @@
 
 .featureTitle {
   font-size: 1rem;
-  color: #333;
+  color: var(--ifm-font-color-base);
   margin: 0;
 }
 
 .featureYear {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--ifm-color-emphasis-700);
 }
 
-/* Module-specific colors */
-.featureItem[data-subject="PHYS"] { background-color: #e3f2fd; }
-.featureItem[data-subject="BIO"] { background-color: #e8f5e9; }
-.featureItem[data-subject="MATH"] { background-color: #fff3e0; }
-.featureItem[data-subject="CHEM"] { background-color: #fce4ec; }
-.featureItem[data-subject="STATS"] { background-color: #e8eaf6; }
-.featureItem[data-subject="CETG"] { background-color: #f3e5f5; }
-.featureItem[data-subject="COMP"] { background-color: #e0f2f1; }
+/* Icon-based colors */
+.featureIcon[class*="FaBook"] { color: #4ECDC4; } /* For notes */
+.featureIcon[class*="FaFileAlt"] { color: #FF6B6B; } /* For exams/tests */
+.featureIcon[class*="FaFlask"] { color: #F7B801; } /* For labs */
+.featureIcon[class*="FaChalkboardTeacher"] { color: #45B7D1; } /* For tutorials */
+.featureIcon[class*="FaDna"] { color: #e2f01e; } /* For biology-related content */
+/* Add more icon-specific colors as needed */
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .featureItem {
+  background-color: rgba(255, 239, 213, 0.1);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .featureItem:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .featureIcon {
+  filter: brightness(1.2) saturate(1.2);
+}
+
+html[data-theme='dark'] .featureTitle {
+  color: var(--ifm-color-emphasis-900);
+}
+
+html[data-theme='dark'] .featureYear {
+  color: var(--ifm-color-emphasis-700);
+}
