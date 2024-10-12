@@ -12,6 +12,7 @@ const app = firebase.initializeApp({
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET
 });
 
+
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 const db = getFirestore(app);  // Initialize Firestore
@@ -48,6 +49,7 @@ const addUserToFirestore = async (user) => {
   }
 };
 
+
 // Function to calculate the difference in days between two dates
 const getDaysDifference = (date1, date2) => {
   const msInDay = 24 * 60 * 60 * 1000;  // Number of milliseconds in one day
@@ -72,14 +74,14 @@ const checkUserAfterSignIn = async (user) => {
 };
 
 // Sign in with Google and check if the user is valid
-export const signInWithGoogle = async (setErrorMessage) => {
+export const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
     
     if (!isValidBIUSTEmail(user.email)) {
       await signOut(auth);  // Sign out the user immediately
-      setErrorMessage('Only BIUST student emails are allowed.');
+      alert('Only BIUST student emails are allowed.');
       return null;
     }
     
@@ -88,12 +90,11 @@ export const signInWithGoogle = async (setErrorMessage) => {
     // Call function to check the user after sign-in
     await checkUserAfterSignIn(user);
     
-    setErrorMessage(null); // Clear any previous error messages
     return user;  // Return the user object for further use if needed
    
   } catch (err) {
     console.error(err);
-    setErrorMessage(err.message);
+    alert(err.message);
     return null;
   }
 };
