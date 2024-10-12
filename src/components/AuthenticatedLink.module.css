@@ -1,0 +1,58 @@
+.featureButton {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.featureItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  min-width: 200px;
+}
+
+.featureItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.featureYear {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Module-specific colors */
+.featureItem[data-subject="PHYS"] { background-color: #e3f2fd; }
+.featureItem[data-subject="BIO"] { background-color: #e8f5e9; }
+.featureItem[data-subject="MATH"] { background-color: #fff3e0; }
+.featureItem[data-subject="CHEM"] { background-color: #fce4ec; }
+.featureItem[data-subject="STATS"] { background-color: #e8eaf6; }
+.featureItem[data-subject="CETG"] { background-color: #f3e5f5; }
+.featureItem[data-subject="COMP"] { background-color: #e0f2f1; }

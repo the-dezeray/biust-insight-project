@@ -5,18 +5,23 @@ import Loading from './Loading';
 // Import icons from react-icons
 import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook } from 'react-icons/fa';
 import { useHistory } from '@docusaurus/router';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import PricingAndPayment from './PricingAndPayment';
 
 export default function Root({ children }) {
   const [userAuth, setUserAuth] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [animate, setAnimate] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
+  const [showPricing, setShowPricing] = useState(false);
   const history = useHistory();
+  const db = getFirestore();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user && isValidUser(user.email)) {
         setUserAuth(user);
+        checkUserPaymentStatus(user);
         history.push('/biust-insight-project/');
       } else {
         setUserAuth(null);
@@ -37,6 +42,21 @@ export default function Root({ children }) {
       removeRaindrops();
     };
   }, [history, userAuth]);
+
+  const checkUserPaymentStatus = async (user) => {
+    const userDocRef = doc(db, 'users', user.email);
+    const userDoc = await getDoc(userDocRef);
+    if (userDoc.exists()) {
+      const userData = userDoc.data();
+      const creationTime = userData.createdAt.toDate();
+      const currentTime = new Date();
+      const daysSinceCreation = Math.floor((currentTime - creationTime) / (1000 * 60 * 60 * 24));
+      
+      if (daysSinceCreation >= 2 && !userData.payable) {
+        setShowPricing(true);
+      }
+    }
+  };
 
   const isAuthenticated = Boolean(userAuth?.email);
   const containerClass = isAuthenticated ? '' : `${styles.login} ${animate ? styles.animate : ''}`;
@@ -62,8 +82,11 @@ export default function Root({ children }) {
             <h1 className={styles.loginHeading}>Biust Insight Project</h1>
             <p className={styles.loginSubheading}>An Archive Of Material</p>
             {errorMessage && (
-              <div className={styles.errorMessage}>
-                {errorMessage}
+              <div className={styles.errorMessageWrapper}>
+                <div className={styles.errorMessage}>
+                  <span className={styles.errorIcon}>⚠️</span>
+                  {errorMessage}
+                </div>
               </div>
             )}
             <div className={styles.loginFeatures}>
@@ -76,24 +99,26 @@ export default function Root({ children }) {
               </ul>
             </div>
             <div className={styles.loginTrial}>
-              <h3>Free Access 🎉</h3>
-              <p>Still in development mode therefore free access 🆓</p>
+              <h3>Free Trial 🎉</h3>
+              <p>You will be allocated 2 days to use the app freely 🆓</p>
             </div>
             <div className={styles.loginPricing}>
-              <h3>Pricing (Coming Soon) <FaMoneyBillWave /></h3>
+              <h3>Pricing  <FaMoneyBillWave /></h3>
               <p>After your trial:</p>
               <div className={styles.pricingOptions}>
                 <div className={styles.pricingOption}>
                   <span className={styles.price}>80 Pula</span>
                   <span className={styles.period}>per month</span>
                 </div>
-                <div className={styles.pricingOption}>
+                <div className={`${styles.pricingOption} ${styles.bestValue}`}>
+                  <span className={styles.bestValueLabel}>Best Value</span>
                   <span className={styles.price}>150 Pula</span>
                   <span className={styles.period}>per semester <FaSchool /></span>
+                  <span className={styles.savings}>Save 60%</span>
                 </div>
               </div>
               <small className={styles.pricingNote}>
-                <FaClock /> Note: Pricing not yet in effect
+                <FaClock /> Your contribution will be used to maintain the site
               </small>
             </div>
             <button 
