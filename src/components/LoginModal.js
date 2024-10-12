@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { signInWithGoogle, auth } from '../theme/firebase';
 import styles from './LoginModal.module.css';
 import Loading from './Loading'; // Make sure this path is correct
-import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook } from 'react-icons/fa';
+import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
 import { useHistory } from '@docusaurus/router';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
@@ -12,6 +12,7 @@ const LoginModal = ({ onClose, onLogin }) => {
   const [animate, setAnimate] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [showPricing, setShowPricing] = useState(false);
+  const [warningMessage, setWarningMessage] = useState(null);
   const history = useHistory();
   const db = getFirestore();
 
@@ -50,8 +51,21 @@ const LoginModal = ({ onClose, onLogin }) => {
     }
   };
 
-  const handleLogin = () => {
-    signInWithGoogle(setErrorMessage);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setErrorMessage(null);
+    setWarningMessage(null);
+    
+    const result = await signInWithGoogle();
+    
+    if (result.error) {
+      setErrorMessage(result.error);
+    } else if (result.warning) {
+      setWarningMessage(result.warning);
+      onLogin(result.user);
+    } else if (result.user) {
+      onLogin(result.user);
+    }
   };
 
   const isValidUser = (email) => {
@@ -63,18 +77,15 @@ const LoginModal = ({ onClose, onLogin }) => {
   }
 
   return (
-    <div className={styles.modalOverlay}>
-      <div className={`${styles.modalContent} ${animate ? styles.animate : ''}`}>
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={`${styles.modalContent} ${animate ? styles.animate : ''}`} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeBtn} onClick={onClose}>
+          <FaTimes />
+        </button>
+        
         <h1 className={styles.loginHeading}>Biust Insight Project</h1>
         <p className={styles.loginSubheading}>An Archive Of Material</p>
-        {errorMessage && (
-          <div className={styles.errorMessageWrapper}>
-            <div className={styles.errorMessage}>
-              <span className={styles.errorIcon}>⚠️</span>
-              {errorMessage}
-            </div>
-          </div>
-        )}
+        
         <div className={styles.loginFeatures}>
           <h2>Contains:</h2>
           <ul>
@@ -84,10 +95,12 @@ const LoginModal = ({ onClose, onLogin }) => {
             <li><FaBook /> Study resources</li>
           </ul>
         </div>
+        
         <div className={styles.loginTrial}>
           <h3>Free Trial 🎉</h3>
           <p>You will be allocated 2 days to use the app freely 🆓</p>
         </div>
+        
         <div className={styles.loginPricing}>
           <h3>Pricing  <FaMoneyBillWave /></h3>
           <p>After your trial:</p>
@@ -107,12 +120,28 @@ const LoginModal = ({ onClose, onLogin }) => {
             <FaClock /> Your contribution will be used to maintain the site
           </small>
         </div>
+        
+        {errorMessage && (
+          <div className={styles.errorMessage}>
+            <FaExclamationTriangle className={styles.errorIcon} />
+            {errorMessage}
+          </div>
+        )}
+        
+        {warningMessage && (
+          <div className={styles.warningMessage}>
+            <FaExclamationTriangle className={styles.warningIcon} />
+            {warningMessage}
+          </div>
+        )}
+        
         <button 
           className={`${styles.loginBtn} ${styles.loginGoogle}`} 
           onClick={handleLogin}
         >
           <FaGoogle /> Login with Google
         </button>
+        
         <p className={styles.loginInfo}>
           By logging in, you agree to our{' '}
           <a href="/terms" className={styles.loginLink}>Terms of Service</a> and{' '}
@@ -121,7 +150,6 @@ const LoginModal = ({ onClose, onLogin }) => {
         <small className={styles.loginSmallText}>
           Don't have an account? <a href="/signup" className={styles.loginLink}>Sign up</a>
         </small>
-        <button className={styles.closeBtn} onClick={onClose}>Close</button>
       </div>
       <div className={styles.backgroundAnimation}>
         {[...Array(10)].map((_, index) => (

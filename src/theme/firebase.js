@@ -68,9 +68,10 @@ const checkUserAfterSignIn = async (user) => {
     const userDoc = await getDoc(userDocRef);
     if (!userDoc.exists()) {
       // User is not in Firestore
-      alert('Warning: You need to take action on your account!');
+      return 'Warning: You need to take action on your account!';
     }
   }
+  return null;
 };
 
 // Sign in with Google and check if the user is valid
@@ -81,20 +82,23 @@ export const signInWithGoogle = async () => {
     
     if (!isValidBIUSTEmail(user.email)) {
       await signOut(auth);  // Sign out the user immediately
-      alert('Only BIUST student emails are allowed.');
-      return null;
+      return { error: 'Only BIUST student emails are allowed.' };
     }
     
     // Add the user to Firestore if it's their first sign-in
     await addUserToFirestore(user);
-    // Call function to check the user after sign-in
-    await checkUserAfterSignIn(user);
     
-    return user;  // Return the user object for further use if needed
+    // Check the user after sign-in
+    const warningMessage = await checkUserAfterSignIn(user);
+    
+    if (warningMessage) {
+      return { user, warning: warningMessage };
+    }
+    
+    return { user };
    
   } catch (err) {
     console.error(err);
-    alert(err.message);
-    return null;
+    return { error: err.message || 'An error occurred during sign in.' };
   }
 };

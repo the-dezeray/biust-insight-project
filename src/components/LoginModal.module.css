@@ -27,6 +27,7 @@
   transition: all 0.5s ease-in-out;
   opacity: 0;
   transform: translateY(30px);
+  position: relative;
 }
 
 .modalContent.animate {
@@ -56,25 +57,50 @@
   margin: 10px 0;
 }
 
-.errorMessage {
-  background-color: #ffebee;
-  color: #d32f2f;
-  padding: 8px 12px;
+.errorMessage,
+.warningMessage {
+  padding: 12px;
   border-radius: 4px;
-  font-weight: bold;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  border: 2px solid #d32f2f;
-  max-width: 100%;
-  text-align: center;
+  justify-content: center;
   font-size: 0.9rem;
+  animation: slideIn 0.5s ease-out;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.errorIcon {
-  font-size: 1em;
+.errorMessage {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef5350;
+}
+
+.warningMessage {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ff9800;
+}
+
+.errorIcon,
+.warningIcon {
   margin-right: 8px;
+  font-size: 1.1rem;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes shake {
@@ -242,6 +268,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   animation: pulse 2s infinite;
+  margin-top: 10px;
 }
 
 .loginBtn:hover {
@@ -325,18 +352,34 @@
 }
 
 .closeBtn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .closeBtn:hover {
-  background-color: #e0e0e0;
+  background-color: #d32f2f;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.closeBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.5);
 }
 
 /* Media Queries for better responsiveness */
@@ -406,5 +449,57 @@
 
   .pricingOption {
     margin-bottom: 10px;
+  }
+
+  .closeBtn {
+    top: 5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
+.warningMessage {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border: 1px solid #e53e3e;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.warningIcon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ... (keep existing media queries) */
+
+@media (min-width: 768px) {
+  /* ... (keep existing styles for larger screens) */
+
+  .warningMessage {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ... (keep existing styles for smaller screens) */
+
+  .warningMessage {
+    font-size: 0.8rem;
+    padding: 10px;
   }
 }
