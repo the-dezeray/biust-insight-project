@@ -59,16 +59,21 @@ const getDaysDifference = (date1, date2) => {
 
 // Function to check if the user account is older than 4 days and if the user exists in Firestore
 const checkUserAfterSignIn = async (user) => {
-  const creationTime = new Date(user.metadata.creationTime);  // Account creation time
-  const currentTime = new Date();  // Current time
-  const daysSinceCreation = getDaysDifference(creationTime, currentTime);
-  // Check if more than 4 days have passed
-  if (daysSinceCreation > 4) {
-    const userDocRef = doc(db, 'users', user.email);
-    const userDoc = await getDoc(userDocRef);
-    if (!userDoc.exists()) {
-      // User is not in Firestore
-      return 'Warning: You need to take action on your account!';
+  console.log("Checking user after sign in...");
+  const userDocRef = doc(db, 'users', user.email);
+  const userDoc = await getDoc(userDocRef);
+  
+  if (userDoc.exists()) {
+    const userData = userDoc.data();
+    console.log("User data:", userData);
+    const creationTime = userData.createdAt.toDate();
+    const currentTime = new Date();
+    const daysSinceCreation = getDaysDifference(creationTime, currentTime);
+    console.log("Days since creation:", daysSinceCreation);
+    
+    if (daysSinceCreation > 2 && !userData.payable) {
+      console.log("Trial ended");
+      return { trialEnded: true };
     }
   }
   return null;
@@ -77,28 +82,24 @@ const checkUserAfterSignIn = async (user) => {
 // Sign in with Google and check if the user is valid
 export const signInWithGoogle = async () => {
   try {
+    console.log("Attempting Google sign in...");
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
     
     if (!isValidBIUSTEmail(user.email)) {
-      await signOut(auth);  // Sign out the user immediately
+      console.log("Invalid email, signing out");
+      await signOut(auth);
       return { error: 'Only BIUST student emails are allowed.' };
     }
     
-    // Add the user to Firestore if it's their first sign-in
+    console.log("Valid email, adding user to Firestore");
     await addUserToFirestore(user);
     
-    // Check the user after sign-in
-    const warningMessage = await checkUserAfterSignIn(user);
-    
-    if (warningMessage) {
-      return { user, warning: warningMessage };
-    }
-    
+    console.log("Sign in successful");
     return { user };
    
   } catch (err) {
-    console.error(err);
+    console.error("Error during sign in:", err);
     return { error: err.message || 'An error occurred during sign in.' };
   }
 };

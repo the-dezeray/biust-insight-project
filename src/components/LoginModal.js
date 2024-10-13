@@ -5,26 +5,19 @@ import Loading from './Loading'; // Make sure this path is correct
 import { FaGoogle, FaMoneyBillWave, FaSchool, FaClock, FaFileAlt, FaFlask, FaClipboardList, FaBook, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
 import { useHistory } from '@docusaurus/router';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import PricingAndPayment from '../theme/PricingAndPayment';
 
 const LoginModal = ({ onClose, onLogin }) => {
-  const [userAuth, setUserAuth] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
+  const [checkingTrial, setCheckingTrial] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [showPricing, setShowPricing] = useState(false);
-  const [warningMessage, setWarningMessage] = useState(null);
+  const [trialEnded, setTrialEnded] = useState(false);
   const history = useHistory();
   const db = getFirestore();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      if (user && isValidUser(user.email)) {
-        setUserAuth(user);
-        checkUserPaymentStatus(user);
-        onLogin(user);
-      } else {
-        setUserAuth(null);
-      }
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       setAuthLoading(false);
     });
 
@@ -34,46 +27,76 @@ const LoginModal = ({ onClose, onLogin }) => {
       unsubscribe();
       clearTimeout(animationTimer);
     };
-  }, [history, userAuth]);
+  }, []);
 
   const checkUserPaymentStatus = async (user) => {
-    const userDocRef = doc(db, 'users', user.email);
-    const userDoc = await getDoc(userDocRef);
-    if (userDoc.exists()) {
-      const userData = userDoc.data();
-      const creationTime = userData.createdAt.toDate();
-      const currentTime = new Date();
-      const daysSinceCreation = Math.floor((currentTime - creationTime) / (1000 * 60 * 60 * 24));
-      
-      if (daysSinceCreation >= 2 && !userData.payable) {
-        setShowPricing(true);
+    console.log("Checking user payment status...");
+    setCheckingTrial(true);
+    try {
+      const userDocRef = doc(db, 'users', user.email);
+      const userDoc = await getDoc(userDocRef);
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        console.log("User data:", userData);
+        const creationTime = userData.createdAt.toDate();
+        const currentTime = new Date();
+        const daysSinceCreation = Math.floor((currentTime - creationTime) / (1000 * 60 * 60 * 24));
+        console.log("Days since creation:", daysSinceCreation);
+        
+        if (daysSinceCreation >= 2 && !userData.payable) {
+          console.log("Trial ended, showing pricing");
+          setTrialEnded(true);
+          return true;
+        }
       }
+      return false;
+    } catch (error) {
+      console.error("Error checking user payment status:", error);
+      setErrorMessage("An error occurred while checking your account status. Please try again.");
+      return false;
+    } finally {
+      setCheckingTrial(false);
     }
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMessage(null);
-    setWarningMessage(null);
+    setTrialEnded(false);
     
+    console.log("Attempting login...");
     const result = await signInWithGoogle();
+    console.log("Login result:", result);
     
     if (result.error) {
       setErrorMessage(result.error);
-    } else if (result.warning) {
-      setWarningMessage(result.warning);
-      onLogin(result.user);
     } else if (result.user) {
-      onLogin(result.user);
+      const isTrialEnded = await checkUserPaymentStatus(result.user);
+      if (isTrialEnded) {
+        setTrialEnded(true);
+      } else {
+        onLogin(result.user);
+      }
     }
-  };
-
-  const isValidUser = (email) => {
-    return email.endsWith('@studentmail.biust.ac.bw');
   };
 
   if (authLoading) {
     return <Loading />;
+  }
+
+  if (trialEnded) {
+    return (
+      <div className={styles.modalOverlay} onClick={onClose}>
+        <div className={`${styles.modalContent} ${animate ? styles.animate : ''}`} onClick={(e) => e.stopPropagation()}>
+          <button className={styles.closeBtn} onClick={onClose}>
+            <FaTimes />
+          </button>
+          
+
+          <PricingAndPayment />
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -83,55 +106,13 @@ const LoginModal = ({ onClose, onLogin }) => {
           <FaTimes />
         </button>
         
-        <h1 className={styles.loginHeading}>Biust Insight Project</h1>
-        <p className={styles.loginSubheading}>An Archive Of Material</p>
-        
-        <div className={styles.loginFeatures}>
-          <h2>Contains:</h2>
-          <ul>
-            <li><FaFileAlt /> Past exam papers</li>
-            <li><FaFlask /> Laboratory reports</li>
-            <li><FaClipboardList /> Assignment samples</li>
-            <li><FaBook /> Study resources</li>
-          </ul>
-        </div>
-        
-        <div className={styles.loginTrial}>
-          <h3>Free Trial 🎉</h3>
-          <p>You will be allocated 2 days to use the app freely 🆓</p>
-        </div>
-        
-        <div className={styles.loginPricing}>
-          <h3>Pricing  <FaMoneyBillWave /></h3>
-          <p>After your trial:</p>
-          <div className={styles.pricingOptions}>
-            <div className={styles.pricingOption}>
-              <span className={styles.price}>80 Pula</span>
-              <span className={styles.period}>per month</span>
-            </div>
-            <div className={`${styles.pricingOption} ${styles.bestValue}`}>
-              <span className={styles.bestValueLabel}>Best Value</span>
-              <span className={styles.price}>150 Pula</span>
-              <span className={styles.period}>per semester <FaSchool /></span>
-              <span className={styles.savings}>Save 60%</span>
-            </div>
-          </div>
-          <small className={styles.pricingNote}>
-            <FaClock /> Your contribution will be used to maintain the site
-          </small>
-        </div>
+        <h1 className={styles.loginHeading}>Login</h1>
+        <p className={styles.loginSubheading}>Sign in with your BIUST student email</p>
         
         {errorMessage && (
           <div className={styles.errorMessage}>
             <FaExclamationTriangle className={styles.errorIcon} />
             {errorMessage}
-          </div>
-        )}
-        
-        {warningMessage && (
-          <div className={styles.warningMessage}>
-            <FaExclamationTriangle className={styles.warningIcon} />
-            {warningMessage}
           </div>
         )}
         
