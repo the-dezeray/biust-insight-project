@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useAnimate, useInView } from 'framer-motion';
-import { FaAtom, FaDna, FaSquareRootAlt, FaFlask, FaChartBar, FaCog, FaLaptopCode } from 'react-icons/fa';
+import { FaAtom, FaDna, FaSquareRootAlt, FaFlask, FaChartBar, FaCog, FaLaptopCode, FaBook, FaMountain, FaDatabase } from 'react-icons/fa';
 import styles from "./Features.module.css";
 
 function FeatureItem({ Icon, title, percentage, link, delay }) {
@@ -13,7 +13,8 @@ function FeatureItem({ Icon, title, percentage, link, delay }) {
     }
   }, [isInView, animate, delay]);
 
-  const circumference = 2 * Math.PI * 13; // 30 is the radius of the circle
+  const radius = 8;
+  const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
@@ -22,24 +23,24 @@ function FeatureItem({ Icon, title, percentage, link, delay }) {
         <Icon className={styles.featureIcon} />
         <h3 className={styles.featureTitle}>{title}</h3>
         <div className={styles.percentageContainer}>
-          <svg className={styles.percentageRing} width="20" height="20">
+          <svg className={styles.percentageRing} width="24" height="24" viewBox="0 0 24 24">
             <circle
               className={styles.percentageCircle}
               stroke="#e0e0e0"
-              strokeWidth="3"
+              strokeWidth="2"
               fill="transparent"
-              r="8"
-              cx="10"
-              cy="10"
+              r={radius}
+              cx="12"
+              cy="12"
             />
             <circle
               className={styles.percentageProgress}
               stroke="#4a90e2"
-              strokeWidth="3"
+              strokeWidth="2"
               fill="transparent"
-              r="8"
-              cx="10"
-              cy="10"
+              r={radius}
+              cx="12"
+              cy="12"
               style={{
                 strokeDasharray: circumference,
                 strokeDashoffset: strokeDashoffset,
@@ -63,18 +64,25 @@ export default function Features() {
   }, [isInView, animate]);
 
   const subjects = [
-    { title: "PHYS 101", Icon: FaAtom, percentage: 75, link: "/docs/phys-101" },
-    { title: "PHYS 102", Icon: FaAtom, percentage: 60, link: "/docs/phys-102" },
-    { title: "BIO 101", Icon: FaDna, percentage: 80, link: "/docs/bio-101" },
-    { title: "BIO 102", Icon: FaDna, percentage: 65, link: "/docs/bio-102" },
-    { title: "MATH 101", Icon: FaSquareRootAlt, percentage: 70, link: "/docs/math-101" },
-    { title: "MATH 102", Icon: FaSquareRootAlt, percentage: 60, link: "/docs/math-102" },
-    { title: "CHEM 101", Icon: FaFlask, percentage: 80, link: "/docs/chem-101" },
-    { title: "CHEM 102", Icon: FaFlask, percentage: 75, link: "/docs/chem-102" },
-    { title: "STATS 101", Icon: FaChartBar, percentage: 70, link: "/docs/stats-101" },
-    { title: "CETG 101", Icon: FaCog, percentage: 80, link: "/docs/cetg-101" },
-    { title: "CETG 102", Icon: FaCog, percentage: 75, link: "/docs/cetg-102" },
-    { title: "COMP 231", Icon: FaLaptopCode, percentage: 70, link: "/docs/comp-231" }
+    { title: "PHYS 101", Icon: FaAtom, percentage: 75, link: "/biust-insight-project/docs/category/phys-modules" },
+    { title: "PHYS 102", Icon: FaAtom, percentage: 60, link: "/biust-insight-project/docs/category/phys-modules" },
+    { title: "BIO 101", Icon: FaDna, percentage: 80, link: "/biust-insight-project/docs/category/biology-modules" },
+    { title: "BIO 102", Icon: FaDna, percentage: 65, link: "/biust-insight-project/docs/category/bio-modules" },
+    { title: "MATH 101", Icon: FaSquareRootAlt, percentage: 70, link: "/biust-insight-project/docs/category/math-modules" },
+    { title: "MATH 102", Icon: FaSquareRootAlt, percentage: 60, link: "/biust-insight-project/docs/category/math-modules" },
+    { title: "CHEM 101", Icon: FaFlask, percentage: 80, link: "/biust-insight-project/docs/category/chem-modules" },
+    { title: "CHEM 102", Icon: FaFlask, percentage: 75, link: "/biust-insight-project/docs/category/chem-modules" },
+    { title: "STATS 101", Icon: FaChartBar, percentage: 70, link: "/biust-insight-project/docs/category/stats-modules" },
+    { title: "CETG 101", Icon: FaCog, percentage: 80, link: "/biust-insight-project/docs/category/cetg-modules" },
+    { title: "CETG 102", Icon: FaCog, percentage: 75, link: "/biust-insight-project/docs/category/cetg-modules" },
+    { title: "COMP 201", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "COMP 211", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "COMP 221", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "COMP 231", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "COMP 232", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "COMP 222", Icon: FaLaptopCode, percentage: 70, link: "/biust-insight-project/docs/category/comp-modules" },
+    { title: "ALSS 201", Icon: FaBook, percentage: 70, link: "/biust-insight-project/docs/category/alss-modules" },
+    { title: "GEOL 201", Icon: FaMountain, percentage: 70, link: "/biust-insight-project/docs/category/geol-modules" }
   ];
 
   return (

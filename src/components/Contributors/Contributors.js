@@ -23,7 +23,7 @@ const mainContributors = [
 ];
 
 const resourceProviders = [
-  'Mike Johnson', 'Sarah Brown', 'Alex Lee', 'Emma Wilson', 'Chris Taylor', 'Olivia Moore'
+  'Lindy', 'Caroline', 'Melaine', 'Matty', 'Phenyo', 'Olivia ','Shezzaine','Bunno','Scheke','Tanatswa','Micheal','Pearl'
 ];
 
 const Contributors = () => {
