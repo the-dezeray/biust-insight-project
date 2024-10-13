@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaExclamationTriangle } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../css/pricingAndPayment.module.css';
 
 const PricingAndPayment = () => {
@@ -35,11 +34,9 @@ const PricingAndPayment = () => {
 
   const renderPricingOptions = () => (
     <div className={styles.pricingOptions}>
-      <motion.div 
+      <div 
         className={`${styles.pricingOption} ${styles.monthlyOption}`}
         onClick={() => handlePlanSelect('monthly')}
-        whileHover={{ scale: 1.03 }}
-        transition={{ type: "spring", stiffness: 400 }}
       >
         <h3><FaMoneyBillWave className={styles.optionIcon} /> Monthly</h3>
         <p className={styles.price}>60 <span>Pula</span></p>
@@ -47,13 +44,10 @@ const PricingAndPayment = () => {
           <li><FaCheck /> Full access</li>
           <li><FaCheck /> Billed monthly</li>
         </ul>
-
-      </motion.div>
-      <motion.div 
+      </div>
+      <div 
         className={`${styles.pricingOption} ${styles.semesterOption}`}
         onClick={() => handlePlanSelect('semester')}
-        whileHover={{ scale: 1.03 }}
-        transition={{ type: "spring", stiffness: 400 }}
       >
         <div className={styles.popularBadge}><FaStar /> Best Value</div>
         <h3><FaSchool className={styles.optionIcon} /> Semester</h3>
@@ -61,33 +55,28 @@ const PricingAndPayment = () => {
         <ul className={styles.features}>
           <li><FaCheck /> Full access</li>
           <li><FaCheck /> Billed per semester</li>
+          <li><FaCheck /> Priority support</li>
         </ul>
-
-      </motion.div>
+      </div>
     </div>
   );
 
   const renderPaymentInstructions = () => (
-    <motion.div
-      className={styles.paymentInstructions}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-    >
+    <div className={styles.paymentInstructions}>
       <h2>Payment Instructions for {selectedPlan} Plan</h2>
       <ol>
-        <li>Open your mobile banking app or visit your bank's website.</li>
-        <li>Navigate to the "Send Money" or "Make a Transfer" section.</li>
+        <li>Open your mobile banking app or USSD banking service.</li>
+        <li>Select the "Send Money" or "Make a Payment" option.</li>
         <li>Enter the following details:
           <ul>
             <li>Recipient: [Your Company Name]</li>
             <li>Account Number: [Your Account Number]</li>
-            <li>Bank: [Your Bank Name]</li>
             <li>Amount: {selectedPlan === 'monthly' ? '60' : '100'} Pula</li>
+            <li>Reference: [Your Student ID] - {selectedPlan} Plan</li>
           </ul>
         </li>
-        <li>In the reference or description field, please enter: "[Student's Full Name] - {selectedPlan} Plan"</li>
-        <li>Review the details and confirm the transfer.</li>
+        <li>Confirm the payment details and complete the transaction.</li>
+        <li>Once the payment is complete, you'll receive a confirmation message or reference number.</li>
       </ol>
       <form onSubmit={handlePaymentConfirmation}>
         <input
@@ -102,7 +91,7 @@ const PricingAndPayment = () => {
       <button className={styles.backButton} onClick={() => setShowInstructions(false)}>
         <FaArrowRight className={styles.backIcon} /> Back to Plans
       </button>
-    </motion.div>
+    </div>
   );
 
   const renderConfirmation = () => (
@@ -121,16 +110,11 @@ const PricingAndPayment = () => {
           <p>Loading pricing options...</p>
         </div>
       ) : (
-        <AnimatePresence mode="wait">
+        <>
           {showInstructions ? (
             renderPaymentInstructions()
           ) : (
-            <motion.div
-              key="pricing-options"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+            <div>
               {trialEnded && (
                 <div className={styles.trialEndedBox}>
                   <FaExclamationTriangle className={styles.warningIcon} />
@@ -139,9 +123,9 @@ const PricingAndPayment = () => {
               )}
               <h1 className={styles.mainTitle}>Choose Your Plan</h1>
               {renderPricingOptions()}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </>
       )}
       {paymentConfirmed && renderConfirmation()}
     </div>

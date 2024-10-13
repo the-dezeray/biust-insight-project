@@ -3,11 +3,12 @@
   margin: 0 auto;
   padding: 40px 20px;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5ff;
 }
 
 .trialEndedBox {
-  background-color: #ffebee;
-  border: 2px solid #ef5350;
+  background-color: #f3e5f5;
+  border: 2px solid #9c27b0;
   border-radius: 8px;
   padding: 12px 20px;
   margin-bottom: 30px;
@@ -15,30 +16,30 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: #c62828;
-  box-shadow: 0 0 10px rgba(239, 83, 80, 0.5);
+  color: #6a1b9a;
+  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
   animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px rgba(239, 83, 80, 0.5);
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
   }
   to {
-    box-shadow: 0 0 20px rgba(239, 83, 80, 0.8);
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.6);
   }
 }
 
 .warningIcon {
   margin-right: 10px;
   font-size: 20px;
-  color: #c62828;
+  color: #6a1b9a;
 }
 
 .mainTitle {
   font-size: 32px;
   text-align: center;
-  color: #333;
+  color: #4a148c;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -99,57 +100,53 @@
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 .pricingOption {
   flex: 1;
-  max-width: 240px;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  max-width: 280px;
   padding: 24px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.monthlyOption {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+.pricingOption:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(156, 39, 176, 0.2);
+}
+
+.monthlyOption, .semesterOption {
+  background: #f0f0f0;
+}
+
+.monthlyOption.active, .semesterOption.active {
+  background: #ffffff;
 }
 
 .semesterOption {
-  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-  border-color: #8ec5fc;
+  background-color: #f3e5f5;
+  border: 2px solid #9c27b0;
 }
 
 .popularBadge {
-  position: absolute;
-  top: 12px;
-  right: -28px;
-  background-color: #ff9800;
+  background-color: #9c27b0;
   color: white;
-  padding: 4px 28px;
-  transform: rotate(45deg);
-  font-size: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .pricingOption h3 {
   font-size: 18px;
   margin-bottom: 16px;
-  color: #333;
+  color: #4a148c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,20 +155,20 @@
 
 .optionIcon {
   font-size: 20px;
-  color: #007bff;
+  color: #9c27b0;
 }
 
 .price {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
   margin: 16px 0;
-  color: #007bff;
+  color: #6a1b9a;
 }
 
 .price span {
   font-size: 16px;
   font-weight: normal;
-  color: #666;
+  color: #7b1fa2;
 }
 
 .features {
@@ -191,7 +188,7 @@
 }
 
 .features li svg {
-  color: #28a745;
+  color: #9c27b0;
 }
 
 .selectButton {
@@ -219,18 +216,20 @@
 }
 
 .paymentInstructions {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 70px;
 }
 
 .paymentInstructions h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333;
+  color: #4a148c;
   text-align: center;
 }
 
@@ -257,14 +256,14 @@
 
 .paymentInstructions input {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #e1bee7;
   border-radius: 6px;
   font-size: 16px;
 }
 
 .paymentInstructions button {
   padding: 12px;
-  background-color: #007bff;
+  background-color: #9c27b0;
   color: white;
   border: none;
   border-radius: 6px;
@@ -275,32 +274,32 @@
 }
 
 .paymentInstructions button:hover {
-  background-color: #0056b3;
+  background-color: #7b1fa2;
 }
 
 .confirmation {
   text-align: center;
   padding: 40px;
-  background-color: #e8f5e9;
+  background-color: #f3e5f5;
   border-radius: 12px;
   margin-top: 40px;
 }
 
 .checkIcon {
   font-size: 64px;
-  color: #28a745;
+  color: #9c27b0;
   margin-bottom: 20px;
 }
 
 .confirmation h2 {
   font-size: 28px;
-  color: #28a745;
+  color: #4a148c;
   margin-bottom: 15px;
 }
 
 .confirmation p {
   font-size: 18px;
-  color: #4caf50;
+  color: #7b1fa2;
 }
 
 .contentWrapper {
@@ -341,18 +340,6 @@
   z-index: 1000;
 }
 
-.paymentInstructions {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  max-width: 500px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-}
-
 .closeButton {
   position: absolute;
   top: 10px;
@@ -367,4 +354,32 @@
 
 .closeButton:hover {
   color: #333;
+}
+
+.backButton {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #7b1fa2;
+}
+
+.backIcon {
+  margin-right: 10px;
+  transform: rotate(180deg);
 }
