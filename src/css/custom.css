@@ -263,19 +263,21 @@ footer a:hover {
 }
 
 .menu__link--sublist {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--ifm-menu-color);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 0.75rem 1rem;
 }
 
 .menu__link--sublist:hover,
 .menu__link--active {
   color: var(--ifm-color-primary);
-  background-color: transparent;
+  background-color: var(--ifm-menu-color-background-active);
 }
 
 .menu__list-item-collapsible--active {
-  background-color: transparent;
+  background-color: var(--ifm-menu-color-background-active);
 }
 
 .menu__caret {
@@ -284,71 +286,48 @@ footer a:hover {
 }
 
 .menu__caret:hover {
-  background-color: transparent;
   color: var(--ifm-color-primary);
 }
 
 /* Submenu items */
 .menu__list-item-collapsible + ul .menu__link {
-  padding-left: 2rem;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  padding: 0.6rem 1rem 0.6rem 2rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .menu__list-item-collapsible + ul .menu__link:hover {
-  background-color: transparent;
+  background-color: var(--ifm-menu-color-background-hover);
   color: var(--ifm-color-primary);
 }
 
 .menu__list-item-collapsible + ul .menu__link--active {
-  border-left: 2px solid var(--ifm-color-primary);
+  border-left: 3px solid var(--ifm-color-primary);
+  font-weight: 600;
   color: var(--ifm-color-primary);
 }
 
-/* Dark mode adjustments */
-[data-theme='dark'] .menu__link--sublist:hover,
-[data-theme='dark'] .menu__link--active,
-[data-theme='dark'] .menu__caret:hover,
-[data-theme='dark'] .menu__list-item-collapsible + ul .menu__link:hover,
-[data-theme='dark'] .menu__list-item-collapsible + ul .menu__link--active {
-  color: var(--ifm-color-primary-lighter);
-}
-
-/* Override default Docusaurus menu hover styles */
-.menu__link:hover,
-.menu__list-item-collapsible:hover {
-  background-color: transparent;
-}
-
-.menu__link:hover {
-  color: var(--ifm-color-primary);
-}
-
-/* Ensure active items don't have a background color */
-.menu__link--active:not(.menu__link--sublist) {
-  background-color: transparent;
-}
-
-/* If you want a subtle background for active items, use this instead:
-.menu__link--active:not(.menu__link--sublist) {
-  background-color: var(--ifm-menu-color-background-active);
-}
-*/
-
-/* Adjust styles for dark mode if needed */
-[data-theme='dark'] .menu__link:hover {
-  color: var(--ifm-color-primary-lighter);
-}
-
-/* Sidebar menu styling */
-.menu__list-item-collapsible:hover {
-  background-color: var(--ifm-menu-color-background-active);
-}
-
+/* Add a subtle hover effect for all menu items */
 .menu__list-item:not(.menu__list-item-collapsible):hover {
   background-color: var(--ifm-menu-color-background-hover);
 }
 
-.menu__link:hover {
-  background-color: transparent;
+/* Ensure active items have a background color */
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+/* Add a subtle box shadow to the entire sidebar */
+.menu {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Adjust styles for dark mode if needed */
+[data-theme='dark'] .menu__link:hover,
+[data-theme='dark'] .menu__list-item-collapsible:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-color-emphasis-300);
 }

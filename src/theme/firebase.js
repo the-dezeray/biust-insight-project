@@ -72,11 +72,10 @@ const checkUserAfterSignIn = async (user) => {
     console.log("Days since creation:", daysSinceCreation);
     
     if (daysSinceCreation > 2 && !userData.payable) {
-      console.log("Trial ended");
-      return { trialEnded: true };
+      console.log("Trial ended, logging out user in the background");
+      signOut(auth).catch(error => console.error("Error signing out:", error));
     }
   }
-  return null;
 };
 
 // Sign in with Google and check if the user is valid
@@ -96,6 +95,7 @@ export const signInWithGoogle = async () => {
     await addUserToFirestore(user);
     
     console.log("Sign in successful");
+    checkUserAfterSignIn(user); // Call this function after successful sign-in
     return { user };
    
   } catch (err) {
