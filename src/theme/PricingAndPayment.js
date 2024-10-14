@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaExclamationTriangle } from 'react-icons/fa';
+import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaExclamationTriangle,FaArrowLeft} from 'react-icons/fa';
 import styles from '../css/pricingAndPayment.module.css';
 
 const PricingAndPayment = () => {
@@ -64,32 +64,52 @@ const PricingAndPayment = () => {
   const renderPaymentInstructions = () => (
     <div className={styles.paymentInstructions}>
       <h2>Payment Instructions for {selectedPlan} Plan</h2>
-      <ol>
-        <li>Open your mobile banking app or USSD banking service.</li>
-        <li>Select the "Send Money" or "Make a Payment" option.</li>
-        <li>Enter the following details:
-          <ul>
-            <li>Recipient: [Your Company Name]</li>
-            <li>Account Number: [Your Account Number]</li>
-            <li>Amount: {selectedPlan === 'monthly' ? '60' : '100'} Pula</li>
-            <li>Reference: [Your Student ID] - {selectedPlan} Plan</li>
-          </ul>
-        </li>
-        <li>Confirm the payment details and complete the transaction.</li>
-        <li>Once the payment is complete, you'll receive a confirmation message or reference number.</li>
-      </ol>
-      <form onSubmit={handlePaymentConfirmation}>
+      <div className={styles.instructionSteps}>
+        <div className={styles.step}>
+          <div className={styles.stepNumber}>1</div>
+          <div className={styles.stepContent}>
+            <p>In the FNB app, select "Pay" then "Pay to Cell"</p>
+          </div>
+        </div>
+        <div className={styles.step}>
+          <div className={styles.stepNumber}>2</div>
+          <div className={styles.stepContent}>
+            <p>Enter amount: <strong>{selectedPlan === 'monthly' ? '60' : '100'} Pula</strong></p>
+          </div>
+        </div>
+        <div className={styles.step}>
+          <div className={styles.stepNumber}>3</div>
+          <div className={styles.stepContent}>
+            <p>Set reference: <strong>Your initials + Student ID</strong></p>
+            <p className={styles.example}>Example: RT2301904</p>
+          </div>
+        </div>
+        <div className={styles.step}>
+          <div className={styles.stepNumber}>4</div>
+          <div className={styles.stepContent}>
+            <p>Complete the transaction in the FNB app</p>
+          </div>
+        </div>
+        <div className={styles.step}>
+          <div className={styles.stepNumber}>5</div>
+          <div className={styles.stepContent}>
+            <p>Enter the reference below and click "Confirm Payment"</p>
+          </div>
+        </div>
+      </div>
+      <form onSubmit={handlePaymentConfirmation} className={styles.confirmationForm}>
         <input
           type="text"
-          placeholder="Enter transaction reference"
+          placeholder="Enter your reference (e.g., RT2301904)"
           value={transactionReference}
           onChange={(e) => setTransactionReference(e.target.value)}
           required
+          className={styles.referenceInput}
         />
-        <button type="submit">Confirm Payment</button>
+        <button type="submit" className={styles.confirmButton}>Confirm Payment</button>
       </form>
       <button className={styles.backButton} onClick={() => setShowInstructions(false)}>
-        <FaArrowRight className={styles.backIcon} /> Back to Plans
+        <FaArrowLeft className={styles.backIcon} /> Back to Plans
       </button>
     </div>
   );

@@ -108,6 +108,14 @@ plugins:
         hideable: true,
       },
     },
+    announcementBar: {
+      id: 'project_update',
+      content:
+        '🚀 New materials added daily! Check back often for the latest resources. <a href="/docs/category/modules">Explore now</a>',
+      backgroundColor: '#4051b5',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
  metadata: [
       { name: 'keywords', content: 'BIUST, test papers, labs, exams, archive, students, university, insight, project, academic resources, study materials' },
       { name: 'description', content: 'The BIUST Insight Project is a comprehensive archive of past test papers, labs, and exams for students at BIUST. Access high-quality academic resources to enhance your study and improve your academic performance.' },
