@@ -1,7 +1,7 @@
 import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from 'firebase/auth';
 
 // Initialize Firebase
@@ -17,9 +17,15 @@ export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 const db = getFirestore(app);  // Initialize Firestore
 
+// Declare currentUserEmail at the module level
+let currentUserEmail = null;
+
 // Sign out function
 export const logout = (afterAction = () => {}) => {
-  signOut(auth).then(r => afterAction(null));
+  signOut(auth).then(() => {
+    currentUserEmail = null;
+    afterAction(null);
+  });
 };
 
 // Function to validate BIUST student email
@@ -95,11 +101,37 @@ export const signInWithGoogle = async () => {
     await addUserToFirestore(user);
     
     console.log("Sign in successful");
-    checkUserAfterSignIn(user); // Call this function after successful sign-in
+    currentUserEmail = user.email; // Save the user's email
+    checkUserAfterSignIn(user);
     return { user };
    
   } catch (err) {
     console.error("Error during sign in:", err);
     return { error: err.message || 'An error occurred during sign in.' };
+  }
+};
+
+// Add a function to get the current user's email
+export const getCurrentUserEmail = () => currentUserEmail;
+
+// Add a new function to update the user's payable status
+export const updateUserPayableStatus = async (referenceNumber) => {
+  const email = getCurrentUserEmail();
+  if (!email) {
+    console.error("No user is currently signed in");
+    return { error: 'No user is currently signed in.' };
+  }
+
+  try {
+    const userDocRef = doc(db, 'users', email);
+    await updateDoc(userDocRef, {
+      payable: true,
+      referenceNumber: referenceNumber
+    });
+    console.log("User's payable status updated successfully");
+    return { success: true };
+  } catch (err) {
+    console.error("Error updating user's payable status:", err);
+    return { error: err.message || 'An error occurred while updating payment status.' };
   }
 };

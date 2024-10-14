@@ -1,3 +1,10 @@
+.pricingAndPaymentWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 .pricingContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -470,4 +477,49 @@
   background-color: #303f9f;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(64, 81, 181, 0.3);
+}
+
+.paymentConfirmed {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3e5f5;  /* Light purple background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(103, 58, 183, 0.1);
+}
+
+.paymentConfirmed h2 {
+  color: #673ab7;  /* Deep purple color for the heading */
+  margin-bottom: 1rem;
+}
+
+.loginButton {
+  background-color: #673ab7;  /* Deep purple background for the button */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(103, 58, 183, 0.2);
+  margin-top: 1rem;
+}
+
+.loginButton:hover {
+  background-color: #5e35b1;  /* Slightly darker purple on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(103, 58, 183, 0.3);
+}
+
+.loggedIn {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e8eaf6;  /* Light indigo background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(63, 81, 181, 0.1);
+}
+
+.loggedIn h2 {
+  color: #3f51b5;  /* Indigo color for the heading */
+  margin-bottom: 1rem;
 }

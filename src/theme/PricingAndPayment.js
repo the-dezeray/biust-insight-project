@@ -1,42 +1,113 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaExclamationTriangle,FaArrowLeft} from 'react-icons/fa';
-import styles from '../css/pricingAndPayment.module.css';
+import styles from '@site/src/css/pricingAndPayment.module.css';
+import { updateUserPayableStatus, getCurrentUserEmail, signInWithGoogle } from './firebase';
 
 const PricingAndPayment = () => {
-  const [showInstructions, setShowInstructions] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [showInstructions, setShowInstructions] = useState(false);
   const [transactionReference, setTransactionReference] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [paymentConfirmed, setPaymentConfirmed] = useState(false);
-  const [trialEnded, setTrialEnded] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  useEffect(() => {
-    // Simulate loading delay and check trial status
-    setTimeout(() => {
-      setIsLoading(false);
-      // Here you would typically check the trial status from your backend
-      // For this example, we'll just set it to true
-      setTrialEnded(true);
-    }, 1000);
-  }, []);
-
-  const handlePlanSelect = (plan) => {
+  const handlePlanSelection = (plan) => {
     setSelectedPlan(plan);
     setShowInstructions(true);
   };
 
-  const handlePaymentConfirmation = (e) => {
+  const handlePaymentConfirmation = async (e) => {
     e.preventDefault();
-    // Here you would typically send the transaction reference to your backend for verification
-    // For this example, we'll just set paymentConfirmed to true
-    setPaymentConfirmed(true);
+    setIsLoading(true);
+    
+    const currentEmail = getCurrentUserEmail();
+    if (!currentEmail) {
+      console.error("No user is signed in");
+      setIsLoading(false);
+      // Handle the error, maybe show a message to the user
+      return;
+    }
+    
+    const result = await updateUserPayableStatus(transactionReference);
+    
+    if (result.success) {
+      setPaymentConfirmed(true);
+      // Clear everything
+      setSelectedPlan(null);
+      setShowInstructions(false);
+      setTransactionReference('');
+    } else {
+      // Handle the error, show an error message to the user
+      console.error(result.error);
+      // You might want to set some state to show an error message in the UI
+    }
+    
+    setIsLoading(false);
+  };
+
+  const handleLogin = async () => {
+    const result = await signInWithGoogle();
+    if (result.user) {
+      console.log("User logged in successfully");
+      setLoggedIn(true);
+      // The confirmation message will disappear due to the conditional render
+    } else if (result.error) {
+      console.error("Login failed:", result.error);
+      // Handle login error, maybe show a message to the user
+    }
+  };
+
+  const renderContent = () => {
+    if (paymentConfirmed && !loggedIn) {
+      return (
+        <div className={styles.paymentConfirmed}>
+          <h2>Payment Confirmed!</h2>
+          <p>Thank you for your payment. Your account has been updated.</p>
+          <p>You can now log in to access your account.</p>
+          <button onClick={handleLogin} className={styles.loginButton}>
+            Log In
+          </button>
+        </div>
+      );
+    }
+
+    if (loggedIn) {
+      return (
+        <div className={styles.loggedIn}>
+          <h2>Welcome!</h2>
+          <p>You have successfully logged in. Enjoy your access to the platform.</p>
+        </div>
+      );
+    }
+
+    return (
+      <div className={styles.pricingContainer}>
+        {isLoading ? (
+          <div className={styles.loadingSpinner}>
+            <div className={styles.spinner}></div>
+            <p>Loading pricing options...</p>
+          </div>
+        ) : (
+          <>
+            {showInstructions ? (
+              renderPaymentInstructions()
+            ) : (
+              <div>
+                {renderPricingOptions()}
+              </div>
+            )}
+          </>
+        )}
+        {paymentConfirmed && renderConfirmation()}
+      </div>
+    );
   };
 
   const renderPricingOptions = () => (
     <div className={styles.pricingOptions}>
       <div 
         className={`${styles.pricingOption} ${styles.monthlyOption}`}
-        onClick={() => handlePlanSelect('monthly')}
+        onClick={() => handlePlanSelection('monthly')}
       >
         <h3><FaMoneyBillWave className={styles.optionIcon} /> Monthly</h3>
         <p className={styles.price}>60 <span>Pula</span></p>
@@ -47,7 +118,7 @@ const PricingAndPayment = () => {
       </div>
       <div 
         className={`${styles.pricingOption} ${styles.semesterOption}`}
-        onClick={() => handlePlanSelect('semester')}
+        onClick={() => handlePlanSelection('semester')}
       >
         <div className={styles.popularBadge}><FaStar /> Best Value</div>
         <h3><FaSchool className={styles.optionIcon} /> Semester</h3>
@@ -123,32 +194,8 @@ const PricingAndPayment = () => {
   );
 
   return (
-    <div className={styles.pricingContainer}>
-      {isLoading ? (
-        <div className={styles.loadingSpinner}>
-          <div className={styles.spinner}></div>
-          <p>Loading pricing options...</p>
-        </div>
-      ) : (
-        <>
-          {showInstructions ? (
-            renderPaymentInstructions()
-          ) : (
-            <div>
-              {trialEnded && (
-                <div className={styles.trialEndedBox}>
-                  <FaExclamationTriangle className={styles.warningIcon} />
-                  Your trial has ended. Please select a plan to continue using our services.
-                </div>
-              )}
-              <h1 className={styles.mainTitle}>Choose Your Plan</h1>
-              {renderPricingOptions()}
-            </div>
-            
-          )}
-        </>
-      )}
-      {paymentConfirmed && renderConfirmation()}
+    <div className={styles.pricingAndPaymentWrapper}>
+      {renderContent()}
     </div>
   );
 };
