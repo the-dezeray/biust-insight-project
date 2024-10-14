@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Biust Insight Project',
-  tagline: 'biust insight project',
-  favicon: '/img/social-card.png',
+  title: 'BIUST Insight Project - Academic Resource Archive',
+  tagline: 'Access past test papers, labs, and exams for BIUST students',
+  favicon: '/img/favicon.ico', // Consider using a .ico file for better compatibility
 
   // Set the production url of your site here
   url: 'https://the-dezeray.github.io',
@@ -23,7 +23,7 @@ const config = {
   organizationName: 'the-dezeray', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw', // Change to 'throw' to ensure all links are valid
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -45,44 +45,24 @@ plugins:
     ],
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
-
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
+      {
         hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
         searchBarPosition: 'left',
-        // ```
-      }),
+      },
     ],
-    // ... Your other themes.
-
-  
 ],
   presets: [
     [
-
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        pages :{showLastUpdateAuthor:true,showLastUpdateTime:true},
-          gtag: {
-          trackingID: 'G-DJKE85H5XJ',
-          anonymizeIP: false,
+        debug: process.env.NODE_ENV === 'development',
+        theme: {
+          customCss: './src/css/custom.css',
         },
-         googleTagManager: {
-          containerId: 'GTM-WZ8LD4SX',
-        },
-   
         docs: {
-        sidebarPath: './sidebars.js',
-    
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/the-dezeray/biust-insight-project/blob/',
+          sidebarPath: './sidebars.js',
+          editUrl: 'https://github.com/the-dezeray/biust-insight-project/blob/',
         },
         blog: {
           showReadingTime: true,
@@ -90,22 +70,34 @@ plugins:
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/the-dezeray/biust-insight-project/blob/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          editUrl: 'https://github.com/the-dezeray/biust-insight-project/blob/',
         },
-        theme: {
-          customCss: './src/css/custom.css',
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '/',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+        },
+        gtag: {
+          trackingID: 'G-DJKE85H5XJ',
+          anonymizeIP: true,
+        },
+        googleTagManager: {
+          containerId: 'GTM-WZ8LD4SX',
+        },
+        sitemap: {
+          lastmod: 'datetime',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
         },
       }),
-
     ],
-
   ],
 
   themeConfig:
@@ -117,13 +109,18 @@ plugins:
       },
     },
  metadata: [
-      { name: 'keywords', content: 'BIUST, test papers, labs, exams, archive, students, university,insight,project' },
-      { name: 'description', content: 'The BIUST Insight Project is an archive of past test papers, labs, and exams for students at BIUST, providing resources to aid study and academic performance.' },
+      { name: 'keywords', content: 'BIUST, test papers, labs, exams, archive, students, university, insight, project, academic resources, study materials' },
+      { name: 'description', content: 'The BIUST Insight Project is a comprehensive archive of past test papers, labs, and exams for students at BIUST. Access high-quality academic resources to enhance your study and improve your academic performance.' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'BIUST Insight Project - An Archive of Past Test , Lab & Exam Documents' },
-      { name: 'twitter:description', content: 'Access past test papers, labs, and exams to help you prepare for assessments at BIUST.' },
-      { name: 'twitter:image', content: 'img/logo.png' },
-      {name: 'author',content:'Desiree Chingwaru'}
+      { name: 'twitter:title', content: 'BIUST Insight Project - Comprehensive Academic Resource Archive' },
+      { name: 'twitter:description', content: 'Access a wealth of past test papers, labs, and exams to boost your academic preparation at BIUST.' },
+      { name: 'twitter:image', content: 'https://the-dezeray.github.io/biust-insight-project/img/social-card.png' },
+      { name: 'og:title', content: 'BIUST Insight Project - Academic Resource Archive' },
+      { name: 'og:description', content: 'Enhance your studies with our comprehensive collection of past academic materials for BIUST students.' },
+      { name: 'og:image', content: 'https://the-dezeray.github.io/biust-insight-project/img/social-card.png' },
+      { name: 'og:url', content: 'https://the-dezeray.github.io/biust-insight-project/' },
+      { name: 'og:type', content: 'website' },
+      { name: 'author', content: 'Desiree Chingwaru' }
     ],
   
     colorMode: {
@@ -266,7 +263,14 @@ footer: {
         name: 'viewport',
         content: 'width=device-width, initial-scale=0.9, minimum-scale=0.9'
       }
-    }
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'canonical',
+        href: 'https://the-dezeray.github.io/biust-insight-project/',
+      },
+    },
   ],
   stylesheets: [
     {

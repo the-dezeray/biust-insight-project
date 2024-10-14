@@ -71,7 +71,7 @@ const checkUserAfterSignIn = async (user) => {
     const daysSinceCreation = getDaysDifference(creationTime, currentTime);
     console.log("Days since creation:", daysSinceCreation);
     
-    if (daysSinceCreation > 2 && !userData.payable) {
+    if (daysSinceCreation > 2 &&  !userData.payable) {
       console.log("Trial ended, logging out user in the background");
       signOut(auth).catch(error => console.error("Error signing out:", error));
     }

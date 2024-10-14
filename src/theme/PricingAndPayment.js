@@ -124,6 +124,7 @@ const PricingAndPayment = () => {
               <h1 className={styles.mainTitle}>Choose Your Plan</h1>
               {renderPricingOptions()}
             </div>
+            
           )}
         </>
       )}
