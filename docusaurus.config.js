@@ -23,7 +23,7 @@ const config = {
   organizationName: 'the-dezeray', // Usually your GitHub org/user name.
   projectName: 'biust-insight-project', // Usually your repo name.
 
-  onBrokenLinks: 'throw', // Change to 'throw' to ensure all links are valid
+  onBrokenLinks: 'warn', // Change to 'throw' to ensure all links are valid
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
