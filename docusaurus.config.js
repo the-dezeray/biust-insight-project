@@ -47,7 +47,7 @@ plugins:
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
-        searchBarPosition: 'left',
+        searchBarPosition: 'right',
       },
     ],
 ],
