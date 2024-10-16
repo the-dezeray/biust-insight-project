@@ -20,7 +20,7 @@ function PricingItem({ title, price, features, buttonText, isPopular }) {
       </div>
       <div className={styles.pricingFooter}>
         <Link
-          to="/contact"
+          to="/docs/about"
           className={clsx(styles.pricingBtn, isPopular && styles.popularBtn)}
         >
           {buttonText}
