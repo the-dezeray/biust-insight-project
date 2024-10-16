@@ -1,36 +1,34 @@
-import React, { useEffect } from 'react';
-import { useAnimate } from 'framer-motion';
-import styles from "./FloatingBackground.module.css";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import styles from './FloatingBackground.module.css';
 
-export default function FloatingBackground() {
-  const [scope, animate] = useAnimate();
+const FloatingBackgroundContent = () => {
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const animateBackground = async () => {
-      for (let i = 0; i < 20; i++) {
-        animate(`#float-${i}`, {
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
-          rotate: Math.random() * 360,
-        }, { duration: 20 + Math.random() * 10, repeat: Infinity, repeatType: "reverse" });
-      }
-    };
-    animateBackground();
-  }, [animate]);
+    setItems(Array.from({ length: 10 }, (_, index) => ({
+      id: index,
+      style: {
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDuration: `${Math.random() * 20 + 10}s`,
+        animationDelay: `${Math.random() * 5}s`,
+      },
+    })));
+  }, []);
 
   return (
-    <div ref={scope} className={styles.floatingBackground}>
-      {[...Array(20)].map((_, index) => (
-        <div
-          key={index}
-          id={`float-${index}`}
-          className={styles.floatingElement}
-          style={{
-            left: Math.random() * window.innerWidth,
-            top: Math.random() * window.innerHeight,
-          }}
-        />
+    <div className={styles.floatingBackground}>
+      {items.map((item) => (
+        <div key={item.id} className={styles.floatingItem} style={item.style}></div>
       ))}
     </div>
   );
-}
+};
+
+const FloatingBackground = () => (
+  <BrowserOnly>{() => <FloatingBackgroundContent />}</BrowserOnly>
+);
+
+export default FloatingBackground;

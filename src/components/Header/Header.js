@@ -46,7 +46,7 @@ export default function Header() {
               </Link>
               <Link
                 className={clsx(styles.mainBtn, styles.learnMoreBtn)}
-                to="/docs/intro"
+                to="/docs/category/modules"
               >
                 Learn More <i className="lni lni-arrow-right"></i>
               </Link>

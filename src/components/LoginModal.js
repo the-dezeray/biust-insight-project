@@ -125,11 +125,11 @@ const LoginModal = ({ onClose, onLogin }) => {
         
         <p className={styles.loginInfo}>
           By logging in, you agree to our{' '}
-          <a href="/terms" className={styles.loginLink}>Terms of Service</a> and{' '}
-          <a href="/privacy" className={styles.loginLink}>Privacy Policy</a>.
+          <a href="/biust-insight-project/docs/about/terms" className={styles.loginLink}>Terms of Service</a> and{' '}
+          <a href="/biust-insight-project/docs/about/privacy" className={styles.loginLink}>Privacy Policy</a>.
         </p>
         <small className={styles.loginSmallText}>
-          Don't have an account? <a href="/signup" className={styles.loginLink}>Sign up</a>
+        Curious about the project? <a href="/biust-insight-project/docs/about" className={styles.loginLink}>Learn more</a>
         </small>
       </div>
       <div className={styles.backgroundAnimation}>
