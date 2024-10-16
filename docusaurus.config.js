@@ -111,7 +111,7 @@ plugins:
     announcementBar: {
       id: 'project_update',
       content:
-        '🚀 New materials added daily! Check back often for the latest resources. <a href="/docs/category/modules">Explore now</a>',
+        '🚀 New materials added daily! Check back often for the latest resources. <a href="/biust-insight-project/docs/category/modules">Explore now</a>',
       backgroundColor: '#4051b5',
       textColor: '#ffffff',
       isCloseable: true,
