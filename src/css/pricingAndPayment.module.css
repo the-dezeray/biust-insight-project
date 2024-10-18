@@ -1,14 +1,7 @@
-.pricingAndPaymentWrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
 .pricingContainer {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f5ff;
 }
@@ -17,102 +10,32 @@
   background-color: #f3e5f5;
   border: 2px solid #9c27b0;
   border-radius: 8px;
-  padding: 12px 20px;
-  margin-bottom: 30px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   color: #6a1b9a;
   box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
-  }
-  to {
-    box-shadow: 0 0 20px rgba(156, 39, 176, 0.6);
-  }
+  font-size: 14px;
 }
 
 .warningIcon {
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 8px;
+  font-size: 16px;
   color: #6a1b9a;
-}
-
-.mainTitle {
-  font-size: 32px;
-  text-align: center;
-  color: #4a148c;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.trialEndedTitle {
-  font-size: 24px;
-  text-align: center;
-  color: #ff3b30;
-  margin-bottom: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.loadingSpinner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-}
-
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #007bff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loadingSpinner p {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #666;
 }
 
 .pricingOptions {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .pricingOption {
-  flex: 1;
-  max-width: 280px;
-  padding: 24px;
+  padding: 20px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -128,10 +51,6 @@
 
 .monthlyOption, .semesterOption {
   background: #f0f0f0;
-}
-
-.monthlyOption.active, .semesterOption.active {
-  background: #ffffff;
 }
 
 .semesterOption {
@@ -152,7 +71,7 @@
 
 .pricingOption h3 {
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   color: #4a148c;
   display: flex;
   align-items: center;
@@ -161,19 +80,19 @@
 }
 
 .optionIcon {
-  font-size: 20px;
+  font-size: 18px;
   color: #9c27b0;
 }
 
 .price {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
-  margin: 16px 0;
+  margin: 10px 0;
   color: #6a1b9a;
 }
 
 .price span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   color: #7b1fa2;
 }
@@ -181,15 +100,15 @@
 .features {
   list-style-type: none;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 
 .features li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 6px;
   color: #555;
   font-size: 14px;
 }
@@ -198,328 +117,313 @@
   color: #9c27b0;
 }
 
-.selectButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@media (min-width: 768px) {
+  .pricingOptions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pricingOption {
+    flex: 1;
+    max-width: 280px;
+  }
 }
 
-.selectButton:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
+/* ... rest of the existing styles ... */
 
-.selectedText {
-  color: #007bff;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
+/* Payment Instructions Styles */
 .paymentInstructions {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 70px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .paymentInstructions h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
   color: #4a148c;
-  text-align: center;
-}
-
-.paymentInstructions ol {
-  margin-bottom: 30px;
-  padding-left: 20px;
-}
-
-.paymentInstructions li {
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.paymentInstructions ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.paymentInstructions form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.paymentInstructions input {
-  padding: 12px;
-  border: 1px solid #e1bee7;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-.paymentInstructions button {
-  padding: 12px;
-  background-color: #9c27b0;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.paymentInstructions button:hover {
-  background-color: #7b1fa2;
-}
-
-.confirmation {
-  text-align: center;
-  padding: 40px;
-  background-color: #f3e5f5;
-  border-radius: 12px;
-  margin-top: 40px;
-}
-
-.checkIcon {
-  font-size: 64px;
-  color: #9c27b0;
   margin-bottom: 20px;
-}
-
-.confirmation h2 {
-  font-size: 28px;
-  color: #4a148c;
-  margin-bottom: 15px;
-}
-
-.confirmation p {
-  font-size: 18px;
-  color: #7b1fa2;
-}
-
-.contentWrapper {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-.pricingOptionsWrapper {
-  flex: 1;
-}
-
-.instructionsWrapper {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .contentWrapper {
-    flex-direction: column;
-  }
-
-  .pricingOptionsWrapper,
-  .instructionsWrapper {
-    width: 100%;
-  }
-}
-
-.paymentInstructionsOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
   font-size: 24px;
-  cursor: pointer;
-  color: #666;
-  transition: color 0.3s ease;
-}
-
-.closeButton:hover {
-  color: #333;
-}
-
-.backButton {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #9c27b0;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.backButton:hover {
-  background-color: #7b1fa2;
-}
-
-.backIcon {
-  margin-right: 10px;
-  transform: rotate(180deg);
+  text-align: center;
 }
 
 .instructionSteps {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .step {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  margin-bottom: 15px;
 }
 
 .stepNumber {
-  background-color: #4051b5;
+  background-color: #9c27b0;
   color: white;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 6px rgba(64, 81, 181, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step:hover .stepNumber {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(64, 81, 181, 0.3);
+  margin-right: 15px;
+  flex-shrink: 0;
 }
 
 .stepContent {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .stepContent p {
   margin: 0;
-  line-height: 1.4;
+  color: #333;
 }
 
 .example {
   font-style: italic;
   color: #666;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
 
 .confirmationForm {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 2rem auto 0;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .referenceInput {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  transition: border-color 0.3s ease;
+  padding: 10px;
+  border: 1px solid #9c27b0;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.referenceInput:focus {
-  outline: none;
-  border-color: #4051b5;
+.confirmButton, .backButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .confirmButton {
-  background-color: #4051b5;
+  background-color: #9c27b0;
   color: white;
-  border: none;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 6px rgba(64, 81, 181, 0.2);
 }
 
 .confirmButton:hover {
-  background-color: #303f9f;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(64, 81, 181, 0.3);
+  background-color: #7b1fa2;
 }
 
-.paymentConfirmed {
+.backButton {
+  background-color: #f3e5f5;
+  color: #9c27b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.backButton:hover {
+  background-color: #e1bee7;
+}
+
+.backIcon {
+  font-size: 18px;
+}
+
+/* Confirmation Styles */
+.confirmation {
   text-align: center;
-  padding: 2rem;
-  background-color: #f3e5f5;  /* Light purple background */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(103, 58, 183, 0.1);
+  padding: 20px;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkIcon {
+  font-size: 48px;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.confirmation h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.confirmation p {
+  color: #333;
+}
+
+/* Loading Spinner */
+.loadingSpinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  border: 4px solid #f3e5f5;
+  border-top: 4px solid #9c27b0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricingContainer {
+    padding: 15px;
+  }
+
+  .paymentInstructions {
+    padding: 15px;
+  }
+
+  .paymentInstructions h2 {
+    font-size: 20px;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stepNumber {
+    margin-bottom: 10px;
+  }
+
+  .confirmationForm {
+    gap: 10px;
+  }
+
+  .referenceInput, .confirmButton, .backButton {
+    font-size: 14px;
+  }
+}
+
+/* ... rest of the existing styles ... */
+
+/* Payment Confirmed Styles */
+.paymentConfirmed {
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .paymentConfirmed h2 {
-  color: #673ab7;  /* Deep purple color for the heading */
-  margin-bottom: 1rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.paymentConfirmed p {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.paymentConfirmed p:nth-child(3) {
+  font-weight: bold;
+  color: #d32f2f;
 }
 
 .loginButton {
-  background-color: #673ab7;  /* Deep purple background for the button */
+  background-color: #9c27b0;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 6px rgba(103, 58, 183, 0.2);
-  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .loginButton:hover {
-  background-color: #5e35b1;  /* Slightly darker purple on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(103, 58, 183, 0.3);
+  background-color: #7b1fa2;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .paymentConfirmed {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .paymentConfirmed h2 {
+    font-size: 24px;
+  }
+
+  .paymentConfirmed p {
+    font-size: 14px;
+  }
+
+  .loginButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* ... rest of the existing styles ... */
+
+/* Logged In Styles */
 .loggedIn {
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  padding: 30px;
   text-align: center;
-  padding: 2rem;
-  background-color: #e8eaf6;  /* Light indigo background */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(63, 81, 181, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .loggedIn h2 {
-  color: #3f51b5;  /* Indigo color for the heading */
-  margin-bottom: 1rem;
+  color: #1565c0;
+  margin-bottom: 15px;
+  font-size: 24px;
 }
+
+.loggedIn p {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .paymentConfirmed,
+  .loggedIn {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .paymentConfirmed h2,
+  .loggedIn h2 {
+    font-size: 20px;
+  }
+
+  .loginButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* ... rest of the existing styles ... */

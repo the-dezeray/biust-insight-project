@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaExclamationTriangle,FaArrowLeft} from 'react-icons/fa';
+import { FaMoneyBillWave, FaSchool, FaMobileAlt, FaCheck, FaStar, FaArrowRight, FaArrowLeft, FaExclamationTriangle } from 'react-icons/fa';
 import styles from '@site/src/css/pricingAndPayment.module.css';
 import { updateUserPayableStatus, getCurrentUserEmail, signInWithGoogle } from './firebase';
 
@@ -61,11 +61,12 @@ const PricingAndPayment = () => {
     if (paymentConfirmed && !loggedIn) {
       return (
         <div className={styles.paymentConfirmed}>
-          <h2>Payment Confirmed!</h2>
-          <p>Thank you for your payment. Your account has been updated.</p>
-          <p>You can now log in to access your account.</p>
+          <h2>Access Granted!</h2>
+          <p>Thank you for your payment. You have been granted temporary access while we verify the details.</p>
+          <p>Please note: If any fraudulent activity is detected, your account will be permanently blocked.</p>
+          <p>Enjoy your access to the platform!</p>
           <button onClick={handleLogin} className={styles.loginButton}>
-            Log In
+            Log In Now
           </button>
         </div>
       );
@@ -82,6 +83,10 @@ const PricingAndPayment = () => {
 
     return (
       <div className={styles.pricingContainer}>
+        <div className={styles.trialEndedBox}>
+          <FaExclamationTriangle className={styles.warningIcon} />
+          <span>Free trial ended. Select a plan:</span>
+        </div>
         {isLoading ? (
           <div className={styles.loadingSpinner}>
             <div className={styles.spinner}></div>
@@ -92,9 +97,7 @@ const PricingAndPayment = () => {
             {showInstructions ? (
               renderPaymentInstructions()
             ) : (
-              <div>
-                {renderPricingOptions()}
-              </div>
+              renderPricingOptions()
             )}
           </>
         )}

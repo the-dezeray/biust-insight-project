@@ -92,7 +92,7 @@ const LoginModal = ({ onClose, onLogin }) => {
             <FaTimes />
           </button>
           
-
+<p>hello </p>
           <PricingAndPayment />
         </div>
       </div>
