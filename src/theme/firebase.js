@@ -90,7 +90,7 @@ export const signInWithGoogle = async () => {
     console.log("Attempting Google sign in...");
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
-    
+
     if (!isValidBIUSTEmail(user.email)) {
       console.log("Invalid email, signing out");
       await signOut(auth);
@@ -101,10 +101,18 @@ export const signInWithGoogle = async () => {
     await addUserToFirestore(user);
     
     console.log("Sign in successful");
-    currentUserEmail = user.email; // Save the user's email
+    currentUserEmail = user.email;
+    
+    // Check if the user is payable and set the cookie
+    const userDocRef = doc(db, 'users', user.email);
+    const userDoc = await getDoc(userDocRef);
+    if (userDoc.exists()) {
+      const userData = userDoc.data();
+      setPayableCookie(userData.payable, userData.createdAt.toDate());
+    }
+    
     checkUserAfterSignIn(user);
     return { user };
-   
   } catch (err) {
     console.error("Error during sign in:", err);
     return { error: err.message || 'An error occurred during sign in.' };
@@ -124,14 +132,48 @@ export const updateUserPayableStatus = async (referenceNumber) => {
 
   try {
     const userDocRef = doc(db, 'users', email);
-    await updateDoc(userDocRef, {
-      payable: true,
-      referenceNumber: referenceNumber
-    });
-    console.log("User's payable status updated successfully");
-    return { success: true };
+    const userDoc = await getDoc(userDocRef);
+    if (userDoc.exists()) {
+      const userData = userDoc.data();
+      await updateDoc(userDocRef, {
+        payable: true,
+        referenceNumber: referenceNumber
+      });
+      setPayableCookie(true, userData.createdAt.toDate());
+      console.log("User's payable status updated successfully");
+      return { success: true };
+    } else {
+      return { error: 'User document not found.' };
+    }
   } catch (err) {
     console.error("Error updating user's payable status:", err);
     return { error: err.message || 'An error occurred while updating payment status.' };
   }
 };
+
+// Add this function after the existing functions
+export const setPayableCookie = (isPayable, createdAt) => {
+  const expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 30); // Cookie expires in 30 days
+  const cookieValue = JSON.stringify({ isPayable, createdAt: createdAt.toISOString() });
+  document.cookie = `userStatus=${encodeURIComponent(cookieValue)}; expires=${expirationDate.toUTCString()}; path=/`;
+};
+
+// Add this function to get the cookie data
+export const getUserStatusFromCookie = () => {
+  const cookies = document.cookie.split(';');
+  for (let cookie of cookies) {
+    const [name, value] = cookie.trim().split('=');
+    if (name === 'userStatus') {
+      try {
+        return JSON.parse(decodeURIComponent(value));
+      } catch (error) {
+        console.error('Error parsing user status cookie:', error);
+        return null;
+      }
+    }
+  }
+  return null;
+};
+
+export { signOut } from 'firebase/auth';
