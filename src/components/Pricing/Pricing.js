@@ -53,11 +53,9 @@ export default function Pricing() {
           />
           <PricingItem
             title="Semester"
-<<<<<<< HEAD
+
             price="50 pula"
-=======
-            price="99 pula"
->>>>>>> 3587480ed3603c257828e2361fbf6c0ab607f0d1
+
             features={[
               "the whole semester",
               "All UI components",
@@ -69,13 +67,10 @@ export default function Pricing() {
             isPopular={true}
           />
           <PricingItem
-<<<<<<< HEAD
+
             title="Enterprise"
             price="90 "
-=======
-            title="2 users"
-            price="180 pula"
->>>>>>> 3587480ed3603c257828e2361fbf6c0ab607f0d1
+
             features={[
               "unlimited users",
               "all modules",
