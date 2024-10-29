@@ -47,34 +47,41 @@ export default function Pricing() {
               "for a single month ",
                 "1 Users",
               "All module components",
-              "Lifetime access",
+        
               ]}
             buttonText="Get Started"
           />
           <PricingItem
             title="Semester"
+<<<<<<< HEAD
             price="50 pula"
+=======
+            price="99 pula"
+>>>>>>> 3587480ed3603c257828e2361fbf6c0ab607f0d1
             features={[
               "the whole semester",
               "All UI components",
               "Lifetime access",
               "Free updates",
-              "Use on 3 projects",
-              "6 Months support",
+              "3 Months support",
             ]}
             buttonText="Get Pro"
             isPopular={true}
           />
           <PricingItem
+<<<<<<< HEAD
             title="Enterprise"
             price="90 "
+=======
+            title="2 users"
+            price="180 pula"
+>>>>>>> 3587480ed3603c257828e2361fbf6c0ab607f0d1
             features={[
               "unlimited users",
               "all modules",
-              "Lifetime access",
+              "90 each",
               "Free updates",
-              "Unlimited projects",
-              "12 Months support",
+              "3 months support",
             ]}
             buttonText="Contact Us"
           />

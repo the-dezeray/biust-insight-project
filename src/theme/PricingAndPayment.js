@@ -142,7 +142,7 @@ const PricingAndPayment = () => {
         <div className={styles.step}>
           <div className={styles.stepNumber}>1</div>
           <div className={styles.stepContent}>
-            <p>In the FNB app, select "Pay" then "Pay to Cell"</p>
+            <p>In the FNB app,   "Pay to Cell"</p>
           </div>
         </div>
         <div className={styles.step}>
@@ -154,8 +154,9 @@ const PricingAndPayment = () => {
         <div className={styles.step}>
           <div className={styles.stepNumber}>3</div>
           <div className={styles.stepContent}>
-            <p>Set reference: <strong>Your initials + Student ID</strong></p>
-            <p className={styles.example}>Example: RT2301904</p>
+            <p>Cell Number: <strong>71477276 </strong></p>
+
+            <p className={styles.example}>if it fails attempt ewallet</p>
           </div>
         </div>
         <div className={styles.step}>
