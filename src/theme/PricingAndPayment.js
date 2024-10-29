@@ -113,7 +113,7 @@ const PricingAndPayment = () => {
         onClick={() => handlePlanSelection('monthly')}
       >
         <h3><FaMoneyBillWave className={styles.optionIcon} /> Monthly</h3>
-        <p className={styles.price}>60 <span>Pula</span></p>
+        <p className={styles.price}>40 <span>Pula</span></p>
         <ul className={styles.features}>
           <li><FaCheck /> Full access</li>
           <li><FaCheck /> Billed monthly</li>
@@ -125,7 +125,7 @@ const PricingAndPayment = () => {
       >
         <div className={styles.popularBadge}><FaStar /> Best Value</div>
         <h3><FaSchool className={styles.optionIcon} /> Semester</h3>
-        <p className={styles.price}>100 <span>Pula</span></p>
+        <p className={styles.price}>50 <span>Pula</span></p>
         <ul className={styles.features}>
           <li><FaCheck /> Full access</li>
           <li><FaCheck /> Billed per semester</li>
@@ -148,7 +148,7 @@ const PricingAndPayment = () => {
         <div className={styles.step}>
           <div className={styles.stepNumber}>2</div>
           <div className={styles.stepContent}>
-            <p>Enter amount: <strong>{selectedPlan === 'monthly' ? '60' : '100'} Pula</strong></p>
+            <p>Enter amount: <strong>{selectedPlan === 'monthly' ? '40' : '50'} Pula</strong></p>
           </div>
         </div>
         <div className={styles.step}>

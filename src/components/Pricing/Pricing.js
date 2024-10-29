@@ -42,7 +42,7 @@ export default function Pricing() {
         <div className={styles.pricingGrid}>
           <PricingItem
             title="Monthly"
-            price="60 pula"
+            price="40 pula"
             features={[
               "for a single month ",
                 "1 Users",
@@ -53,7 +53,7 @@ export default function Pricing() {
           />
           <PricingItem
             title="Semester"
-            price="1oo pula"
+            price="50 pula"
             features={[
               "the whole semester",
               "All UI components",
@@ -67,7 +67,7 @@ export default function Pricing() {
           />
           <PricingItem
             title="Enterprise"
-            price="TBH"
+            price="90 "
             features={[
               "unlimited users",
               "all modules",

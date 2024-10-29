@@ -111,7 +111,7 @@ plugins:
     announcementBar: {
       id: 'project_update',
       content:
-        '🚀 New materials added daily! Check back often for the latest resources. <a href="/biust-insight-project/docs/category/modules">Explore now</a>',
+        '🚀 Discount availaible for this week  40 pula for monthly and 50 pula for the semester. <a href="/biust-insight-project/docs/category/modules">Explore now</a>',
       backgroundColor: '#4051b5',
       textColor: '#ffffff',
       isCloseable: true,
