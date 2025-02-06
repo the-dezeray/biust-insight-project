@@ -1,0 +1,95 @@
+.contributorsSection {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4a148c;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #6a1b9a;
+}
+
+.contributorsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contributorItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #e1bee7;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(243, 236, 236, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contributorItem:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #8e24aa;
+}
+
+.contributorInfo h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #4a148c;
+}
+
+.contributorInfo p {
+  margin: 0.25rem 0;
+  font-size: 0.8rem;
+  color: #7b1fa2;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #7f8c8d;
+}
+
+.resourceProvidersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resourceProviderItem {
+  background-color: #6f2e97;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resourceProviderItem:hover {
+  background-color: #8e24aa;
+  color: #ffffff;
+}

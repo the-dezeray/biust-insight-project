@@ -1,0 +1,81 @@
+.featureButton {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.featureItem {
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  min-width: 200px;
+}
+
+.featureItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  color: var(--ifm-font-color-base);
+  margin: 0;
+}
+
+.featureYear {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Icon-based colors */
+.featureIcon[class*="FaBook"] { color: #4ECDC4; } /* For notes */
+.featureIcon[class*="FaFileAlt"] { color: #FF6B6B; } /* For exams/tests */
+.featureIcon[class*="FaFlask"] { color: #F7B801; } /* For labs */
+.featureIcon[class*="FaChalkboardTeacher"] { color: #45B7D1; } /* For tutorials */
+.featureIcon[class*="FaDna"] { color: #e2f01e; } /* For biology-related content */
+/* Add more icon-specific colors as needed */
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .featureItem {
+  background-color: rgba(255, 239, 213, 0.1);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .featureItem:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .featureIcon {
+  filter: brightness(1.2) saturate(1.2);
+}
+
+html[data-theme='dark'] .featureTitle {
+  color: var(--ifm-color-emphasis-900);
+}
+
+html[data-theme='dark'] .featureYear {
+  color: var(--ifm-color-emphasis-700);
+}

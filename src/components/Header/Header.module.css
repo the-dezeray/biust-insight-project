@@ -1,0 +1,123 @@
+.heroBanner {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heroBox {
+  background-color: rgba(106, 13, 173, 1);
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  padding: 6rem 4rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.heroDesc {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mainBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.exploreBtn {
+  background-color: #ffffff;
+  color: #6a0dad;
+}
+
+.exploreBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.learnMoreBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.learnMoreBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transform: rotate(-15deg);
+  animation: meteor 1.5s linear infinite;
+}
+
+@keyframes meteor {
+  0% {
+    opacity: 1;
+    transform: translateY(-150px) translateX(0) rotate(-15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100% + 150px)) translateX(50px) rotate(-15deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroBox {
+    padding: 3rem 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .heroDesc {
+    font-size: 1.1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .mainBtn {
+    width: 100%;
+  }
+}
+

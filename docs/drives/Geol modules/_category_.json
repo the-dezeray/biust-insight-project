@@ -1,0 +1,13 @@
+{
+  "position": 2.5,
+
+  "collapsible": true,
+  "collapsed": true,
+  "className": "customButton",
+  "link": {
+    "type": "generated-index"
+  },
+  "customProps": {
+    "description": "This description can be used in the swizzled DocCard"
+  }
+}
