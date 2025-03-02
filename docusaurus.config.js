@@ -35,6 +35,17 @@ const config = {
   },
 plugins: 
 [
+  async function myPlugin(context, options) {
+    return {
+      name: "docusaurus-tailwindcss",
+      configurePostCss(postcssOptions) {
+        // Appends TailwindCSS and AutoPrefixer.
+        postcssOptions.plugins.push(require("tailwindcss"));
+        postcssOptions.plugins.push(require("autoprefixer"));
+        return postcssOptions;
+      },
+    };
+  },
     // Other plugins
     [
       'docusaurus-plugin-dotenv',
@@ -167,74 +178,7 @@ plugins:
 ],
       },
 footer: {
-  style: 'dark',
-  links: [
-    {
-      title: 'Info',
-      items: [
-        {
-          label: 'Project Stats',
-          to: '/blog/project-stats',
-        },
-        {
-          label: 'About the Project',
-          to: '/blog/why-project',
-        },
-        {
-          label: 'Developer',
-          to: '/blog/about-me',
-        },
-      ],
-    },
-    {
-      title: 'Contribute / Join',
-      items: [
-        {
-          label: 'GitHub',
-          to: 'https://github.com/the-dezeray/biust-insight-project',
-        },
-        {
-          label: 'Contributors',
-          href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
-        },
-        {
-          label: 'Documentation',
-          href: 'https://github.com/the-dezeray/biust-insight-project/tree/main',
-        },
-      ],
-    },{
-      title: 'Social',
-      items: [
-        {
-          label: 'Facebook',
-          href: 'https://www.facebook.com',
-        },
-      ],
-    },
-    {
-      title: 'Legal',
-      items: [
-        {
-          label: 'Terms',
-          href: '/blog/terms',
-        },
-        {
-          label: 'Cookie Policy',
-          href: '/blog/cookie-policy',
-        },
-      ],
-    },
-  ],
-  copyright: `
-    <div style="text-align: center; margin-top: 20px;">
-      <p>The content provided in this archive is for educational use only. 
-      While I encourage collaboration and resource sharing, I will not be responsible for 
-      any instances of plagiarism, loss of marks, or other academic consequences that may arise 
-      from the use of this material. Users are advised to adhere to their institution’s academic 
-      integrity policies when utilizing these resources. Thank you for your understanding.</p>
-      <p>Copyright © ${new Date().getFullYear()} Desiree</p>
-    </div>
-  `,
+  
 },
 
       prism: {

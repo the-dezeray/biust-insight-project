@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useAnimate, useInView } from 'framer-motion';
-import { FaAtom, FaDna, FaSquareRootAlt, FaFlask, FaChartBar, FaCog, FaLaptopCode, FaBook, FaMountain, FaDatabase } from 'react-icons/fa';
-import styles from "./Features.module.css";
+import { Link } from 'react-router-dom';
+import { FaAtom, FaDna, FaSquareRootAlt, FaFlask, FaChartBar, FaCog, FaLaptopCode, FaBook, FaMountain } from 'react-icons/fa';
 
-function FeatureItem({ Icon, title, percentage, link, delay }) {
+function SubjectItem({ Icon, title, percentage, link, delay }) {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
 
@@ -13,39 +13,61 @@ function FeatureItem({ Icon, title, percentage, link, delay }) {
     }
   }, [isInView, animate, delay]);
 
-  const radius = 8;
+  // Circle percentage configuration
+  const size = 36;
+  const strokeWidth = 2;
+  const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <a href={link} className={styles.featureLink}>
-      <div ref={scope} className={styles.featureItem} style={{ opacity: 0, y: 50 }} data-subject={title.split(' ')[0]}>
-        <Icon className={styles.featureIcon} />
-        <h3 className={styles.featureTitle}>{title}</h3>
-        <div className={styles.percentageContainer}>
-          <svg className={styles.percentageRing} width="24" height="24" viewBox="0 0 24 24">
-            <circle
-              className={styles.percentageCircle}
-              stroke="#e0e0e0"
-              strokeWidth="2"
-              fill="transparent"
+    <a href={link} className="block">
+      <div 
+        ref={scope} 
+        className="bg-transparent border border-zinc-700 p-4 rounded-lg hover:border-purple-500 transition-colors cursor-pointer flex justify-between items-center"
+        style={{ opacity: 0, y: 30 }}
+        data-subject={title.split(' ')[0]}
+      >
+        <div className="flex items-center">
+          <Icon className="w-5 h-5 text-purple-400 mr-3" />
+          <h3 className="font-medium text-white">{title}</h3>
+        </div>
+        <div className="relative">
+          <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+            {/* Background circle */}
+            <circle 
+              cx={size/2} 
+              cy={size/2} 
               r={radius}
-              cx="12"
-              cy="12"
-            />
-            <circle
-              className={styles.percentageProgress}
-              stroke="#4a90e2"
-              strokeWidth="2"
               fill="transparent"
-              r={radius}
-              cx="12"
-              cy="12"
-              style={{
-                strokeDasharray: circumference,
-                strokeDashoffset: strokeDashoffset,
-              }}
+              stroke="rgba(255,255,255,0.1)"
+              strokeWidth={strokeWidth}
             />
+            {/* Progress circle */}
+            <circle 
+              cx={size/2} 
+              cy={size/2} 
+              r={radius}
+              fill="transparent"
+              stroke="rgba(168,85,247,0.8)" // purple-500 with some transparency
+              strokeWidth={strokeWidth}
+              strokeDasharray={circumference}
+              strokeDashoffset={strokeDashoffset}
+              strokeLinecap="round"
+              transform={`rotate(-90 ${size/2} ${size/2})`}
+            />
+            {/* Percentage text */}
+            <text 
+              x="50%" 
+              y="50%" 
+              dominantBaseline="middle" 
+              textAnchor="middle" 
+              fill="white"
+              fontSize="10"
+              fontWeight="medium"
+            >
+              {percentage}%
+            </text>
           </svg>
         </div>
       </div>
@@ -86,20 +108,31 @@ export default function Features() {
   ];
 
   return (
-    <section className={styles.featureSection}>
-      <div className={styles.container}>
-        <div ref={scope} className={styles.featureGrid} style={{ opacity: 0 }}>
-          {subjects.map((subject, index) => (
-            <FeatureItem
-              key={subject.title}
-              Icon={subject.Icon}
-              title={subject.title}
-              percentage={subject.percentage}
-              link={subject.link}
-              delay={index * 0.1}
-            />
-          ))}
-        </div>
+    <section className="w-full max-w-6xl mx-auto px-4 py-12">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-xl font-bold text-white">Course <span className="text-purple-500">Modules</span></h2>
+        <Link to="/docs/category/all-modules" className="text-sm text-zinc-500 hover:text-purple-400 transition-colors flex items-center">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
+      <div 
+        ref={scope} 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        style={{ opacity: 0 }}
+      >
+        {subjects.map((subject, index) => (
+          <SubjectItem
+            key={subject.title}
+            Icon={subject.Icon}
+            title={subject.title}
+            percentage={subject.percentage}
+            link={subject.link}
+            delay={index * 0.1}
+          />
+        ))}
       </div>
     </section>
   );
