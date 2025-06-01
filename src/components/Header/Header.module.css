@@ -1,3 +1,4 @@
+
 .heroBanner {
   padding: 4rem 0;
   background-color: #f8f9fa;
@@ -14,7 +15,7 @@
 }
 
 .heroBox {
-  background-color: rgba(106, 13, 173, 1);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   padding: 6rem 4rem;
@@ -27,55 +28,49 @@
   overflow: hidden;
 }
 
+/* Wrapper to align text and boxes */
+.heroContentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Left side - text */
 .heroContent {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 600px;
+  text-align: left;
 }
 
 .heroTitle {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  text-align: left;
   color: #ffffff;
 }
 
 .heroDesc {
+  text-align: left;
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #ffffff;
 }
 
-.heroButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+/* Right side - 4 boxes */
+.heroBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-gap: 1rem;
+  width: 250px;
 }
 
-.mainBtn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+.infoBox {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
   font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.exploreBtn {
-  background-color: #ffffff;
-  color: #6a0dad;
-}
-
-.exploreBtn:hover {
-  background-color: #f0f0f0;
-}
-
-.learnMoreBtn {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.learnMoreBtn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 .meteor {
@@ -99,25 +94,69 @@
   }
 }
 
+/* Base button styles */
+.mainBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+/* Explore Button */
+.exploreBtn {
+  background-color: #ffffff;
+  color: #6a0dad;
+}
+
+.exploreBtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Learn More Button */
+.learnMoreBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.learnMoreBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
 @media screen and (max-width: 768px) {
-  .heroBox {
-    padding: 3rem 2rem;
+  .heroContentWrapper {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .container {
-    padding: 0 1rem;
+  
+  .heroContent {
+    text-align: center;
+    max-width: 100%;
   }
-
-  .heroDesc {
-    font-size: 1.1rem;
+  
+  .heroBoxes {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
-
+  
   .heroButtons {
     flex-direction: column;
   }
-
+  
   .mainBtn {
     width: 100%;
   }
 }
 
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}

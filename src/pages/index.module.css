@@ -1,3 +1,4 @@
+
 /* Overall styles for the hero section */
 .heroBanner {
   padding: 4rem 0;
@@ -11,6 +12,7 @@
 .container {
   max-width: 1400px; /* Increased from 1200px for a wider layout */
   margin: 0 auto;
+  justify-content: left;
   padding: 0 2rem;
 }
 

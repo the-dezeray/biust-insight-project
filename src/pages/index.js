@@ -11,18 +11,10 @@ import styles from "./index.module.css";
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Biust Insight Project`}
-      description="An Archive of academic materials for collaborative learning"
-    >
-      <FloatingBackground />
-      <Header />
-      <main className={styles.mainContent}>
-        <Features />
-        <Pricing />
 
-        <Contributors />
-      </main>
-    </Layout>
+
+<Header/>
+
+
   );
 }
