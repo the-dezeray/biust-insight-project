@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import SearchBar from './components/SearchBar';
-import SearchResults from './components/SearchResults';
-import Navigation from './components/Navigation';
-import MaintainerCard from './components/MaintainerCard';
+import SearchBar from '@/components/SearchBar';
+import SearchResults from '@/components/SearchResults';
+import Navigation from '@/components/Navigation';
+import MaintainerCard from '@/components/MaintainerCard';
 
 interface Document {
   id: number;
@@ -21,7 +21,7 @@ export default function PerplexityLayout() {
   return (
     <div className="min-h-screen bg-gray-50 flex relative">
       {/* Left Sidebar */}
-      <Navigation />
+      1<Navigation />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">

@@ -4,6 +4,11 @@
             "id": 1,
             "name": "ALSS 101",
             "description": "Introduction to ALSS"
+        },
+                {
+            "id": 1,
+            "name": "ALSS 101",
+            "description": "Introduction to ALSS"
         }
     ]
 }

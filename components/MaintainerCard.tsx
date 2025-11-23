@@ -41,8 +41,8 @@ export default function MaintainerCard() {
           </DialogHeader>
           <div className="space-y-4 text-center text-gray-600">
             <p className="text-sm leading-relaxed text-center">
-              A BIUST nerd who lives and breathes code. I like code, I dream of code,
-              and I definitely don't like people who use Windows...
+         I like code, I dream of code,
+              and i use arch by the way..
             </p>
             <div className="pt-4 border-t border-gray-100">
               <p className="text-xs text-gray-500 mb-2 text-center">Get in touch:</p>
