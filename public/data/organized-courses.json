@@ -1,0 +1,1253 @@
+[
+  {
+    "id": "academic-literacy",
+    "name": "ALLS",
+    "prefix": "ALSS",
+    "icon": "BookOpen",
+    "description": "Academic language and study skills",
+    "color": "bg-rose-50 text-rose-700 border-rose-200",
+    "courses": [
+      {
+        "code": "ALSS 101",
+        "title": "ALSS 101 ( April 2018)",
+        "college": "College Of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "ALSS 102",
+        "title": "ALSS 102",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "ALSS 201",
+        "title": "ALSS 201",
+        "college": "College Of Science",
+        "entries": 1
+      },
+      {
+        "code": "ALSS 202",
+        "title": "ALSS 202 (2018)",
+        "college": "College OF Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "ALSS 301",
+        "title": "ALSS 301",
+        "college": "College Of Engineering",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 5
+  },
+  {
+    "id": "biology",
+    "name": "BIO",
+    "prefix": "BIO",
+    "icon": "Folder",
+    "description": "Life sciences and biological systems",
+    "color": "bg-emerald-50 text-emerald-700 border-emerald-200",
+    "courses": [
+      {
+        "code": "BIO 101",
+        "title": "BIO 101 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "BIO 102",
+        "title": "BIO 102 (2012)",
+        "college": "College of Science",
+        "year": "2012",
+        "entries": 1
+      },
+      {
+        "code": "BIO 201",
+        "title": "BIO 201 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "BIO 205",
+        "title": "BIO 205/ BIOL 205",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "BIO 206",
+        "title": "BIO 206 SUPP (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "BIO 207",
+        "title": "BIO 207 (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "BIO 208",
+        "title": "BIO 208 (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "BIO 302",
+        "title": "BIO 302",
+        "college": "College Of Science",
+        "entries": 1
+      },
+      {
+        "code": "BIO 304",
+        "title": "BIO 304",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "BIO 305",
+        "title": "BIO 305",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "BIO 307",
+        "title": "BIO 307 (2018 SUPP)",
+        "college": "College of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "BIO 308",
+        "title": "BIO 308 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "BIO 311",
+        "title": "BIO 311 (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "BIO 312",
+        "title": "BIO 312",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "BIO 602",
+        "title": "BIO 602",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 15
+  },
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "prefix": "CHEM",
+    "icon": "FlaskConical",
+    "description": "Chemical sciences and laboratory work",
+    "color": "bg-green-50 text-green-700 border-green-200",
+    "courses": [
+      {
+        "code": "CHEM 101",
+        "title": "CHEM 101 (2013)",
+        "college": "College of Science",
+        "year": "2013",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 102",
+        "title": "CHEM 102 (2012)",
+        "college": "College of Science",
+        "year": "2012",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 203",
+        "title": "CHEM 203 (2015)",
+        "college": "College of Science",
+        "year": "2015",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 204",
+        "title": "CHEM 204 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 205",
+        "title": "CHEM 205",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 206",
+        "title": "CHEM 206 (2018)",
+        "college": "Faculty of Sciences",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 301",
+        "title": "CHEM 301",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 302",
+        "title": "CHEM 302",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 304",
+        "title": "CHEM 304 (2018)",
+        "college": "Fuculty of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 305",
+        "title": "CHEM 305",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 307",
+        "title": "CHEM 307",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 308",
+        "title": "CHEM 308",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 309",
+        "title": "CHEM 309",
+        "college": "College of science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 310",
+        "title": "CHEM 310 (SEPT 2018 SUPP)",
+        "college": "Faculty of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 315",
+        "title": "CHEM 315",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 401",
+        "title": "CHEM 401",
+        "college": "College of science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 402",
+        "title": "CHEM 402",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 403",
+        "title": "CHEM 403",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 404",
+        "title": "CHEM 404 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 405",
+        "title": "CHEM 405",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 406",
+        "title": "CHEM 406 (2018)",
+        "college": "Fuculty Of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 407",
+        "title": "CHEM 407",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 408",
+        "title": "CHEM 408",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "CHEM 416",
+        "title": "CHEM 416",
+        "college": "Faculty of Science",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 24
+  },
+  {
+    "id": "computer-science",
+    "name": "COMP",
+    "prefix": "COMP",
+    "icon": "Binary",
+    "description": "Programming, algorithms, and computational thinking",
+    "color": "bg-blue-50 text-blue-700 border-blue-200",
+    "courses": [
+      {
+        "code": "COMP 101",
+        "title": "COMP 101 (2013)",
+        "college": "College of Science",
+        "year": "2013",
+        "entries": 1
+      },
+      {
+        "code": "COMP 201",
+        "title": "COMP 201 (2014)",
+        "college": "College of ICT",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "COMP 202",
+        "title": "COMP 202 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "COMP 204",
+        "title": "COMP 204 (2015/2016)",
+        "college": "College of ICT",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "COMP 211",
+        "title": "COMP 211 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "COMP 212",
+        "title": "COMP 212",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 221",
+        "title": "COMP 221",
+        "college": "College Of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 222",
+        "title": "COMP 222(2018)",
+        "college": "College of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "COMP 232",
+        "title": "COMP 232 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "COMP 301",
+        "title": "COMP 301 (2014)",
+        "college": "College of ITC",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "COMP 303",
+        "title": "COMP 303 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "COMP 304",
+        "title": "COMP 304 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "COMP 311",
+        "title": "COMP 311",
+        "college": "College of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "COMP 312",
+        "title": "COMP 312 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "COMP 321",
+        "title": "COMP 321",
+        "college": "College of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "COMP 322",
+        "title": "COMP 322",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 331",
+        "title": "COMP 331",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 332",
+        "title": "COMP 332 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "COMP 341",
+        "title": "COMP 341",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "COMP 342",
+        "title": "COMP 342",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 352",
+        "title": "COMP 352",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 401",
+        "title": "COMP 401 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "COMP 412",
+        "title": "COMP 412",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "COMP 421",
+        "title": "COMP 421",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "COMP 422",
+        "title": "COMP 422 (2018)",
+        "college": "Fuculty of Science",
+        "year": "2018",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 25
+  },
+  {
+    "id": "electrical-engineering",
+    "name": "EEEN",
+    "prefix": "EEEN",
+    "icon": "Zap",
+    "description": "Electrical systems and engineering",
+    "color": "bg-yellow-50 text-yellow-700 border-yellow-200",
+    "courses": [
+      {
+        "code": "EEEN 211",
+        "title": "EEEN 211",
+        "college": "Faculty of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 221",
+        "title": "EEEN 221",
+        "college": "Fuculty of Engineering and Technology",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 222",
+        "title": "EEEN 222 (2017/2018)",
+        "college": "Faculty of Engineering and Technology",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 223",
+        "title": "EEEN 223 (2017/2018 SUPP)",
+        "college": "Faculty of Engineering and technology",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 311",
+        "title": "EEEN 311 (2014/15)",
+        "college": "College of Engineering and Technology",
+        "year": "2014/15",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 312",
+        "title": "EEEN 312",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 313",
+        "title": "EEEN 313",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 321",
+        "title": "EEEN 321",
+        "college": "Faculty of Engineering and Technology",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 322",
+        "title": "EEEN 322 (2016)",
+        "college": "College of Engineering",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 323",
+        "title": "EEEN 323",
+        "college": "Fuculty of Engineering and Technology",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 411",
+        "title": "EEEN 411 (2016)",
+        "college": "College of Engineering",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 412",
+        "title": "EEEN 412",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 413",
+        "title": "EEEN 413",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 414",
+        "title": "EEEN 414 (2016)",
+        "college": "College of Engineering",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 415",
+        "title": "EEEN 415",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 513",
+        "title": "EEEN 513",
+        "college": "College of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 521",
+        "title": "EEEN 521",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 522",
+        "title": "EEEN 522",
+        "college": "Faculty of Engineering",
+        "entries": 1
+      },
+      {
+        "code": "EEEN 523",
+        "title": "EEEN 523",
+        "college": "Faculty of Engineering and Technology",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 19
+  },
+  {
+    "id": "geology",
+    "name": "GEO",
+    "prefix": "GEOL",
+    "icon": "Earth",
+    "description": "Earth sciences and geological studies",
+    "color": "bg-amber-50 text-amber-700 border-amber-200",
+    "courses": [
+      {
+        "code": "GEOL 201",
+        "title": "GEOL 201 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 204",
+        "title": "GEOL 204 (2018)",
+        "college": "Fuculty of science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 207",
+        "title": "GEOL 207 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 208",
+        "title": "GEOL 208 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 301",
+        "title": "GEOL 301 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 302",
+        "title": "GEOL 302 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 303",
+        "title": "GEOL 303 (2015)",
+        "college": "College of Science",
+        "year": "2015",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 304",
+        "title": "GEOL 304",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 305",
+        "title": "GEOL 305 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 306",
+        "title": "GEOL 306 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 307",
+        "title": "GEOL 307 (2016 SUPP)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 401",
+        "title": "GEOL 401 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 402",
+        "title": "GEOL 402 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 403",
+        "title": "GEOL 403 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 404",
+        "title": "GEOL 404",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 405",
+        "title": "GEOL 405 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "GEOL 406",
+        "title": "GEOL 406 (2015/2016)",
+        "college": "",
+        "year": "2015/2016",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 17
+  },
+  {
+    "id": "information-systems",
+    "name": "INFS",
+    "prefix": "INFS",
+    "icon": "Cpu",
+    "description": "Information systems and data management",
+    "color": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "courses": [
+      {
+        "code": "INFS 101",
+        "title": "INFS 101 (2016)",
+        "college": "College of ICT",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "INFS 102",
+        "title": "INFS 102 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "INFS 202",
+        "title": "INFS 202 (2018)",
+        "college": "College of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "INFS 212",
+        "title": "INFS 212",
+        "college": "College of Science",
+        "entries": 1
+      },
+      {
+        "code": "INFS 221",
+        "title": "INFS 221",
+        "college": "College of science/information systems",
+        "entries": 1
+      },
+      {
+        "code": "INFS 302",
+        "title": "INFS 302 (2017/2018)",
+        "college": "College of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "INFS 422",
+        "title": "INFS 422",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "INFS 462",
+        "title": "INFS 462",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 8
+  },
+  {
+    "id": "mathematics",
+    "name": "MATH",
+    "prefix": "MATH",
+    "icon": "Calculator",
+    "description": "Mathematical analysis and computation",
+    "color": "bg-indigo-50 text-indigo-700 border-indigo-200",
+    "courses": [
+      {
+        "code": "MATH 101",
+        "title": "MATH 101 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 102",
+        "title": "MATH 102 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "MATH 201",
+        "title": "MATH 201 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "MATH 202",
+        "title": "MATH 202 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 204",
+        "title": "MATH 204 (2013)",
+        "college": "College of Science",
+        "year": "2013",
+        "entries": 1
+      },
+      {
+        "code": "MATH 206",
+        "title": "MATH 206 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 207",
+        "title": "MATH 207",
+        "college": "College of Science/Department of mathematics and statistical sciences-MATH 207(2016/2017)",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "MATH 209",
+        "title": "MATH 209 (2018) SUPP",
+        "college": "Fuculty of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "MATH 211",
+        "title": "MATH 211 (2014)",
+        "college": "College of science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "MATH 301",
+        "title": "MATH 301 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "MATH 302",
+        "title": "MATH 302 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 303",
+        "title": "MATH 303 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 304",
+        "title": "MATH 304",
+        "college": "",
+        "entries": 1
+      },
+      {
+        "code": "MATH 305",
+        "title": "MATH 305 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "MATH 309",
+        "title": "MATH 309 (2017/2018 SUPP)",
+        "college": "Faculty of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "MATH 310",
+        "title": "MATH 310",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "MATH 403",
+        "title": "MATH 403 (2016 SUPP)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 406",
+        "title": "MATH 406 (2017/2018)",
+        "college": "Faculty of Science",
+        "year": "2017/2018",
+        "entries": 1
+      },
+      {
+        "code": "MATH 408",
+        "title": "MATH 408 (2018)",
+        "college": "Fuculty of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "MATH 409",
+        "title": "MATH 409 (2018)",
+        "college": "College of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "MATH 410",
+        "title": "MATH 410",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "MATH 411",
+        "title": "MATH 411 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 412",
+        "title": "MATH 412 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 413",
+        "title": "MATH 413 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "MATH 613",
+        "title": "MATH 613",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "MATH 625",
+        "title": "MATH 625",
+        "college": "",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 26
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "prefix": "PHYS",
+    "icon": "Atom",
+    "description": "Physics theory and practical applications",
+    "color": "bg-purple-50 text-purple-700 border-purple-200",
+    "courses": [
+      {
+        "code": "PHYS 101",
+        "title": "PHYS 101 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 102",
+        "title": "PHYS 102 (2012)",
+        "college": "College of Science",
+        "year": "2012",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 201",
+        "title": "PHYS 201 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 202",
+        "title": "PHYS 202 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 203",
+        "title": "PHYS 203 (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 204",
+        "title": "PHYS 204 (2017)",
+        "college": "College of Science",
+        "year": "2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 301",
+        "title": "PHYS 301 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 302",
+        "title": "PHYS 302 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 305",
+        "title": "PHYS 305",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 312",
+        "title": "PHYS 312 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 313",
+        "title": "PHYS 313 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 401",
+        "title": "PHYS 401 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 402",
+        "title": "PHYS 402 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 404",
+        "title": "PHYS 404 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "PHYS 411",
+        "title": "PHYS 411",
+        "college": "College of science",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 15
+  },
+  {
+    "id": "statistics",
+    "name": "STAT",
+    "prefix": "STAT",
+    "icon": "TrendingUp",
+    "description": "Statistical analysis and data science",
+    "color": "bg-orange-50 text-orange-700 border-orange-200",
+    "courses": [
+      {
+        "code": "STAT 101",
+        "title": "STAT 101 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "STAT 201",
+        "title": "STAT 201 (2018)",
+        "college": "Fuculty of Science",
+        "year": "2018",
+        "entries": 1
+      },
+      {
+        "code": "STAT 202",
+        "title": "STAT 202 (2013/14)",
+        "college": "College of Science",
+        "year": "2013/14",
+        "entries": 1
+      },
+      {
+        "code": "STAT 203",
+        "title": "STAT 203 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "STAT 301",
+        "title": "STAT 301",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 302",
+        "title": "STAT 302 (2015/2016)",
+        "college": "College of Science",
+        "year": "2015/2016",
+        "entries": 1
+      },
+      {
+        "code": "STAT 303",
+        "title": "STAT 303",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 304",
+        "title": "STAT 304 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "STAT 305",
+        "title": "STAT 305 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "STAT 307",
+        "title": "STAT 307",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "STAT 308",
+        "title": "STAT 308 (2014)",
+        "college": "College of Science",
+        "year": "2014",
+        "entries": 1
+      },
+      {
+        "code": "STAT 411",
+        "title": "STAT 411 (2016/2017)",
+        "college": "College of Science",
+        "year": "2016/2017",
+        "entries": 1
+      },
+      {
+        "code": "STAT 412",
+        "title": "STAT 412",
+        "college": "Faculty of Sciences",
+        "entries": 1
+      },
+      {
+        "code": "STAT 414",
+        "title": "STAT 414 (2016)",
+        "college": "College of Science",
+        "year": "2016",
+        "entries": 1
+      },
+      {
+        "code": "STAT 416",
+        "title": "STAT 416",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 601",
+        "title": "STAT 601",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 612",
+        "title": "STAT 612",
+        "college": "Faculty of science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 614",
+        "title": "STAT 614",
+        "college": "Faculty of Science",
+        "entries": 1
+      },
+      {
+        "code": "STAT 621",
+        "title": "STAT 621",
+        "college": "Faculty of science",
+        "entries": 1
+      }
+    ],
+    "totalEntries": 19
+  }
+]

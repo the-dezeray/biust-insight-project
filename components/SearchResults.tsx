@@ -17,7 +17,7 @@ export default function SearchResults({ results }: SearchResultsProps) {
   if (results.length === 0) {
     return (
       <div className="mt-8 text-center text-gray-500">
-       just type 
+     --
       </div>
     );
   }

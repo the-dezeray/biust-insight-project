@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { FileText, Plus, Download, BarChart3, Clock, Percent, CheckCircle, ExternalLink, Eye, Search, Filter, TrendingUp, BookOpen, Target, Zap } from 'lucide-react';
+import { SidebarProvider, Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarFooter, SidebarTrigger } from "@/components/ui/sidebar";
+import { FileText, Plus, Download, BarChart3, Clock, Percent, CheckCircle, ExternalLink, Eye, Search, Filter, TrendingUp, BookOpen, Target, Zap, Home, Grid3x3, PlusIcon, User, Calculator, Atom, FlaskConical, Binary, Folder, SearchIcon, Upload } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { toast } from "sonner";
 
 // Define the type for question analytics
 type QuestionAnalytics = {
@@ -13,10 +16,70 @@ type QuestionAnalytics = {
   answer: string;
 };
 
+const navigationItems = [
+
+  {
+    title: "Search",
+    icon: SearchIcon,
+    url: "/",
+  },
+  {
+    title: "Browse All",
+    icon: Grid3x3,
+    url: "/browse",
+  },
+  {
+    title: "Upload",
+    icon: PlusIcon,
+    url: "/upload",
+  },
+];
+
+const moduleItems = [
+  {
+    title: "Mathematics",
+    icon: Calculator,
+    url: "/modules/math",
+    description: "Advanced mathematics courses and resources",
+  },
+  {
+    title: "Physics",
+    icon: Atom,
+    url: "/modules/physics",
+    description: "Physics theory and practical applications",
+  },
+  {
+    title: "Chemistry",
+    icon: FlaskConical,
+    url: "/modules/chemistry",
+    description: "Chemical sciences and laboratory work",
+  },
+  {
+    title: "Computer Science",
+    icon: Binary,
+    url: "/modules/computer",
+    description: "Programming and computational thinking",
+  },
+  {
+    title: "Statistics",
+    icon: TrendingUp,
+    url: "/modules/statistics",
+    description: "Statistical analysis and data science",
+  },
+  {
+    title: "Biology",
+    icon: Folder,
+    url: "/modules/biology",
+    description: "Life sciences and biological systems",
+  },
+];
+
 export default function LandingPage() {
   const [isMaximized, setIsMaximized] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<QuestionAnalytics | null>(null);
   const [activeTab, setActiveTab] = useState('analytics');
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
 
   const toggleMaximize = () => {
     setIsMaximized(!isMaximized);
@@ -102,52 +165,105 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
-      {/* Left Sidebar */}
-      <div className="w-12 bg-white border-r border-gray-200 flex flex-col items-center py-4 space-y-6">
-        {/* Logo */}
-        <div className="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
-          <div className="w-4 h-4 bg-white rounded-sm"></div>
-        </div>
-        
-        {/* Navigation Icons */}
-        <div className="flex flex-col space-y-4">
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <Plus size={20} className="text-gray-600" />
-          </button>
-          
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <BookOpen size={20} className="text-gray-600" />
-          </button>
-          
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <BarChart3 size={20} className="text-gray-600" />
-          </button>
-          
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <FileText size={20} className="text-gray-600" />
-          </button>
-        </div>
-        
-        {/* Bottom Icons */}
-        <div className="flex-1"></div>
-        <div className="flex flex-col space-y-4">
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <Search size={20} className="text-gray-600" />
-          </button>
-          
-          <button className="p-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
-            <TrendingUp size={16} />
-          </button>
-          
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <Download size={20} className="text-gray-600" />
-          </button>
-        </div>
-      </div>
+    <SidebarProvider>
+      <div className="flex min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-teal-50/30">
+        <Sidebar className="border-r border-gray-200/60 bg-white/80 backdrop-blur-xl">
+          <SidebarHeader className="border-b border-gray-200/50 p-6">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center shadow-md">
+                <div className="w-4 h-4 bg-white rounded-sm"></div>
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900">insight-04.2</h2>
+                <p className="text-xs text-gray-500">BIUST Resource Hub</p>
+              </div>
+            </div>
+          </SidebarHeader>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+          <SidebarContent className="p-4">
+            <SidebarGroup>
+              <SidebarGroupLabel className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">
+                Navigation
+              </SidebarGroupLabel>
+              <SidebarGroupContent>
+                <SidebarMenu className="space-y-1">
+                  {navigationItems.map((item) => (
+                    <SidebarMenuItem key={item.title}>
+                      <SidebarMenuButton 
+                        asChild
+                        className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-50 text-gray-600 hover:text-gray-900`}
+                      >
+                        {item.title === "Upload" ? (
+                          <button onClick={() => setIsUploadModalOpen(true)} className="flex items-center gap-3 w-full">
+                            <item.icon size={18} />
+                            <span className="font-medium">{item.title}</span>
+                          </button>
+                        ) : (
+                          <a href={item.url} className="flex items-center gap-3 w-full">
+                            <item.icon size={18} />
+                            <span className="font-medium">{item.title}</span>
+                          </a>
+                        )}
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+
+            <SidebarGroup className="mt-6">
+              <SidebarGroupLabel className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">
+                Academic Modules
+              </SidebarGroupLabel>
+              <SidebarGroupContent>
+                <SidebarMenu className="space-y-1">
+                  {moduleItems.map((module) => (
+                    <SidebarMenuItem key={module.title}>
+                      <SidebarMenuButton
+                        onClick={() => setSelectedModule(module.title)}
+                        className={`w-full flex items-start gap-3 px-3 py-3 rounded-lg transition-all duration-200 ${
+                          selectedModule === module.title
+                            ? 'bg-teal-50 border-teal-200 text-teal-700 shadow-sm'
+                            : 'hover:bg-gray-50 text-gray-600 hover:text-gray-900'
+                        }`}
+                      >
+                        <module.icon size={18} className="mt-0.5 flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-sm">{module.title}</div>
+                          <div className="text-xs text-gray-500 mt-0.5 line-clamp-2">{module.description}</div>
+                        </div>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+          </SidebarContent>
+
+          <SidebarFooter className="border-t border-gray-200/50 p-4">
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-50 text-gray-600 hover:text-gray-900 transition-all duration-200">
+                  <button onClick={() => toast("Will be implemented in the future")} className="flex items-center gap-3 w-full">
+                    <User size={18} />
+                    <span className="font-medium">Profile</span>
+                  </button>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarFooter>
+        </Sidebar>
+
+        <main className="flex-1 flex flex-col">
+          <header className="border-b border-gray-200/50 bg-white/80 backdrop-blur-xl p-4">
+            <div className="flex items-center gap-4">
+              <SidebarTrigger className="text-gray-600 hover:text-gray-900" />
+              <div className="flex items-center gap-2">
+                <BarChart3 size={20} className="text-teal-600" />
+                <h1 className="text-xl font-semibold text-gray-900">Analytics Dashboard</h1>
+              </div>
+            </div>
+          </header>
         {/* Header with Title */}
         <div className="flex-1 flex flex-col px-8">
           <div className="max-w-7xl mx-auto w-full">
@@ -461,7 +577,67 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </main>
+
+        {/* Upload Modal */}
+        <Dialog open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen}>
+          <DialogContent className="max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-teal-700 text-xl flex items-center gap-2">
+                <Upload size={20} />
+                Upload Documents
+              </DialogTitle>
+            </DialogHeader>
+            
+            <div className="space-y-6">
+              {/* Drag and Drop Area */}
+              <div className="border-2 border-dashed border-teal-300 rounded-lg p-8 text-center hover:border-teal-400 transition-colors duration-300">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center">
+                    <FileText size={32} className="text-teal-600" />
+                  </div>
+                  <div>
+                    <p className="text-lg font-medium text-gray-700 mb-2">
+                      Drag & drop your files here
+                    </p>
+                    <p className="text-sm text-gray-500 mb-4">
+                      Or click to browse files
+                    </p>
+                    <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
+                      Choose Files
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Supported Formats */}
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="text-sm font-medium text-gray-700 mb-2">Supported formats:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['PDF', 'DOC', 'DOCX', 'TXT', 'MD'].map((format) => (
+                    <span key={format} className="px-2 py-1 bg-white text-xs text-gray-600 rounded border">
+                      {format}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3 pt-4">
+                <button 
+                  onClick={() => setIsUploadModalOpen(false)}
+                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-300"
+                >
+                  Cancel
+                </button>
+                <button className="flex-1 px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
+                  Upload
+                </button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
-    </div>
+    </SidebarProvider>
   );
 }
