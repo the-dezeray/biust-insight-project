@@ -7,12 +7,7 @@ export const navigationItems = [
     icon: SearchIcon,
     url: "/",
   },
-  {
-    title: "Browse All",
-    icon: Grid3x3,
-    url: "/browse",
-    isActive: true,
-  },
+
   {
     title: "Upload",
     icon: PlusIcon,

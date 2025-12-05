@@ -17,33 +17,45 @@ export default function SearchResults({ results }: SearchResultsProps) {
   if (results.length === 0) {
     return (
       <div className="mt-8 text-center text-gray-500">
-     --
+        --
       </div>
     );
   }
 
+  // Group results by category
+  const groupedResults = results.reduce((acc, result) => {
+    const category = result.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(result);
+    return acc;
+  }, {} as Record<string, Document[]>);
+
   return (
-    <div className="mt-8 space-y-4">
-      {results.map((result) => (
-        <a
-          key={result.id}
-          href={result.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-teal-500 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-lg font-medium text-gray-900">{result.title}</h3>
-              <p className="text-sm text-gray-500 mt-1">
-                {result.module} • {result.category} {result.year ? `• ${result.year}` : ''}
-              </p>
-            </div>
-            <span className="px-2 py-1 text-xs font-medium rounded-full bg-teal-100 text-teal-800">
-              {result.category}
-            </span>
+    <div className="mt-6 space-y-6">
+      {Object.entries(groupedResults).map(([category, items]) => (
+        <div key={category}>
+          <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3 border-b border-gray-200 pb-2">
+            {category}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            {items.map((result) => (
+              <a
+                key={result.id}
+                href={result.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-2 bg-white rounded border border-gray-200 hover:border-teal-500 hover:bg-teal-50 transition-colors"
+              >
+                <h3 className="text-sm font-medium text-gray-900 truncate">{result.title}</h3>
+                <p className="text-xs text-gray-500 mt-0.5 truncate">
+                  {result.module} {result.year ? `• ${result.year}` : ''}
+                </p>
+              </a>
+            ))}
           </div>
-        </a>
+        </div>
       ))}
     </div>
   );

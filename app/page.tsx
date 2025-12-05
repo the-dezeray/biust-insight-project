@@ -5,6 +5,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Upload, FileText, Home } from 'lucide-react';
 import SearchBar from '@/components/SearchBar';
 import SearchResults from '@/components/SearchResults';
+import DiscoverSection from '@/components/DiscoverSection';
 import MaintainerCard from '@/components/MaintainerCard';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { AppSidebar } from '@/components/AppSidebar';
@@ -43,8 +44,11 @@ const  [versionNumber, setVersionNumber] = useState(0);
           </header>
 
           {/* Main Content */}
-          <div className="flex-1 flex flex-col items-center justify-center px-8">
-            <div className="max-w-2xl w-full">
+          <div className="flex-1 flex flex-col px-8 overflow-y-auto">
+            <div className="max-w-2xl w-full mx-auto">
+              {/* Spacer to push search bar to center */}
+              <div className="min-h-[30vh]" />
+              
               {/* Logo */}
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-light text-gray-900 tracking-wide">insight-<AnimatedNumber value={versionNumber} springOptions= {{
@@ -57,8 +61,15 @@ const  [versionNumber, setVersionNumber] = useState(0);
               {/* Search Bar */}
               <SearchBar onSearchResults={setSearchResults} />
 
-              {/* Search Results */}
-              <SearchResults results={searchResults} />
+              {/* Search Results or Discover Section */}
+              {searchResults.length > 0 ? (
+                <SearchResults results={searchResults} />
+              ) : (
+                <DiscoverSection />
+              )}
+              
+              {/* Bottom padding */}
+              <div className="min-h-[20vh]" />
             </div>
           </div>
         </main>
