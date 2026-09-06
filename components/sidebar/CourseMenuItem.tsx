@@ -2,7 +2,7 @@
 
 import { FileText } from 'lucide-react';
 import { SidebarMenuSubItem, SidebarMenuSubButton } from '@/components/ui/sidebar';
-import { CourseModule } from '@/lib/parsers/courseParser';
+import { CourseModule } from '@/lib/types';
 
 interface CourseMenuItemProps {
   course: CourseModule;

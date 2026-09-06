@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Grid3x3, FileText, Loader2, Calculator, Atom, FlaskConical, Binary, TrendingUp, Folder, BookOpen, Cpu, Zap, Earth, Upload } from 'lucide-react';
+import { Grid3x3, FileText, Calculator, Atom, FlaskConical, Binary, TrendingUp, Folder, BookOpen, Cpu, Zap, Earth, Download, Loader2 } from 'lucide-react';
 import { useSubjectData } from '@/hooks/useSubjectData';
+import { getCourseDocuments } from '@/app/actions/catalog';
+import { getDocumentDownloadUrl } from '@/app/actions/download';
 import { AppSidebar } from '@/components/AppSidebar';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { UploadModal } from '@/components/UploadModal';
+import type { CourseDocument } from '@/lib/types';
 
 // Icon mapping for subject groups
 const iconMap: Record<string, any> = {
@@ -21,10 +24,77 @@ const iconMap: Record<string, any> = {
   Earth,
 };
 
+function DocumentRow({ doc }: { doc: CourseDocument }) {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    try {
+      const result = await getDocumentDownloadUrl(doc.id);
+      if (result.error || !result.data) return;
+      window.open(result.data, '_blank', 'noopener,noreferrer');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  return (
+    <div className="flex items-center justify-between bg-white rounded-lg border border-gray-200 p-3 hover:border-teal-300 transition-colors">
+      <div className="min-w-0">
+        <p className="text-sm font-medium text-gray-900 truncate">{doc.title}</p>
+        <p className="text-xs text-gray-500 capitalize">
+          {doc.category} {doc.year ? `• ${doc.year}` : ''}
+        </p>
+      </div>
+      <button
+        onClick={handleDownload}
+        disabled={isDownloading}
+        className="ml-3 flex items-center gap-1.5 px-3 py-1.5 text-xs rounded bg-teal-50 text-teal-700 hover:bg-teal-100 disabled:opacity-60 transition-colors shrink-0"
+      >
+        {isDownloading ? (
+          <Loader2 size={13} className="animate-spin" />
+        ) : (
+          <Download size={13} />
+        )}
+        Download
+      </button>
+    </div>
+  );
+}
+
 export default function BrowsePage() {
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const { subjectGroups, isLoading, error } = useSubjectData();
+  const [documents, setDocuments] = useState<CourseDocument[]>([]);
+  const [docsLoading, setDocsLoading] = useState(false);
+  const [docsError, setDocsError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!selectedCourse) {
+      setDocuments([]);
+      setDocsError(null);
+      return;
+    }
+    let cancelled = false;
+    setDocsLoading(true);
+    setDocsError(null);
+
+    getCourseDocuments(selectedCourse).then((result) => {
+      if (cancelled) return;
+      setDocsLoading(false);
+      if (result.error) {
+        setDocsError(result.error);
+        setDocuments([]);
+      } else {
+        setDocuments(result.data ?? []);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedCourse]);
   return (
     <SidebarProvider>
       <div className="flex min-h-screen w-full bg-gradient-to-br from-slate-50 via-white to-teal-50/20 relative overflow-hidden">
@@ -56,6 +126,12 @@ export default function BrowsePage() {
                   Discover comprehensive study materials, research papers, and course content across various academic disciplines.
                 </p>
               </div>
+
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-600 text-center">
+                  {error}
+                </div>
+              )}
 
               {/* Selected Course Content */}
               {selectedCourse && !isLoading ? (
@@ -95,16 +171,28 @@ export default function BrowsePage() {
                         <div className="flex items-center justify-between mb-4">
                           <span className="font-bold text-gray-800 text-base">Available Documents</span>
                           <span className="bg-gradient-to-r from-teal-100 to-teal-200 text-teal-800 px-3 py-1.5 rounded-full text-sm font-medium">
-                            {selectedCourseData.entries} document{selectedCourseData.entries !== 1 ? 's' : ''}
+                            {documents.length} document{documents.length !== 1 ? 's' : ''}
                           </span>
                         </div>
-                        <p className="text-gray-700 mb-4 text-base">Documents for {selectedCourseData.code} will be loaded here. This could include:</p>
-                        <ul className="list-disc list-inside space-y-2 text-gray-600">
-                          <li>Past exam papers and tests</li>
-                          <li>Assignment templates and solutions</li>
-                          <li>Lecture notes and tutorials</li>
-                          <li>Practical and lab materials</li>
-                        </ul>
+
+                        {docsLoading ? (
+                          <div className="flex items-center justify-center gap-2 py-8 text-gray-500">
+                            <Loader2 size={18} className="animate-spin" />
+                            Loading documents...
+                          </div>
+                        ) : docsError ? (
+                          <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-600">
+                            {docsError}
+                          </div>
+                        ) : documents.length === 0 ? (
+                          <p className="text-gray-600">No documents uploaded for this course yet.</p>
+                        ) : (
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {documents.map((doc) => (
+                              <DocumentRow key={doc.id} doc={doc} />
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   );
@@ -178,64 +266,8 @@ export default function BrowsePage() {
           </div>
         </main>
 
-          {/* Upload Modal */}
-        <Dialog open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen}>
-          <DialogContent className="max-w-md">
-            <DialogHeader>
-              <DialogTitle className="text-teal-700 text-xl flex items-center gap-2">
-                <Upload size={20} />
-                Upload Documents
-              </DialogTitle>
-            </DialogHeader>
-            
-            <div className="space-y-6">
-              {/* Drag and Drop Area */}
-              <div className="border-2 border-dashed border-teal-300 rounded-lg p-8 text-center hover:border-teal-400 transition-colors duration-300">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center">
-                    <FileText size={32} className="text-teal-600" />
-                  </div>
-                  <div>
-                    <p className="text-lg font-medium text-gray-700 mb-2">
-                      Drag & drop your files here
-                    </p>
-                    <p className="text-sm text-gray-500 mb-4">
-                      Or click to browse files
-                    </p>
-                    <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
-                      Choose Files
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Supported Formats */}
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="text-sm font-medium text-gray-700 mb-2">Supported formats:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['PDF', 'DOC', 'DOCX', 'TXT', 'MD'].map((format) => (
-                    <span key={format} className="px-2 py-1 bg-white text-xs text-gray-600 rounded border">
-                      {format}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-3 pt-4">
-                <button 
-                  onClick={() => setIsUploadModalOpen(false)}
-                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Cancel
-                </button>
-                <button className="flex-1 px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
-                  Upload
-                </button>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+        {/* Upload Modal */}
+        <UploadModal open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen} />
       </div>
     </SidebarProvider>
   );

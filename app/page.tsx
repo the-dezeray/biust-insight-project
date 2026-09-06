@@ -2,28 +2,20 @@
 
 import { useState } from 'react';
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Upload, FileText, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
 import SearchBar from '@/components/SearchBar';
 import SearchResults from '@/components/SearchResults';
 import DiscoverSection from '@/components/DiscoverSection';
 import MaintainerCard from '@/components/MaintainerCard';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { UploadModal } from '@/components/UploadModal';
 import { AppSidebar } from '@/components/AppSidebar';
 
 import { useEffect} from 'react';
 import { AnimatedNumber } from '@/components/motion-primitives/animated-number';
-
-interface Document {
-  id: number;
-  module: string;
-  title: string;
-  category: string;
-  year: string;
-  link: string;
-}
+import type { SearchResult } from '@/lib/types';
 
 export default function HomePage() {
-  const [searchResults, setSearchResults] = useState<Document[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
 const  [versionNumber, setVersionNumber] = useState(0);
   useEffect(()=>{setVersionNumber(4.2)},[]);
@@ -78,63 +70,7 @@ const  [versionNumber, setVersionNumber] = useState(0);
         <MaintainerCard />
 
         {/* Upload Modal */}
-        <Dialog open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen}>
-          <DialogContent className="max-w-md">
-            <DialogHeader>
-              <DialogTitle className="text-teal-700 text-xl flex items-center gap-2">
-                <Upload size={20} />
-                Upload Documents
-              </DialogTitle>
-            </DialogHeader>
-            
-            <div className="space-y-6">
-              {/* Drag and Drop Area */}
-              <div className="border-2 border-dashed border-teal-300 rounded-lg p-8 text-center hover:border-teal-400 transition-colors duration-300">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center">
-                    <FileText size={32} className="text-teal-600" />
-                  </div>
-                  <div>
-                    <p className="text-lg font-medium text-gray-700 mb-2">
-                      Drag & drop your files here
-                    </p>
-                    <p className="text-sm text-gray-500 mb-4">
-                      Or click to browse files
-                    </p>
-                    <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
-                      Choose Files
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Supported Formats */}
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="text-sm font-medium text-gray-700 mb-2">Supported formats:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['PDF', 'DOC', 'DOCX', 'TXT', 'MD'].map((format) => (
-                    <span key={format} className="px-2 py-1 bg-white text-xs text-gray-600 rounded border">
-                      {format}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-3 pt-4">
-                <button 
-                  onClick={() => setIsUploadModalOpen(false)}
-                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Cancel
-                </button>
-                <button className="flex-1 px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors duration-300">
-                  Upload
-                </button>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <UploadModal open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen} />
       </div>
     </SidebarProvider>
   );

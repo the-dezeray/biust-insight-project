@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { SubjectGroup } from '@/lib/parsers/courseParser';
+import { useEffect, useState } from 'react';
+import { getSubjectGroups } from '@/app/actions/catalog';
+import type { SubjectGroup } from '@/lib/types';
 
 export function useSubjectData() {
   const [subjectGroups, setSubjectGroups] = useState<SubjectGroup[]>([]);
@@ -9,27 +10,36 @@ export function useSubjectData() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadData = async () => {
+    let cancelled = false;
+
+    const load = async () => {
       try {
         setIsLoading(true);
         setError(null);
-        
-        const response = await fetch('/data/organized-courses.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+
+        const result = await getSubjectGroups();
+        if (cancelled) return;
+
+        if (result.error) {
+          throw new Error(result.error);
         }
-        
-        const data = await response.json();
-        setSubjectGroups(data);
+        setSubjectGroups(result.data ?? []);
       } catch (err) {
-        console.error('Error loading subject data:', err);
-        setError('Failed to load course data. Please try again later.');
+        if (!cancelled) {
+          console.error('Error loading subject data:', err);
+          setError(
+            err instanceof Error ? err.message : 'Failed to load course data.',
+          );
+        }
       } finally {
-        setIsLoading(false);
+        if (!cancelled) setIsLoading(false);
       }
     };
 
-    loadData();
+    load();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return { subjectGroups, isLoading, error };

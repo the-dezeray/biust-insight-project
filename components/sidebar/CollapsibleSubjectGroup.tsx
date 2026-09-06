@@ -5,7 +5,7 @@ import { ChevronDown, ChevronRight, Calculator, Atom, FlaskConical, Binary, Tren
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub } from '@/components/ui/sidebar';
 import { CourseMenuItem } from './CourseMenuItem';
-import { SubjectGroup } from '@/lib/parsers/courseParser';
+import { SubjectGroup } from '@/lib/types';
 
 interface CollapsibleSubjectGroupProps {
   subject: SubjectGroup;
